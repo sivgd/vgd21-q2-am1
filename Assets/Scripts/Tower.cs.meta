@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6621747f50a2ca148bb6747b1a70d013
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - roughSlingShotTowerSprite: {fileID: 21300000, guid: f660cfd795171c94795a2e008a024466,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
