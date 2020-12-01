@@ -7,6 +7,7 @@ public class TowerPlace : MonoBehaviour
     public new Camera camera;
     public GameObject roughSlingShotTowerPrefab;
     public Transform towerParent;
+    public Transform enemyParent;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,9 @@ public class TowerPlace : MonoBehaviour
 
             if (canPlace)
             {
-                Instantiate(roughSlingShotTowerPrefab, position + offset, new Quaternion(), towerParent);
+
+                GameObject tower = Instantiate(roughSlingShotTowerPrefab, position + offset, new Quaternion(), towerParent);
+                tower.GetComponent<Tower>().enemyParent = enemyParent;
             }
         }
 

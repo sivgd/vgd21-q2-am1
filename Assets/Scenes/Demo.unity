@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448746010}
   m_Layer: 0
-  m_Name: Towers
+  m_Name: TowerParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,6 +925,7 @@ MonoBehaviour:
   roughSlingShotTowerPrefab: {fileID: 5689718888534118928, guid: 1f4d9e881b68cea49b7a69109f387072,
     type: 3}
   towerParent: {fileID: 1448746010}
+  enemyParent: {fileID: 1342466404}
 --- !u!4 &2059952096
 Transform:
   m_ObjectHideFlags: 0
