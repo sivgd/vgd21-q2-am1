@@ -42,7 +42,7 @@ public class TowerPlace : MonoBehaviour
         {
             return true;
         }
-        if (ray.collider.name != "RoughMapCantPlaceArea")
+        if (ray.collider.name != "RoughMapCantPlaceArea" && ray.collider.tag != "Tower")
         {
             return true;
         }
