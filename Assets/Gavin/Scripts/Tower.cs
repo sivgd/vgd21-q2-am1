@@ -5,14 +5,27 @@ using System;
 
 public class Tower : MonoBehaviour
 {
-    protected int shootingSpeed;
-    protected int shootingDamage;
+    public float projectileSpeed;
+    public float shootingSpeed;
+    public float shootingDamage;
 
     public Transform enemyParent;
+    public Transform ammunitionParent;
 
+
+    public GameObject ammunition;
+
+    float shootingCooldown = 0;
     public void Update()
     {
+        //A line between tower and closest enemy
         Debug.DrawLine(transform.position, ClosestEnemy().position);
+        if (shootingCooldown <= 0)
+        {
+            Shoot();
+            shootingCooldown = shootingSpeed;
+        }
+        shootingCooldown -= Time.deltaTime;
     }
 
     public virtual void Place(Vector2 position)
@@ -22,6 +35,7 @@ public class Tower : MonoBehaviour
 
     Transform ClosestEnemy()
     {
+        //gets and returns the closest enemy under the enemyParent
         Transform closestEnemy = enemyParent.GetChild(0);
         for (int i = 1; i < enemyParent.childCount; i++)
         {
@@ -33,5 +47,24 @@ public class Tower : MonoBehaviour
         }
 
         return closestEnemy;
+    }
+
+    void Shoot()
+    {
+        //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
+        Vector2 closestEnemy = ClosestEnemy().position;
+        GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
+        projectile.transform.right = new Vector3(closestEnemy.x, closestEnemy.y, projectile.transform.position.z) - projectile.transform.position;
+
+        projectile.GetComponent<Rigidbody2D>().AddForce(projectile.transform.right * projectileSpeed);
+
+        StartCoroutine(DeleteObject(projectile, 3));
+    }
+
+    IEnumerator DeleteObject(GameObject gameObject, float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        Destroy(gameObject);
     }
 }

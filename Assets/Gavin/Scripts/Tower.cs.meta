@@ -4,7 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - roughSlingShotTowerSprite: {fileID: 21300000, guid: f660cfd795171c94795a2e008a024466,
+  - enemyParent: {instanceID: 0}
+  - ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
