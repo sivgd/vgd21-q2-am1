@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Waves : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public GameObject enemyPrefab;
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
 
@@ -42,6 +42,7 @@ public class Waves : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, enemyParent);
+        GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, enemyParent);
+        enemy.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
     }
 }
