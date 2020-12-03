@@ -96,5 +96,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 1
-  speed: 5
+  speed: 2
   transformPos: {fileID: 1511470625747951749}
