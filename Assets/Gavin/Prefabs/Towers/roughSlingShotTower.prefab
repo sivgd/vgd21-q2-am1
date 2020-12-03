@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 600
   shootingSpeed: 0.5
-  shootingDamage: 0
+  shootingDamage: 1
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
