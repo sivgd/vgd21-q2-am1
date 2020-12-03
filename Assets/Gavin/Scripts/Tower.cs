@@ -54,6 +54,7 @@ public class Tower : MonoBehaviour
         //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
         Vector2 closestEnemy = ClosestEnemy().position;
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
+        projectile.GetComponent<Projectile>().damage = shootingDamage;
         projectile.transform.right = new Vector3(closestEnemy.x, closestEnemy.y, projectile.transform.position.z) - projectile.transform.position;
 
         projectile.GetComponent<Rigidbody2D>().AddForce(projectile.transform.right * projectileSpeed);

@@ -28,7 +28,6 @@ public class TowerPlace : MonoBehaviour
 
             if (canPlace)
             {
-
                 GameObject tower = Instantiate(roughSlingShotTowerPrefab, position + offset, new Quaternion(), towerParent);
                 tower.GetComponent<Tower>().enemyParent = enemyParent;
                 tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
