@@ -19,7 +19,7 @@ public class Tower : MonoBehaviour
     public void Update()
     {
         //A line between tower and closest enemy
-        Debug.DrawLine(transform.position, ClosestEnemy().position);
+        //Debug.DrawLine(transform.position, ClosestEnemy().position);
         if (shootingCooldown <= 0)
         {
             Shoot();
@@ -36,6 +36,10 @@ public class Tower : MonoBehaviour
     Transform ClosestEnemy()
     {
         //gets and returns the closest enemy under the enemyParent
+        if(enemyParent.childCount == 0)
+        {
+            return null;
+        }
         Transform closestEnemy = enemyParent.GetChild(0);
         for (int i = 1; i < enemyParent.childCount; i++)
         {
@@ -51,8 +55,16 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
+
         //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
-        Vector2 closestEnemy = ClosestEnemy().position;
+        Transform closestEnemyTransform = ClosestEnemy();
+        if(closestEnemyTransform == null)
+        {
+            return;
+        }
+        Vector2 closestEnemy = closestEnemyTransform.position;
+
+
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
         projectile.GetComponent<Projectile>().damage = shootingDamage;
         projectile.transform.right = new Vector3(closestEnemy.x, closestEnemy.y, projectile.transform.position.z) - projectile.transform.position;
