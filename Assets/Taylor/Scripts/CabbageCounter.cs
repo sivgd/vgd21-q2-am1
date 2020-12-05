@@ -7,19 +7,19 @@ public class CabbageCounter : MonoBehaviour
 {
     public Text cabbageCounter;
     public float cabbageAmount;
-    public float cabbageIncreasedPerKill;
+    public float cabbageIncreasedPerSecond;
 
     // Use this for initialization
     void Start()
     {
-        cabbageAmount =0f;
-        cabbageIncreasedPerKill =100f;
+        cabbageAmount =1f;
+        cabbageIncreasedPerSecond =1f;
 
     }
 
     // Update is called once per frame
     void Update(){
-        cabbageCounter.text = (int)cabbageAmount + "CC";
-        cabbageAmount +=cabbageIncreasedPerKill * Time.deltaTime;
+        cabbageCounter.text = (int)cabbageAmount + "00 C";
+        cabbageAmount +=cabbageIncreasedPerSecond * Time.deltaTime;
     }
 }
