@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public float health;
     public float damage;
     float bulletDamage;
+    public GameObject cabbageCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            cabbageCounter.GetComponent<CabbageCounter>().cabbageAmount += 100;
         }
     }
 }

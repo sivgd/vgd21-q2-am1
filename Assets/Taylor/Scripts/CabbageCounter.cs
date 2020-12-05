@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CabbageCounter : MonoBehaviour
 {
-    public static int cabbageAmount = 0;
+    public int cabbageAmount = 0;
     Text score;
 
     // Use this for initialization
