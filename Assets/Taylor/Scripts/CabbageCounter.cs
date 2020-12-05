@@ -6,16 +6,17 @@ using UnityEngine.UI;
 public class CabbageCounter : MonoBehaviour
 {
     public static int cabbageAmount = 0;
-Text score;
+    Text score;
 
     // Use this for initialization
     void Start()
     {
-       score = GetComponent<Text> ();
-    }
+        score = GetComponent<Text>();
 
+    }
     // Update is called once per frame
-    void Update(){
+    void Update()
+    {
         score.text = "Cabbages: " + cabbageAmount;
     }
 }

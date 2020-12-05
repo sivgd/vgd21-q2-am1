@@ -282,7 +282,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00 C
+  m_Text: 'Cabbages: 0'
 --- !u!222 &845535286
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -307,8 +307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247, y: 94.5}
-  m_SizeDelta: {x: 800, y: 200}
+  m_AnchoredPosition: {x: -294.1, y: 94.5}
+  m_SizeDelta: {x: 705.89624, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &942895473
 GameObject:
@@ -967,9 +967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9cc558aa8294864b0c41c9cef800ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cabbageCounter: {fileID: 845535285}
-  cabbageAmount: 0
-  cabbageIncreasedPerSecond: 100
 --- !u!114 &1561117923
 MonoBehaviour:
   m_ObjectHideFlags: 0
