@@ -5,21 +5,17 @@ using UnityEngine.UI;
 
 public class CabbageCounter : MonoBehaviour
 {
-    public Text cabbageCounter;
-    public float cabbageAmount;
-    public float cabbageIncreasedPerSecond;
+    public static int cabbageAmount = 0;
+Text score;
 
     // Use this for initialization
     void Start()
     {
-        cabbageAmount =1f;
-        cabbageIncreasedPerSecond =1f;
-
+       score = GetComponent<Text> ();
     }
 
     // Update is called once per frame
     void Update(){
-        cabbageCounter.text = (int)cabbageAmount + "00 C";
-        cabbageAmount +=cabbageIncreasedPerSecond * Time.deltaTime;
+        score.text = "Cabbages: " + cabbageAmount;
     }
 }
