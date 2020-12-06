@@ -17,6 +17,6 @@ public class CabbageCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Cabbages: " + cabbageAmount;
+        score.text = "" + cabbageAmount;
     }
 }

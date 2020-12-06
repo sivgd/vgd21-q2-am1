@@ -243,8 +243,9 @@ GameObject:
   - component: {fileID: 845535287}
   - component: {fileID: 845535286}
   - component: {fileID: 845535285}
+  - component: {fileID: 845535288}
   m_Layer: 5
-  m_Name: CabbageCounter
+  m_Name: Cabbages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,6 +311,18 @@ RectTransform:
   m_AnchoredPosition: {x: -294.1, y: 94.5}
   m_SizeDelta: {x: 705.89624, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &845535288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845535284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9cc558aa8294864b0c41c9cef800ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &942895473
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +960,6 @@ GameObject:
   - component: {fileID: 1561117925}
   - component: {fileID: 1561117924}
   - component: {fileID: 1561117923}
-  - component: {fileID: 1561117922}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -955,18 +967,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1561117922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561117921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e9cc558aa8294864b0c41c9cef800ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1561117923
 MonoBehaviour:
   m_ObjectHideFlags: 0
