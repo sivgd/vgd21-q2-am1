@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            cabbageCounter.GetComponent<CabbageCounter>().cabbageAmount += 100;
+            CabbageCounter.cabbageAmount += 100;
         }
     }
 }
