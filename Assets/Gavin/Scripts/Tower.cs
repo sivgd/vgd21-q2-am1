@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
     public float projectileSpeed;
     public float shootingSpeed;
     public float shootingDamage;
+    public float range;
 
     public Transform enemyParent;
     public Transform ammunitionParent;
@@ -40,12 +41,29 @@ public class Tower : MonoBehaviour
         {
             return null;
         }
-        Transform closestEnemy = enemyParent.GetChild(0);
-        for (int i = 1; i < enemyParent.childCount; i++)
+
+        int numberOfEnemiesInRange = 0;
+
+        List<Transform> enemiesInRange = new List<Transform>();
+
+
+        for(int i = 0;i< enemyParent.childCount; i++)
         {
-            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < Vector2.Distance(closestEnemy.position, transform.position))
+            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < range)
             {
-                closestEnemy = enemyParent.GetChild(i);
+                enemiesInRange.Add(enemyParent.GetChild(i));
+            }
+        }
+
+        Transform closestEnemy = enemiesInRange[0];
+        for (int i = 1; i < enemiesInRange.Count; i++)
+        {
+            Transform enemy = enemiesInRange[i];
+
+            if (Vector2.Distance(enemy.position, transform.position) < Vector2.Distance(closestEnemy.position, transform.position)
+                && Vector2.Distance(enemy.position, transform.position) < range)
+            {
+                closestEnemy = enemy;
             }
 
         }

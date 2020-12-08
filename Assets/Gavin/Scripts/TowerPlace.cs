@@ -69,6 +69,15 @@ public class TowerPlace : MonoBehaviour
 
         Transform towerSprite = go.transform.GetChild(3).transform;
         selectedTower = towerSprite;
+
+        float range = roughSlingShotTowerPrefab.GetComponent<Tower>().range;
+
+        GameObject rangeUI = towerSprite.GetChild(0).gameObject;
+        rangeUI.GetComponent<RectTransform>().localScale = new Vector2(range * 0.75f, range * 0.75f);
+        
+
+        rangeUI.GetComponent<RectTransform>().localScale = new Vector3(roughSlingShotTowerPrefab.GetComponent<Tower>().range, roughSlingShotTowerPrefab.GetComponent<Tower>().range, 1);
+        rangeUI.GetComponent<Image>().enabled = true;
     }
 
     public void OnDrag()
@@ -90,6 +99,8 @@ public class TowerPlace : MonoBehaviour
 
         Transform towerSprite = go.transform.GetChild(3).transform;
         towerSprite.localPosition = new Vector3(0, 0, 0);
+
+        towerSprite.GetChild(0).GetComponent<Image>().enabled = false;
 
         //Placing tower stuff
 
