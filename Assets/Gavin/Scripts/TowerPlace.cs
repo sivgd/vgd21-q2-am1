@@ -62,7 +62,6 @@ public class TowerPlace : MonoBehaviour
     public void OnBeginDrag(GameObject go)
     {
 
-        print("Start Dragging" + Time.deltaTime);
         //UI
         GameObject tint = go.transform.GetChild(2).gameObject;
         tint.GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
@@ -86,12 +85,10 @@ public class TowerPlace : MonoBehaviour
         //UI
         selectedTower.position = camera.ScreenToWorldPoint(Input.mousePosition);
         selectedTower.position = new Vector3(selectedTower.position.x, selectedTower.position.y, 0);
-        print(selectedTower.position);
     }
 
     public void OnEndDrag(GameObject go)
     {
-        print("Done Dragging");
 
         //UI
         GameObject tint = go.transform.GetChild(2).gameObject;

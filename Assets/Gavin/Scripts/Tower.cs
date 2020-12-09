@@ -10,6 +10,10 @@ public class Tower : MonoBehaviour
     public float shootingDamage;
     public float range;
 
+    public float switchTargetOffset;
+
+    public bool testBool;
+
     public Transform enemyParent;
     public Transform ammunitionParent;
 
@@ -19,17 +23,20 @@ public class Tower : MonoBehaviour
     float shootingCooldown = 0;
     public void Update()
     {
-        //A line between tower and closest enemy
-        //Debug.DrawLine(transform.position, ClosestEnemy().position);
+        //A line between tower and closest enemy for debugging target selection
+        if (ClosestEnemy() != null)
+        {
+            //Debug.DrawLine(transform.position, ClosestEnemy().position);
+        }
         if (shootingCooldown <= 0)
         {
             Shoot();
             shootingCooldown = shootingSpeed;
-        }
+        } 
         shootingCooldown -= Time.deltaTime;
     }
 
-    public virtual void Place(Vector2 position)
+    public void Place(Vector2 position)
     {
         transform.SetPositionAndRotation(position, new Quaternion());
     }
@@ -62,8 +69,7 @@ public class Tower : MonoBehaviour
         {
             Transform enemy = enemiesInRange[i];
 
-            if (Vector2.Distance(enemy.position, transform.position) < Vector2.Distance(closestEnemy.position, transform.position)
-                && Vector2.Distance(enemy.position, transform.position) < range)
+            if (Vector2.Distance(enemy.position, transform.position) < Vector2.Distance(closestEnemy.position, transform.position))
             {
                 closestEnemy = enemy;
             }
@@ -100,7 +106,7 @@ public class Tower : MonoBehaviour
 
         projectile.GetComponent<Rigidbody2D>().AddForce(projectile.transform.right * projectileSpeed);*/
 
-        StartCoroutine(DeleteObject(projectile, 3));
+        StartCoroutine(DeleteObject(projectile, 5));
     }
 
     IEnumerator DeleteObject(GameObject gameObject, float time)

@@ -14,4 +14,8 @@ public class Projectile : MonoBehaviour
         transform.Translate(dir * Time.deltaTime * speed);
     }
 
+    private void OnDestroy()
+    {
+    }
+
 }
