@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-
+    public float flashTime;
     public float health;
+    public float maxHealth;
     public float damage;
     float bulletDamage;
     public GameObject cabbageCounter;
+    SpriteRenderer sr;
+    Color originalColor;
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
+        sr = GetComponent<SpriteRenderer>();
+        originalColor = sr.color;
         
     }
 
@@ -28,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
             bulletDamage = collision.GetComponent<Projectile>().damage;
             CheckHealth();
             Destroy(collision.gameObject);
+            Flash();
         }
     }
 
@@ -40,5 +47,17 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
             CabbageCounter.cabbageAmount += 100;
         }
+        Debug.Log(health);
+    }
+
+    void Flash()
+    {
+        sr.color = Color.red;
+        Invoke("EndFlash", flashTime);
+
+    }
+    void EndFlash()
+    {
+        sr.color = originalColor;
     }
 }
