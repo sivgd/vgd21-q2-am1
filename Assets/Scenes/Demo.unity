@@ -1120,6 +1120,8 @@ MonoBehaviour:
   enemyParent: {fileID: 1342466404}
   healthBarPrefab: {fileID: 6600681530488028926, guid: 9105ce8b4b64485489fe1c94e045d313,
     type: 3}
+  cabbageCounter: {fileID: 1181954068}
+  enemyFlashTime: 1
 --- !u!4 &1014821517
 Transform:
   m_ObjectHideFlags: 0

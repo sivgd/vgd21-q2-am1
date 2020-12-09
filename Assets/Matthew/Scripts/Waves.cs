@@ -12,6 +12,7 @@ public class Waves : MonoBehaviour
     public Transform enemyParent;
     public GameObject healthBarPrefab;
     public GameObject cabbageCounter;
+    public float enemyFlashTime;
     private void Start()
     {
         
@@ -47,5 +48,6 @@ public class Waves : MonoBehaviour
         GameObject healthBar = Instantiate(healthBarPrefab);
         healthBar.GetComponent<HealthBar>().attachedEnemy = enemy;
         enemy.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
+        enemy.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
     }
 }
