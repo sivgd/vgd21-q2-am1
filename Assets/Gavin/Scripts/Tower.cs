@@ -42,8 +42,6 @@ public class Tower : MonoBehaviour
             return null;
         }
 
-        int numberOfEnemiesInRange = 0;
-
         List<Transform> enemiesInRange = new List<Transform>();
 
 
@@ -55,6 +53,10 @@ public class Tower : MonoBehaviour
             }
         }
 
+        if(enemiesInRange.Count == 0)
+        {
+            return null;
+        }
         Transform closestEnemy = enemiesInRange[0];
         for (int i = 1; i < enemiesInRange.Count; i++)
         {
@@ -83,11 +85,20 @@ public class Tower : MonoBehaviour
         Vector2 closestEnemy = closestEnemyTransform.position;
 
 
+
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
-        projectile.GetComponent<Projectile>().damage = shootingDamage;
+
+        projectile.GetComponent<Projectile>().dir = (new Vector3(closestEnemy.x, closestEnemy.y, 0) - transform.position).normalized;
+
+        //Transform movement mostly in projectile script though
+
+
+
+        //Physics based movement
+        /*projectile.GetComponent<Projectile>().damage = shootingDamage;
         projectile.transform.right = new Vector3(closestEnemy.x, closestEnemy.y, projectile.transform.position.z) - projectile.transform.position;
 
-        projectile.GetComponent<Rigidbody2D>().AddForce(projectile.transform.right * projectileSpeed);
+        projectile.GetComponent<Rigidbody2D>().AddForce(projectile.transform.right * projectileSpeed);*/
 
         StartCoroutine(DeleteObject(projectile, 3));
     }
