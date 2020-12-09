@@ -6,12 +6,12 @@ public class Waves : MonoBehaviour
     public GameObject enemyPrefab;
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
-
     private int waveIndex = 0;
     public PathCreation.PathCreator spawnPath;
     public Transform spawnPoint;
     public Transform enemyParent;
-
+    public GameObject healthBarPrefab;
+    public GameObject cabbageCounter;
     private void Start()
     {
         
@@ -44,5 +44,8 @@ public class Waves : MonoBehaviour
     {
         GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, enemyParent);
         enemy.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
+        GameObject healthBar = Instantiate(healthBarPrefab);
+        healthBar.GetComponent<HealthBar>().attachedEnemy = enemy;
+        enemy.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
     }
 }

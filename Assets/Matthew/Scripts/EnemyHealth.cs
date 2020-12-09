@@ -6,12 +6,16 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public float health;
+    public float maxHealth;
     public float damage;
     float bulletDamage;
     public GameObject cabbageCounter;
+    
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
+
         
     }
 
@@ -28,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
             bulletDamage = collision.GetComponent<Projectile>().damage;
             CheckHealth();
             Destroy(collision.gameObject);
+            
         }
     }
 
@@ -40,5 +45,6 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
             CabbageCounter.cabbageAmount += 100;
         }
+        Debug.Log(health);
     }
 }
