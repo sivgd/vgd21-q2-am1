@@ -93,7 +93,7 @@ public class Tower : MonoBehaviour
 
 
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
-
+        projectile.GetComponent<Projectile>().damage = shootingDamage;
         projectile.GetComponent<Projectile>().dir = (new Vector3(closestEnemy.x, closestEnemy.y, 0) - transform.position).normalized;
 
         //Transform movement mostly in projectile script though
