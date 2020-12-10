@@ -17,6 +17,7 @@ public class Tower : MonoBehaviour
     public Transform enemyParent;
     public Transform ammunitionParent;
 
+    public string towerName;
 
     public GameObject ammunition;
 
