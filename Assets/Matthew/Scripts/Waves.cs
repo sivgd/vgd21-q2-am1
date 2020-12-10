@@ -49,5 +49,6 @@ public class Waves : MonoBehaviour
         healthBar.GetComponent<HealthBar>().attachedEnemy = enemy;
         enemy.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
         enemy.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
+        enemy.GetComponent<EnemyHealth>().healthBar = healthBar;
     }
 }
