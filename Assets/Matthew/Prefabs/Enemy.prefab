@@ -113,8 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fb7d22975409c4aa4110cc220cb741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashTime: 0
   health: 10
+  maxHealth: 0
   damage: 0
+  cabbageCounter: {fileID: 0}
 --- !u!50 &590353306190523241
 Rigidbody2D:
   serializedVersion: 4
@@ -130,7 +133,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
