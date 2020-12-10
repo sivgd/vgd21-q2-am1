@@ -48,6 +48,7 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
             Destroy(healthBar);
             CabbageCounter.cabbageAmount += 100;
+            Waves.enemiesAlive--;
         }
         Debug.Log(health);
     }
