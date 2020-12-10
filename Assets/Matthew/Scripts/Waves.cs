@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Waves : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public static int enemiesAlive;
+    public WaveHandler[] wavesVar;
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
     private int waveIndex = 0;
@@ -15,15 +16,20 @@ public class Waves : MonoBehaviour
     public float enemyFlashTime;
     private void Start()
     {
-        
+       
     }
     private void Update()
     {
+
+        if(enemiesAlive > 0)
+        {
+            return;
+        }
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
-            
+            return;
         }
         countdown -= Time.deltaTime;
     }
@@ -31,24 +37,25 @@ public class Waves : MonoBehaviour
     IEnumerator SpawnWave()
     {
         Debug.Log("Wave Incoming");
-        waveIndex++;
 
-        for (int i = 0; i < waveIndex; i++)
+        WaveHandler wave = wavesVar[waveIndex];
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1f/wave.rate);
         }
-        
+        waveIndex++;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, enemyParent);
-        enemy.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
+        GameObject enemyAccess = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemyParent);
+        enemyAccess.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
         GameObject healthBar = Instantiate(healthBarPrefab);
-        healthBar.GetComponent<HealthBar>().attachedEnemy = enemy;
-        enemy.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
-        enemy.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
-        enemy.GetComponent<EnemyHealth>().healthBar = healthBar;
+        healthBar.GetComponent<HealthBar>().attachedEnemy = enemyAccess;
+        enemyAccess.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
+        enemyAccess.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
+        enemyAccess.GetComponent<EnemyHealth>().healthBar = healthBar;
+        enemiesAlive++;
     }
 }
