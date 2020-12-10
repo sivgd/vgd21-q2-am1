@@ -19,4 +19,5 @@ public class CabbageCounter : MonoBehaviour
     {
         score.text = "" + cabbageAmount;
     }
+
 }
