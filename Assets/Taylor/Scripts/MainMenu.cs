@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public static bool GameIsPaused = true;
 
     public GameObject pauseMenuUI;
 
@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading Menu");
-        pauseMenuUI.SetActive(false);
         mainMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -29,6 +28,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Starting Game");
         mainMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
