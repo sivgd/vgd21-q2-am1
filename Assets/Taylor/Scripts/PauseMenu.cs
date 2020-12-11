@@ -41,6 +41,5 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Restarting Game...");
         CabbageCounter.cabbageAmount = 0;
-
     }
 }
