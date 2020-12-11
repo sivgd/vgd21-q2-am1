@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Tower
   - TowerProjectile
-  - TowerSelect
   layers:
   - Default
   - TransparentFX
