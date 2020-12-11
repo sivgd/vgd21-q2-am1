@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 590353306190523241}
   - component: {fileID: -3377865706177849505}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: StandardEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,11 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fb7d22975409c4aa4110cc220cb741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashTime: 0
+  flashTime: 0.1
   health: 10
   maxHealth: 0
   damage: 0
   cabbageCounter: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!50 &590353306190523241
 Rigidbody2D:
   serializedVersion: 4

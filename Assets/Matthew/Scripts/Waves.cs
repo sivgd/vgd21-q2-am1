@@ -39,10 +39,37 @@ public class Waves : MonoBehaviour
         Debug.Log("Wave Incoming");
 
         WaveHandler wave = wavesVar[waveIndex];
-        for (int i = 0; i < wave.count; i++)
+        if (wave.firstEnemy != null)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f/wave.rate);
+            for (int i = 0; i < wave.firstCount; i++)
+            {
+                SpawnEnemy(wave.firstEnemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
+        }
+        if (wave.secondEnemy != null)
+        {
+            for (int i = 0; i < wave.secondCount; i++)
+            {
+                SpawnEnemy(wave.secondEnemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
+        }
+        if (wave.thirdEnemy != null)
+        {
+            for (int i = 0; i < wave.thirdCount; i++)
+            {
+                SpawnEnemy(wave.thirdEnemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
+        }
+        if (wave.fourthEnemy != null)
+        {
+            for (int i = 0; i < wave.fourthCount; i++)
+            {
+                SpawnEnemy(wave.fourthEnemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
         }
         waveIndex++;
     }
@@ -51,7 +78,7 @@ public class Waves : MonoBehaviour
     {
         GameObject enemyAccess = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemyParent);
         enemyAccess.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
-        GameObject healthBar = Instantiate(healthBarPrefab);
+        GameObject healthBar = Instantiate(healthBarPrefab, enemyAccess.transform);
         healthBar.GetComponent<HealthBar>().attachedEnemy = enemyAccess;
         enemyAccess.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
         enemyAccess.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
