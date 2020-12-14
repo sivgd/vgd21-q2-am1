@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
@@ -38,14 +38,30 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void RestartGame()
+    {
+        Debug.Log("Restarting Game...");
+        CabbageCounter.cabbageAmount = 0;
+    }
+
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void RestartGame()
+    public void StartGame()
     {
-        Debug.Log("Restarting Game...");
-        CabbageCounter.cabbageAmount = 0;
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("Demo");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game...");
+        Application.Quit();
     }
 }
