@@ -962,52 +962,114 @@ MonoBehaviour:
   - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
       type: 3}
     firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 15
     secondEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
       type: 3}
     secondCount: 5
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 1
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 20
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 0.5
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    secondCount: 15
     thirdEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
       type: 3}
-    thirdCount: 1
-    fourthEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+    thirdCount: 5
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 5
+    secondEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    secondCount: 15
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 1
+  - firstEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 0.5
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    secondCount: 5
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    secondCount: 20
+    thirdEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    thirdCount: 5
+    fourthEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
       type: 3}
     fourthCount: 1
     rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 20
+    secondEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    secondCount: 5
+    thirdEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    thirdCount: 15
+    fourthEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    fourthCount: 5
+    rate: 1
   timeBetweenWaves: 5
   spawnPath: {fileID: 1089613127}
   spawnPoint: {fileID: 83839061}
