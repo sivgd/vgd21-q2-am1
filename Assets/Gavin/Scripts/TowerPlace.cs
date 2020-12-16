@@ -5,8 +5,12 @@ using UnityEngine.UI;
 public class TowerPlace : MonoBehaviour
 {
     public new Camera camera;
+
     public GameObject roughSlingShotTowerPrefab;
     public GameObject icicleTowerPrefab;
+    public GameObject autoballerTowerPrefab;
+    public GameObject slushapultTowerPrefab;
+
     public Transform towerParent;
     public Transform enemyParent;
     public Transform ammunitionParent;
@@ -14,8 +18,11 @@ public class TowerPlace : MonoBehaviour
     public Transform towerSelections;
     public Transform selectedTower;
 
-
+    public Color canPlaceColor;
+    public Color canNotPlaceColor;
     // Start is called before the first frame update
+
+
     void Start()
     {
 
@@ -43,7 +50,6 @@ public class TowerPlace : MonoBehaviour
 
     public bool CheckIfCanPlace(Vector2 position)
     {
-        print("Check");
         RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
         if (ray.collider == null)
         {
@@ -85,6 +91,12 @@ public class TowerPlace : MonoBehaviour
             case "IcicleUI":
                 tower = icicleTowerPrefab;
                 break;
+            case "AutoballerUI":
+                tower = autoballerTowerPrefab;
+                break;
+            case "SlushapultUI":
+                tower = slushapultTowerPrefab;
+                break;
         }
 
 
@@ -98,6 +110,15 @@ public class TowerPlace : MonoBehaviour
         //UI
         selectedTower.position = camera.ScreenToWorldPoint(Input.mousePosition);
         selectedTower.position = new Vector3(selectedTower.position.x, selectedTower.position.y, 0);
+
+        if (!CheckIfCanPlace(selectedTower.position))
+        {
+            selectedTower.GetChild(0).GetComponent<Image>().color = canNotPlaceColor;
+        }
+        else
+        {
+            selectedTower.GetChild(0).GetComponent<Image>().color = canPlaceColor;
+        }
     }
 
     public void OnEndDrag(GameObject go)
@@ -128,6 +149,12 @@ public class TowerPlace : MonoBehaviour
                     break;
                 case "IcicleUI":
                     prefab = icicleTowerPrefab;
+                    break;
+                case "AutoballerUI":
+                    prefab = autoballerTowerPrefab;
+                    break;
+                case "SlushapultUI":
+                    prefab = slushapultTowerPrefab;
                     break;
             }
 
