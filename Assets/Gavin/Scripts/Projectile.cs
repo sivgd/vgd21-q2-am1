@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     public float damage;
     public float speed;
 
+    public bool isPiercing;
+
     public Vector2 dir = new Vector2(0, 0);
 
     private void Update()

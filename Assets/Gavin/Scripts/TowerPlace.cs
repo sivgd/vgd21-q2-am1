@@ -6,6 +6,7 @@ public class TowerPlace : MonoBehaviour
 {
     public new Camera camera;
     public GameObject roughSlingShotTowerPrefab;
+    public GameObject icicleTowerPrefab;
     public Transform towerParent;
     public Transform enemyParent;
     public Transform ammunitionParent;
@@ -28,7 +29,7 @@ public class TowerPlace : MonoBehaviour
             Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 offset = new Vector2(0, 0.5f);
             bool canPlace = CheckIfCanPlace(position);
-            //print(canPlace);
+            print(canPlace);
 
             if (canPlace)
             {
@@ -42,6 +43,7 @@ public class TowerPlace : MonoBehaviour
 
     public bool CheckIfCanPlace(Vector2 position)
     {
+        print("Check");
         RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
         if (ray.collider == null)
         {
@@ -73,9 +75,20 @@ public class TowerPlace : MonoBehaviour
 
         GameObject rangeUI = towerSprite.GetChild(0).gameObject;
         rangeUI.GetComponent<RectTransform>().localScale = new Vector2(range * 0.75f, range * 0.75f);
-        
 
-        rangeUI.GetComponent<RectTransform>().localScale = new Vector3(roughSlingShotTowerPrefab.GetComponent<Tower>().range, roughSlingShotTowerPrefab.GetComponent<Tower>().range, 1);
+        GameObject tower = null;
+        switch (go.tag)
+        {
+            case "SlingshotUI":
+                tower = roughSlingShotTowerPrefab;
+                break;
+            case "IcicleUI":
+                tower = icicleTowerPrefab;
+                break;
+        }
+
+
+        rangeUI.GetComponent<RectTransform>().localScale = new Vector3(tower.GetComponent<Tower>().range, tower.GetComponent<Tower>().range, 1);
         rangeUI.GetComponent<Image>().enabled = true;
     }
 
@@ -107,7 +120,18 @@ public class TowerPlace : MonoBehaviour
 
         if (canPlace)
         {
-            GameObject tower = Instantiate(roughSlingShotTowerPrefab, position + offset, new Quaternion(), towerParent);
+            GameObject prefab = null;
+            switch (go.tag)
+            {
+                case "SlingshotUI":
+                    prefab = roughSlingShotTowerPrefab;
+                    break;
+                case "IcicleUI":
+                    prefab = icicleTowerPrefab;
+                    break;
+            }
+
+            GameObject tower = Instantiate(prefab, position + offset, new Quaternion(), towerParent);
             tower.GetComponent<Tower>().enemyParent = enemyParent;
             tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
         }

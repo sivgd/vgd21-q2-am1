@@ -8,6 +8,8 @@ TagManager:
   - TowerProjectile
   - TowerSelect
   - UI
+  - IcicleUI
+  - SlingshotUI
   layers:
   - Default
   - TransparentFX
