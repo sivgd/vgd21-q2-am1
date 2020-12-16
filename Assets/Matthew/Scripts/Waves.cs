@@ -37,6 +37,7 @@ public class Waves : MonoBehaviour
     IEnumerator SpawnWave()
     {
         Debug.Log("Wave Incoming");
+        WaveCounter.waveNumber += 1;
 
         WaveHandler wave = wavesVar[waveIndex];
         if (wave.firstEnemy != null)
@@ -72,6 +73,7 @@ public class Waves : MonoBehaviour
             }
         }
         waveIndex++;
+        
     }
 
     void SpawnEnemy(GameObject enemy)

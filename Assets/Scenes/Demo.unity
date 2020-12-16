@@ -445,7 +445,7 @@ RectTransform:
   - {fileID: 1972546252}
   - {fileID: 124942589}
   m_Father: {fileID: 1561117926}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -836,6 +836,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916478836}
   m_CullTransparentMesh: 0
+--- !u!1 &1011144130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011144131}
+  - component: {fileID: 1011144134}
+  - component: {fileID: 1011144133}
+  - component: {fileID: 1011144132}
+  m_Layer: 5
+  m_Name: WaveCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1011144131
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011144130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1561117926}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -750, y: 262}
+  m_SizeDelta: {x: 181.85078, y: 45.253143}
+  m_Pivot: {x: 0.50000006, y: 0.5}
+--- !u!114 &1011144132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011144130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91749f5582fde40108bbea2aa08a9f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1011144133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011144130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 36
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 48
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Wave: 0'
+--- !u!222 &1011144134
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011144130}
+  m_CullTransparentMesh: 0
 --- !u!1 &1014821515
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,52 +962,114 @@ MonoBehaviour:
   - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
       type: 3}
     firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 15
     secondEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
       type: 3}
     secondCount: 5
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 1
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 20
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 0.5
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    secondCount: 15
     thirdEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
       type: 3}
-    thirdCount: 1
-    fourthEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+    thirdCount: 5
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 5
+    secondEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    secondCount: 15
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 1
+  - firstEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 0}
+    secondCount: 0
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 0.5
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    secondCount: 5
+    thirdEnemy: {fileID: 0}
+    thirdCount: 0
+    fourthEnemy: {fileID: 0}
+    fourthCount: 0
+    rate: 2
+  - firstEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    firstCount: 10
+    secondEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    secondCount: 20
+    thirdEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    thirdCount: 5
+    fourthEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
       type: 3}
     fourthCount: 1
     rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
-  - firstEnemy: {fileID: 0}
-    firstCount: 0
-    secondEnemy: {fileID: 0}
-    secondCount: 0
-    thirdEnemy: {fileID: 0}
-    thirdCount: 0
-    fourthEnemy: {fileID: 0}
-    fourthCount: 0
-    rate: 2
+  - firstEnemy: {fileID: 2256769802070675157, guid: 9c6e82fdf6a59b5449740c89ecc8dc95,
+      type: 3}
+    firstCount: 20
+    secondEnemy: {fileID: 4765635337769749080, guid: 87ddef0e2b34a4446a6755e32699e39f,
+      type: 3}
+    secondCount: 5
+    thirdEnemy: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
+      type: 3}
+    thirdCount: 15
+    fourthEnemy: {fileID: 3123300131798282967, guid: 8f5dcca050ca29446b4c96a03c718a5e,
+      type: 3}
+    fourthCount: 5
+    rate: 1
   timeBetweenWaves: 5
   spawnPath: {fileID: 1089613127}
   spawnPoint: {fileID: 83839061}
@@ -2009,6 +2162,7 @@ RectTransform:
   m_Children:
   - {fileID: 1337405043902173580}
   - {fileID: 1181954070}
+  - {fileID: 1011144131}
   - {fileID: 487894859}
   m_Father: {fileID: 0}
   m_RootOrder: 10
