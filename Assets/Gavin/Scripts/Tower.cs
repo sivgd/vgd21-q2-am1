@@ -22,6 +22,12 @@ public class Tower : MonoBehaviour
     public GameObject ammunition;
 
     float shootingCooldown = 0;
+
+    private void Start()
+    {
+        transform.GetChild(0).localScale = new Vector3(range * 2, range * 2, 1);
+    }
+
     public void Update()
     {
         //A line between tower and closest enemy for debugging target selection

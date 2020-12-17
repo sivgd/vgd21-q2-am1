@@ -8,6 +8,8 @@ public class TowerSelectUI : MonoBehaviour
     public new Camera camera;
     public Transform towerSelect;
     public Transform towerSelections;
+
+    public Transform towerParent;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +30,18 @@ public class TowerSelectUI : MonoBehaviour
 
                 if (tower.tag == "Tower")
                 {
+                    //Setting tower UI to be invisible
+                    for (int i = 0; i < towerParent.childCount; i++)
+                    {
+                        towerParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                    }
+
+
                     towerSelect.gameObject.SetActive(true);
                     towerSelections.gameObject.SetActive(false);
+
+                    //Setting the rangeUI to be visible
+                    tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
 
                     Tower towerScript = tower.GetComponent<Tower>();
                     //Got the tower now going to set the UI to match what the tower is
@@ -45,6 +57,13 @@ public class TowerSelectUI : MonoBehaviour
             }
             else
             {
+                //Setting tower UI to be invisible
+                for(int i = 0; i < towerParent.childCount; i++)
+                {
+                    towerParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
+                
+
                 towerSelect.gameObject.SetActive(false);
                 towerSelections.gameObject.SetActive(true);
             }

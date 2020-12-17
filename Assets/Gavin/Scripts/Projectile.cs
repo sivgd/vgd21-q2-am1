@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     public bool isPiercing;
+    public bool isAoe;
 
     public Vector2 dir = new Vector2(0, 0);
 

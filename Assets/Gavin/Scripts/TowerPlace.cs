@@ -77,10 +77,7 @@ public class TowerPlace : MonoBehaviour
         Transform towerSprite = go.transform.GetChild(3).transform;
         selectedTower = towerSprite;
 
-        float range = roughSlingShotTowerPrefab.GetComponent<Tower>().range;
-
-        GameObject rangeUI = towerSprite.GetChild(0).gameObject;
-        rangeUI.GetComponent<RectTransform>().localScale = new Vector2(range * 0.75f, range * 0.75f);
+        
 
         GameObject tower = null;
         switch (go.tag)
@@ -99,8 +96,13 @@ public class TowerPlace : MonoBehaviour
                 break;
         }
 
+        //Setting the range for when you drag the tower from the menu
+        float range = tower.GetComponent<Tower>().range;
+        GameObject rangeUI = towerSprite.GetChild(0).gameObject;
+        rangeUI.GetComponent<RectTransform>().localScale = new Vector3(0.76f, 0.76f, 1);
+        rangeUI.GetComponent<RectTransform>().sizeDelta = new Vector2(range * 100, range * 100);
 
-        rangeUI.GetComponent<RectTransform>().localScale = new Vector3(tower.GetComponent<Tower>().range, tower.GetComponent<Tower>().range, 1);
+
         rangeUI.GetComponent<Image>().enabled = true;
     }
 

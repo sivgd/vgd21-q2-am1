@@ -114,4 +114,5 @@ MonoBehaviour:
   damage: 0
   speed: 8
   isPiercing: 0
+  isAoe: 1
   dir: {x: 0, y: 0}
