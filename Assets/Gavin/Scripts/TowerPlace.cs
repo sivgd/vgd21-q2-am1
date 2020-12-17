@@ -43,6 +43,7 @@ public class TowerPlace : MonoBehaviour
                 GameObject tower = Instantiate(roughSlingShotTowerPrefab, position + offset, new Quaternion(), towerParent);
                 tower.GetComponent<Tower>().enemyParent = enemyParent;
                 tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
+                CabbageCounter.cabbageAmount -= tower.GetComponent<Tower>().cost;
             }
         }
 
@@ -58,6 +59,10 @@ public class TowerPlace : MonoBehaviour
         if (ray.collider.name != "RoughMapCantPlaceArea" && ray.collider.tag != "Tower")
         {
             return true;
+        }
+        if (CabbageCounter.cabbageAmount <= selectedTower.GetComponent<Tower>().cost)
+        {
+            return false;
         }
         else
         {

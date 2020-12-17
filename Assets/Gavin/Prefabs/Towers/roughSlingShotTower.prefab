@@ -239,6 +239,7 @@ MonoBehaviour:
   shootingSpeed: 0.5
   shootingDamage: 2
   range: 4
+  cost: 200
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}

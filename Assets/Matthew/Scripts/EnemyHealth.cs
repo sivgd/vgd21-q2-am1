@@ -34,8 +34,13 @@ public class EnemyHealth : MonoBehaviour
         {
             bulletDamage = collision.GetComponent<Projectile>().damage;
             CheckHealth();
-            Destroy(collision.gameObject);
+            
             Flash();
+            if (collision.gameObject.name =="IcicleAmmun(Clone)")
+            {
+                return;
+            }
+            Destroy(collision.gameObject);
         }
     }
 

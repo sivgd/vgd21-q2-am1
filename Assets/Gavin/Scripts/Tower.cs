@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     public float shootingSpeed;
     public float shootingDamage;
     public float range;
+    public int cost;
 
     public float switchTargetOffset;
 
