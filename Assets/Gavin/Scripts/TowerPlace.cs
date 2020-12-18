@@ -51,7 +51,29 @@ public class TowerPlace : MonoBehaviour
 
     public bool CheckIfCanPlace(Vector2 position)
     {
+
+        print(selectedTower.parent.tag);
+        GameObject tower = null;
+        switch (selectedTower.parent.tag)
+        {
+            case "SlingshotUI":
+                tower = roughSlingShotTowerPrefab;
+                break;
+            case "IcicleUI":
+                tower = icicleTowerPrefab;
+                break;
+            case "AutoballerUI":
+                tower = autoballerTowerPrefab;
+                break;
+            case "SlushapultUI":
+                tower = slushapultTowerPrefab;
+                break;
+        }
         RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
+        if (CabbageCounter.cabbageAmount < tower.GetComponent<Tower>().cost)
+        {
+            return false;
+        }
         if (ray.collider == null)
         {
             return true;
@@ -59,10 +81,6 @@ public class TowerPlace : MonoBehaviour
         if (ray.collider.name != "RoughMapCantPlaceArea" && ray.collider.tag != "Tower")
         {
             return true;
-        }
-        if (CabbageCounter.cabbageAmount <= selectedTower.GetComponent<Tower>().cost)
-        {
-            return false;
         }
         else
         {
