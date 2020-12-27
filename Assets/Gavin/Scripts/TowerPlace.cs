@@ -31,6 +31,9 @@ public class TowerPlace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
+         * 
+         * For debugging when placing isn't working for some reason. Don't know why I don't want to delete it but I refuse to
         if (Input.GetMouseButtonDown(0) && false)
         {
             Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -45,14 +48,13 @@ public class TowerPlace : MonoBehaviour
                 tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
                 CabbageCounter.cabbageAmount -= tower.GetComponent<Tower>().cost;
             }
-        }
+        }*/
 
     }
 
     public bool CheckIfCanPlace(Vector2 position)
     {
-
-        print(selectedTower.parent.tag);
+        
         GameObject tower = null;
         switch (selectedTower.parent.tag)
         {
@@ -76,10 +78,12 @@ public class TowerPlace : MonoBehaviour
         }
         if (ray.collider == null)
         {
+            print("Can place");
             return true;
         }
         if (ray.collider.name != "RoughMapCantPlaceArea" && ray.collider.tag != "Tower")
         {
+            print("Can place");
             return true;
         }
         else

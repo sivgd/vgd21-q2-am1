@@ -18,7 +18,11 @@ public class Tower : MonoBehaviour
     public Transform enemyParent;
     public Transform ammunitionParent;
 
+    public GameObject nextStage;
+
+
     public string towerName;
+    public int stage;
 
     public GameObject ammunition;
 
@@ -47,6 +51,29 @@ public class Tower : MonoBehaviour
     public void Place(Vector2 position)
     {
         transform.SetPositionAndRotation(position, new Quaternion());
+    }
+
+    public void Upgrade()
+    {
+
+        if (nextStage != null)
+        {
+            GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);
+            newTower.GetComponent<Tower>().enemyParent = enemyParent;
+            newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
+            CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().cost;
+            print("Done upgrading");
+            Destroy(gameObject);
+
+        }
+        else
+        {
+            print("No next stage");
+        }
+
+
+
+        print("Upgrade: " + towerName);
     }
 
     Transform ClosestEnemy()

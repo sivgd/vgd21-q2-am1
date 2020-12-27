@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: -1584532817037433111}
   - component: {fileID: 8932218428763792393}
   m_Layer: 0
-  m_Name: roughSlingShotTower
+  m_Name: roughSlingShotTowerStage1
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,10 @@ MonoBehaviour:
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
+  nextStage: {fileID: 2995190520303157837, guid: 496dbd7f696e7f644aebef1b2d42f5fb,
+    type: 3}
   towerName: Sling Shot
+  stage: 1
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
     type: 3}
 --- !u!70 &8932218428763792393
