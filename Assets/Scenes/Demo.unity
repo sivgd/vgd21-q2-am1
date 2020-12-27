@@ -1354,6 +1354,7 @@ GameObject:
   - component: {fileID: 1014821516}
   - component: {fileID: 1014821518}
   - component: {fileID: 1014821519}
+  - component: {fileID: 1014821520}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -1552,6 +1553,22 @@ MonoBehaviour:
   towerSelections: {fileID: 1337405044211159820}
   towerParent: {fileID: 1448746010}
   upgradeButton: {fileID: 4595893141218131755}
+--- !u!114 &1014821520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014821515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ee94e254dfb9345be8ec31c431ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stormChance: 1
+  stormTime: 5
+  rangeMultiplier: 0.5
+  towerParent: {fileID: 1448746009}
 --- !u!1 &1024175286
 GameObject:
   m_ObjectHideFlags: 0
