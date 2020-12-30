@@ -7,14 +7,15 @@ public class Hazards : MonoBehaviour
 
     bool snowstorm;
     public int stormChance;
+    public float ogStormTime;
     public float stormTime;
     public float rangeMultiplier;
-    public GameObject towerParent;
+   
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        ogStormTime = stormTime;
     }
 
     // Update is called once per frame
@@ -22,27 +23,28 @@ public class Hazards : MonoBehaviour
     {
 
         
-        if (Random.Range(1, 1) <= stormChance)
+        if (Random.Range(1, stormChance) == 1)
         {
             Snowstorm();
         }
 
 
-
+        
     }
 
 
     void Snowstorm()
     {
         
-        float originalRange = towerParent.GetComponentInChildren<Tower>().range;
+        
         while (stormTime > 0)
         {
+            Tower.universalRangeMultiplier = rangeMultiplier;
             
-            towerParent.GetComponentInChildren<Tower>().range = originalRange * rangeMultiplier;
 
             stormTime -= Time.deltaTime;
         }
-
+        stormTime = ogStormTime;
+        Tower.universalRangeMultiplier = 1;
     }
 }

@@ -28,6 +28,7 @@ public class Tower : MonoBehaviour
 
     float shootingCooldown = 0;
 
+    public static float universalRangeMultiplier = 1;
     private void Start()
     {
         transform.GetChild(0).localScale = new Vector3(range * 2, range * 2, 1);
@@ -89,7 +90,7 @@ public class Tower : MonoBehaviour
 
         for(int i = 0;i< enemyParent.childCount; i++)
         {
-            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < range)
+            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < range * universalRangeMultiplier)
             {
                 enemiesInRange.Add(enemyParent.GetChild(i));
             }
