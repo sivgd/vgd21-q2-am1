@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Hazards : MonoBehaviour
 {
 
@@ -21,10 +22,12 @@ public class Hazards : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-        if (Random.Range(1, stormChance) == 1)
+        int stormOrNah = Random.Range(1, stormChance + 1);
+        Debug.Log(stormOrNah);
+        Debug.Log(Random.Range(1f, 2f));
+        if (stormOrNah == 1)
         {
+            Debug.Log("We're trying");
             Snowstorm();
         }
 
@@ -40,7 +43,7 @@ public class Hazards : MonoBehaviour
         while (stormTime > 0)
         {
             Tower.universalRangeMultiplier = rangeMultiplier;
-            
+            Debug.Log("Currently Storming");
 
             stormTime -= Time.deltaTime;
         }

@@ -60,7 +60,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Flash()
     {
-        sr.color = Color.red;
+        sr.color = Color.grey;
         Invoke("EndFlash", flashTime);
 
     }
