@@ -74,7 +74,8 @@ public class TowerPlace : MonoBehaviour
                 break;
         }
 
-        RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
+        //RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
+        RaycastHit2D ray = Physics2D.BoxCast(position, new Vector2(1, 1.2f), 0, Vector2.zero);
         if (CabbageCounter.cabbageAmount < tower.GetComponent<Tower>().cost)
         {
             return false;
@@ -183,7 +184,7 @@ public class TowerPlace : MonoBehaviour
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 offset = new Vector2(0, 0.5f);
 
-        towerCurrentlyBeingDragged.transform.position = position + offset;
+        towerCurrentlyBeingDragged.transform.position = position;
 
         if (!CheckIfCanPlace(towerCurrentlyBeingDragged.transform.position))
         {
