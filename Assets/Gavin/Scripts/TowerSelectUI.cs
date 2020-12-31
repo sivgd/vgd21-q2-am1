@@ -96,7 +96,6 @@ public class TowerSelectUI : MonoBehaviour
                 return ray.collider.transform.parent.gameObject;
             }
         }
-        print(null);
         return null;
     }
 

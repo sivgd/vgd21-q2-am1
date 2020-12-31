@@ -31,9 +31,8 @@ public class Tower : MonoBehaviour
     public static float universalRangeMultiplier = 1;
     private void Start()
     {
-        transform.GetChild(0).localScale = new Vector3(range * 2, range * 2, 1);
+        SetRangeUI();
     }
-
     public void Update()
     {
         //A line between tower and closest enemy for debugging target selection
@@ -63,7 +62,6 @@ public class Tower : MonoBehaviour
             newTower.GetComponent<Tower>().enemyParent = enemyParent;
             newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
             CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().cost;
-            print("Done upgrading");
             Destroy(gameObject);
 
         }
@@ -74,7 +72,6 @@ public class Tower : MonoBehaviour
 
 
 
-        print("Upgrade: " + towerName);
     }
 
     Transform ClosestEnemy()
@@ -150,5 +147,10 @@ public class Tower : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         Destroy(gameObject);
+    }
+
+    public void SetRangeUI()
+    {
+        transform.GetChild(0).localScale = new Vector3(range * 2, range * 2, 1);
     }
 }

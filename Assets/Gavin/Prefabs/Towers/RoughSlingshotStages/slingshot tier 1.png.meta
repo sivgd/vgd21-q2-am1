@@ -1,0 +1,662 @@
+fileFormatVersion: 2
+guid: 3f7de8e17d8987248bff6972d4967599
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2033427420532706772
+    second: slingshot tier 1_0
+  - first:
+      213: -3736920081705869256
+    second: slingshot tier 1_1
+  - first:
+      213: -9199151034425852864
+    second: slingshot tier 1_2
+  - first:
+      213: 7440286849868922235
+    second: slingshot tier 1_3
+  - first:
+      213: 7923860163631096309
+    second: slingshot tier 1_4
+  - first:
+      213: -7538510260906739243
+    second: slingshot tier 1_5
+  - first:
+      213: 3467613158340292878
+    second: slingshot tier 1_6
+  - first:
+      213: -6440025481937767206
+    second: slingshot tier 1_7
+  - first:
+      213: 5497130186465021526
+    second: slingshot tier 1_8
+  - first:
+      213: -7144392195319037907
+    second: slingshot tier 1_9
+  - first:
+      213: 8650422873700430384
+    second: slingshot tier 1_10
+  - first:
+      213: 2554801497298999875
+    second: slingshot tier 1_11
+  - first:
+      213: -8023975209661213143
+    second: slingshot tier 1_12
+  - first:
+      213: -2994525335904603333
+    second: slingshot tier 1_13
+  - first:
+      213: -8915188688117237008
+    second: slingshot tier 1_14
+  - first:
+      213: 4409420212598622662
+    second: slingshot tier 1_15
+  - first:
+      213: 2989393689695379455
+    second: slingshot tier 1_16
+  - first:
+      213: 7261599215894568298
+    second: slingshot tier 1_17
+  - first:
+      213: 2659012846446590100
+    second: slingshot tier 1_18
+  - first:
+      213: 1527305691911313529
+    second: slingshot tier 1_19
+  - first:
+      213: 6136949024825190341
+    second: slingshot tier 1_20
+  - first:
+      213: -225884312878470801
+    second: slingshot tier 1_21
+  - first:
+      213: 354014192358590972
+    second: slingshot tier 1_22
+  - first:
+      213: -6640863137158686057
+    second: slingshot tier 1_23
+  - first:
+      213: 2865270152779336615
+    second: slingshot tier 1_24
+  - first:
+      213: -2381955791850995981
+    second: slingshot tier 1_25
+  - first:
+      213: 2509132933384110724
+    second: slingshot tier 1_26
+  - first:
+      213: -8793688533018469075
+    second: slingshot tier 1_27
+  - first:
+      213: 3323839215522500139
+    second: slingshot tier 1_28
+  - first:
+      213: -7057634861274062276
+    second: slingshot tier 1_29
+  - first:
+      213: -6743534725133737088
+    second: slingshot tier 1_30
+  - first:
+      213: 1678049442570801043
+    second: slingshot tier 1_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slingshot tier 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22fb9ad880d7c3e0800000000000000
+      internalID: -2033427420532706772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_1
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830e5e71cfac32cc0800000000000000
+      internalID: -3736920081705869256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_2
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c31e59fdc065080800000000000000
+      internalID: -9199151034425852864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_3
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d72793875314760800000000000000
+      internalID: 7440286849868922235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_4
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1a91f16d437fd60800000000000000
+      internalID: 7923860163631096309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_5
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d93403cbd4d16790800000000000000
+      internalID: -7538510260906739243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_6
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01f7599bcf6f1030800000000000000
+      internalID: 3467613158340292878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_7
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4b2a4e1fe60a6a0800000000000000
+      internalID: -6440025481937767206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_8
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 3336
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e035097cab94c40800000000000000
+      internalID: 5497130186465021526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d208fe5a6250adc90800000000000000
+      internalID: -7144392195319037907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_10
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032f3df85c97c0870800000000000000
+      internalID: 8650422873700430384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_11
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a94260d6a747320800000000000000
+      internalID: 2554801497298999875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_12
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9265a954f0d15a090800000000000000
+      internalID: -8023975209661213143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_13
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33bf7a921f4176d0800000000000000
+      internalID: -2994525335904603333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_14
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0faf0337f13e64480800000000000000
+      internalID: -8915188688117237008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_15
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c94e5d3258613d30800000000000000
+      internalID: 4409420212598622662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_16
+      rect:
+        serializedVersion: 2
+        x: 5859
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff5618e8b57c7920800000000000000
+      internalID: 2989393689695379455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_17
+      rect:
+        serializedVersion: 2
+        x: 6696
+        y: 2576
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d96a4630266c460800000000000000
+      internalID: 7261599215894568298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1816
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49836a58816b6e420800000000000000
+      internalID: 2659012846446590100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1816
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9785ecd4f64123510800000000000000
+      internalID: 1527305691911313529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_20
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1816
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7a2658f92da2550800000000000000
+      internalID: 6136949024825190341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slingshot tier 1_21
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 1816
+        width: 837
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69ab8a0a6f7ddcf0800000000000000
+      internalID: -225884312878470801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,12 +20,14 @@ public class TowerPlace : MonoBehaviour
 
     public Color canPlaceColor;
     public Color canNotPlaceColor;
+
+    GameObject towerCurrentlyBeingDragged;
     // Start is called before the first frame update
 
 
     void Start()
     {
-
+        towerCurrentlyBeingDragged = null;
     }
 
     // Update is called once per frame
@@ -71,6 +73,7 @@ public class TowerPlace : MonoBehaviour
                 tower = slushapultTowerPrefab;
                 break;
         }
+
         RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
         if (CabbageCounter.cabbageAmount < tower.GetComponent<Tower>().cost)
         {
@@ -78,12 +81,10 @@ public class TowerPlace : MonoBehaviour
         }
         if (ray.collider == null)
         {
-            print("Can place");
             return true;
         }
         if (ray.collider.name != "RoughMapCantPlaceArea" && ray.collider.tag != "Tower")
         {
-            print("Can place");
             return true;
         }
         else
@@ -97,10 +98,53 @@ public class TowerPlace : MonoBehaviour
     public void OnBeginDrag(GameObject go)
     {
 
-        //UI
+        Transform towerSprite = go.transform.GetChild(3).transform;
+        selectedTower = towerSprite;
+
+        Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 offset = new Vector2(0, 0.5f);
+
+        GameObject prefab = null;
+        switch (go.tag)
+        {
+            case "SlingshotUI":
+                prefab = roughSlingShotTowerPrefab;
+                break;
+            case "IcicleUI":
+                prefab = icicleTowerPrefab;
+                break;
+            case "AutoballerUI":
+                prefab = autoballerTowerPrefab;
+                break;
+            case "SlushapultUI":
+                prefab = slushapultTowerPrefab;
+                break;
+        }
+
+        GameObject tower = Instantiate(prefab, position + offset, new Quaternion(), towerParent);
+        tower.GetComponent<Tower>().enemyParent = enemyParent;
+        tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
+
+        //Setting the RangeUI
+        tower.GetComponent<Tower>().SetRangeUI();
+
+        //Disabling everything not needed
+        tower.GetComponent<Tower>().enabled = false;
+        tower.GetComponent<CapsuleCollider2D>().enabled = false;
+        tower.transform.GetChild(1).gameObject.SetActive(false);
+
+        //Enabling the RangeUI
+        tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+
+        towerCurrentlyBeingDragged = tower;
+
+
+        //Hiding the tower UI and tinting
+        GameObject towerSpr = go.transform.GetChild(3).gameObject;
+        towerSpr.SetActive(false);
         GameObject tint = go.transform.GetChild(2).gameObject;
         tint.GetComponent<Image>().color = new Color(0, 0, 0, 0.5f);
-
+        /*
         Transform towerSprite = go.transform.GetChild(3).transform;
         selectedTower = towerSprite;
 
@@ -131,10 +175,25 @@ public class TowerPlace : MonoBehaviour
 
 
         rangeUI.GetComponent<Image>().enabled = true;
+        */
     }
 
     public void OnDrag()
     {
+        Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 offset = new Vector2(0, 0.5f);
+
+        towerCurrentlyBeingDragged.transform.position = position + offset;
+
+        if (!CheckIfCanPlace(towerCurrentlyBeingDragged.transform.position))
+        {
+            towerCurrentlyBeingDragged.transform.GetChild(0).GetComponent<SpriteRenderer>().color = canNotPlaceColor;
+        }
+        else
+        {
+            towerCurrentlyBeingDragged.transform.GetChild(0).GetComponent<SpriteRenderer>().color = canPlaceColor;
+        }
+        /*
         //print("Dragging" + Time.deltaTime);
         //UI
         selectedTower.position = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -147,16 +206,42 @@ public class TowerPlace : MonoBehaviour
         else
         {
             selectedTower.GetChild(0).GetComponent<Image>().color = canPlaceColor;
-        }
+        }*/
     }
 
     public void OnEndDrag(GameObject go)
     {
 
-        //UI
+        Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 offset = new Vector2(0, 0.5f);
+        bool canPlace = CheckIfCanPlace(position);
+
+        if (canPlace)
+        {
+            //Re-enabling everything
+            towerCurrentlyBeingDragged.GetComponent<Tower>().enabled = true;
+            towerCurrentlyBeingDragged.GetComponent<CapsuleCollider2D>().enabled = true;
+            towerCurrentlyBeingDragged.transform.GetChild(1).gameObject.SetActive(true);
+
+            //Disabling the rangeUI
+            towerCurrentlyBeingDragged.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+        {
+            Destroy(towerCurrentlyBeingDragged);
+        }
+
+        towerCurrentlyBeingDragged = null;
+
+
+
+
+        //Showing the tower ui and untinting
+        GameObject towerSpr = go.transform.GetChild(3).gameObject;
+        towerSpr.SetActive(true);
         GameObject tint = go.transform.GetChild(2).gameObject;
         tint.GetComponent<Image>().color = new Color(0, 0, 0, 0);
-
+        /*
         Transform towerSprite = go.transform.GetChild(3).transform;
         towerSprite.localPosition = new Vector3(0, 0, 0);
 
@@ -191,7 +276,8 @@ public class TowerPlace : MonoBehaviour
             tower.GetComponent<Tower>().enemyParent = enemyParent;
             tower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
         }
+        */
 
     }
-    
+
 }

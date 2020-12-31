@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014821515}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2ee94e254dfb9345be8ec31c431ed80, type: 3}
   m_Name: 
@@ -2551,6 +2551,7 @@ GameObject:
   - component: {fileID: 1444630995}
   - component: {fileID: 1444630994}
   - component: {fileID: 1444630996}
+  - component: {fileID: 1444630997}
   m_Layer: 0
   m_Name: RoughMapCantPlaceArea
   m_TagString: Untagged
@@ -4277,6 +4278,32 @@ PolygonCollider2D:
       - {x: -4.9628906, y: 3.2658691}
       - {x: -4.9731445, y: 3.2966309}
       - {x: -5.024414, y: 3.2966309}
+--- !u!61 &1444630997
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444630993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 12.365503, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15.001465}
+    newSize: {x: 6.45, y: 5.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0525246, y: 15.001465}
+  m_EdgeRadius: 0
 --- !u!1 &1448746009
 GameObject:
   m_ObjectHideFlags: 0
