@@ -71,7 +71,7 @@ public class TowerSelectUI : MonoBehaviour
 
 
             }
-            else
+            else if(tower.tag != "UI")
             {
                 //Setting tower UI to be invisible
                 for(int i = 0; i < towerParent.childCount; i++)
