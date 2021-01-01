@@ -46,7 +46,7 @@ public class Tower : MonoBehaviour
             shootingCooldown = shootingSpeed;
         } 
         shootingCooldown -= Time.deltaTime;
-        Debug.Log("URM: " + universalRangeMultiplier);
+        //Debug.Log("URM: " + universalRangeMultiplier);
     }
 
     public void Place(Vector2 position)
@@ -56,7 +56,7 @@ public class Tower : MonoBehaviour
 
     public void Upgrade()
     {
-
+        print("Upgrade");
         if (nextStage != null)
         {
             GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);

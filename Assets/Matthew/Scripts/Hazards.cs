@@ -25,6 +25,7 @@ public class Hazards : MonoBehaviour
         int stormOrNah = Random.Range(1, stormChance + 1);
         Debug.Log(stormOrNah);
         Debug.Log(Random.Range(1f, 2f));
+        print(Random.Range(0, 2));
         if (stormOrNah == 1)
         {
             Debug.Log("We're trying");
