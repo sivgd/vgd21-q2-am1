@@ -1566,9 +1566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stormChance: 1
-  stormTime: 5
+  ogStormTime: 0
+  stormTime: 10
   rangeMultiplier: 0.5
-  towerParent: {fileID: 1448746009}
 --- !u!1 &1024175286
 GameObject:
   m_ObjectHideFlags: 0
