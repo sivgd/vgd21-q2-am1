@@ -23,8 +23,7 @@ public class Hazards : MonoBehaviour
     void Update()
     {
         int stormOrNah = Random.Range(1, stormChance + 1);
-        Debug.Log(stormOrNah);
-        Debug.Log(Random.Range(1f, 2f));
+       
         if (stormOrNah == 1)
         {
             Debug.Log("We're trying");
@@ -43,7 +42,7 @@ public class Hazards : MonoBehaviour
         while (stormTime > 0)
         {
             Tower.universalRangeMultiplier = rangeMultiplier;
-            Debug.Log("Currently Storming");
+            
 
             stormTime -= Time.deltaTime;
         }
