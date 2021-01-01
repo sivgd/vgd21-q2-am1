@@ -28,13 +28,16 @@ public class Tower : MonoBehaviour
 
     float shootingCooldown = 0;
 
-    public static float universalRangeMultiplier = 1;
+    public float universalRangeMultiplier;
+    public GameObject gameMaster;
     private void Start()
     {
         SetRangeUI();
+        
     }
     public void Update()
     {
+        universalRangeMultiplier = gameMaster.gameObject.GetComponent<Hazards>().rangeMultiplier;
         //A line between tower and closest enemy for debugging target selection
         if (ClosestEnemy() != null)
         {

@@ -26,7 +26,7 @@ public class Hazards : MonoBehaviour
        
         if (stormOrNah == 1)
         {
-            Debug.Log("We're trying");
+            
             Snowstorm();
         }
 
@@ -41,12 +41,12 @@ public class Hazards : MonoBehaviour
         
         while (stormTime > 0)
         {
-            Tower.universalRangeMultiplier = rangeMultiplier;
+            rangeMultiplier = 0.5f;
             
 
             stormTime -= Time.deltaTime;
         }
         stormTime = ogStormTime;
-        Tower.universalRangeMultiplier = 1;
+        rangeMultiplier = 1f;
     }
 }
