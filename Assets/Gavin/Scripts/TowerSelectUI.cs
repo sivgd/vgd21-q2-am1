@@ -67,11 +67,22 @@ public class TowerSelectUI : MonoBehaviour
                     UnityEngine.Events.UnityAction closeTowerSelectUI = new UnityEngine.Events.UnityAction(CloseTowerSelectUI);
                     upgradeButton.onClick.AddListener(upgradeEvent);
                     upgradeButton.onClick.AddListener(closeTowerSelectUI);
+                }else if(tower.tag != "UI")
+                {
+                    //Setting tower UI to be invisible
+                    for (int i = 0; i < towerParent.childCount; i++)
+                    {
+                        towerParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                    }
+
+
+                    towerSelect.gameObject.SetActive(false);
+                    towerSelections.gameObject.SetActive(true);
                 }
 
 
             }
-            else if(tower.tag != "UI")
+            else
             {
                 //Setting tower UI to be invisible
                 for(int i = 0; i < towerParent.childCount; i++)
