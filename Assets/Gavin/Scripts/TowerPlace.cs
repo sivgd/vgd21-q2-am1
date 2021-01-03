@@ -28,6 +28,8 @@ public class TowerPlace : MonoBehaviour
     void Start()
     {
         towerCurrentlyBeingDragged = null;
+
+        Tower.gameMaster = gameObject;
     }
 
     // Update is called once per frame
@@ -226,6 +228,9 @@ public class TowerPlace : MonoBehaviour
 
             //Disabling the rangeUI
             towerCurrentlyBeingDragged.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+
+            //Taking the cost of the tower from cabbage amount
+            CabbageCounter.cabbageAmount -= towerCurrentlyBeingDragged.GetComponent<Tower>().cost;
         }
         else
         {

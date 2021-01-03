@@ -158,7 +158,7 @@ MonoBehaviour:
   shootingSpeed: 0.2
   shootingDamage: 1
   range: 4
-  cost: 10
+  cost: 200
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
@@ -169,6 +169,8 @@ MonoBehaviour:
   stage: 1
   ammunition: {fileID: 6500604990334557360, guid: 5dec9c2811da086409a0d49a720244e5,
     type: 3}
+  universalRangeMultiplier: 0
+  gameMaster: {fileID: 0}
 --- !u!70 &8440281830995966487
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class Tower : MonoBehaviour
 
     public GameObject nextStage;
 
+    public static GameObject gameMaster;
 
     public string towerName;
     public int stage;
@@ -29,7 +30,6 @@ public class Tower : MonoBehaviour
     float shootingCooldown = 0;
 
     public float universalRangeMultiplier;
-    public GameObject gameMaster;
     private void Start()
     {
         SetRangeUI();
@@ -62,6 +62,13 @@ public class Tower : MonoBehaviour
         print("Upgrade");
         if (nextStage != null)
         {
+            float costOfTower = nextStage.GetComponent<Tower>().cost;
+            if (CabbageCounter.cabbageAmount <= costOfTower)
+            {
+                print("Not enough money");
+                return;
+            }
+
             GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);
             newTower.GetComponent<Tower>().enemyParent = enemyParent;
             newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;

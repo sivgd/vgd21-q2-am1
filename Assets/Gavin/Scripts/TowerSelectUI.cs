@@ -21,6 +21,17 @@ public class TowerSelectUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //FOR DEBUGGING ADDS MONEY
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            CabbageCounter.cabbageAmount += 100;
+
+            print(CabbageCounter.cabbageAmount);
+        }
+
+
+
+
         if (Input.GetMouseButtonDown(0))
         {
             
@@ -59,7 +70,18 @@ public class TowerSelectUI : MonoBehaviour
                     towerSelect.GetChild(4).GetComponent<Text>().text = "Range: " + towerScript.range.ToString();
                     //Set the Stage of the tower
                     towerSelect.GetChild(5).GetComponent<Text>().text = "Current Stage: " + towerScript.stage.ToString();
-
+                    //Upgrade stuff
+                    if(towerScript.nextStage != null)
+                    {
+                        //Set the Cost of the Upgrade
+                        towerSelect.GetChild(6).GetComponent<Text>().text = "Cost of Upgrade: " + towerScript.nextStage.GetComponent<Tower>().cost.ToString();
+                    }
+                    else
+                    {
+                        //There is no more upgrades
+                        towerSelect.GetChild(6).GetComponent<Text>().text = "No more Upgrades";
+                    }
+                    
 
                     //Set the UpgradeButton button's game object to the selected tower
                     upgradeButton.onClick.RemoveAllListeners();//Removing all the other upgradebutton listeners
