@@ -67,17 +67,6 @@ public class TowerSelectUI : MonoBehaviour
                     UnityEngine.Events.UnityAction closeTowerSelectUI = new UnityEngine.Events.UnityAction(CloseTowerSelectUI);
                     upgradeButton.onClick.AddListener(upgradeEvent);
                     upgradeButton.onClick.AddListener(closeTowerSelectUI);
-                }else if(tower.tag != "UI")
-                {
-                    //Setting tower UI to be invisible
-                    for (int i = 0; i < towerParent.childCount; i++)
-                    {
-                        towerParent.transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-                    }
-
-
-                    towerSelect.gameObject.SetActive(false);
-                    towerSelections.gameObject.SetActive(true);
                 }
 
 
@@ -102,10 +91,13 @@ public class TowerSelectUI : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(pos, Vector2.zero);
         if(ray.collider != null)
         {
-            if(ray.collider.gameObject.tag == "TowerSelect" || ray.collider.gameObject.tag == "UI")
+            print("1");
+            if (ray.collider.gameObject.tag == "TowerSelect" || ray.collider.gameObject.tag == "UI")
             {
+                print("2");
                 return ray.collider.transform.parent.gameObject;
             }
+            print(ray.collider.gameObject.name);
         }
         return null;
     }
