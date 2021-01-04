@@ -59,6 +59,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Demo");
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("CreditScene");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quitting Game...");
