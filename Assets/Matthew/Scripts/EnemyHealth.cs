@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public float flashTime;
     public float health;
     public float maxHealth;
-    public float damage;
+    public int damage;
     float bulletDamage;
     public GameObject cabbageCounter;
     SpriteRenderer sr;
@@ -41,6 +41,12 @@ public class EnemyHealth : MonoBehaviour
                 return;
             }
             Destroy(collision.gameObject);
+        }
+        if (collision.tag == "Farm")
+        {
+            collision.GetComponent<Farm>().farmHealth -= damage;
+
+            Destroy(gameObject);
         }
     }
 

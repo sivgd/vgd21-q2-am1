@@ -12,6 +12,7 @@ TagManager:
   - SlingshotUI
   - AutoballerUI
   - SlushapultUI
+  - Farm
   layers:
   - Default
   - TransparentFX
