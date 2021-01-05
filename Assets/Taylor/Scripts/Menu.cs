@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,13 +11,15 @@ public class Menu : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
                 Resume();
-            }else
+            }
+            else
             {
                 Pause();
             }
@@ -38,12 +40,15 @@ public class Menu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void RestartGame()
+    public void Restart()
     {
         Debug.Log("Restarting Game...");
         CabbageCounter.cabbageAmount = 0;
-    }
+        WaveCounter.waveNumber = 0;
 
+        SceneManager.LoadScene("Demo");
+        GameIsPaused = false;
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
