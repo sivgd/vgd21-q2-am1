@@ -39,12 +39,13 @@ public class Hazards : MonoBehaviour
     {
         
         
-        while (stormTime > 0)
+        if (stormTime > 0)
         {
             rangeMultiplier = 0.5f;
-            
+            Debug.Log("Time: " + stormTime);
 
             stormTime -= Time.deltaTime;
+            return;
         }
         stormTime = ogStormTime;
         rangeMultiplier = 1f;
