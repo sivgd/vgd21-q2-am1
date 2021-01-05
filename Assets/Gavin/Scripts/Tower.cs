@@ -49,7 +49,7 @@ public class Tower : MonoBehaviour
             shootingCooldown = shootingSpeed;
         } 
         shootingCooldown -= Time.deltaTime;
-        Debug.Log("URM: " + universalRangeMultiplier);
+        
     }
 
     public void Place(Vector2 position)

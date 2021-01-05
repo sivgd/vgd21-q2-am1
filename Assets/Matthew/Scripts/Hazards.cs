@@ -8,15 +8,16 @@ public class Hazards : MonoBehaviour
 
     bool snowstorm;
     public int stormChance;
-    public float ogStormTime;
+    
     public float stormTime;
     public float rangeMultiplier;
+    public float ogRangeMultiplier;
    
     
     // Start is called before the first frame update
     void Start()
     {
-        ogStormTime = stormTime;
+        
     }
 
     // Update is called once per frame
@@ -24,30 +25,26 @@ public class Hazards : MonoBehaviour
     {
         int stormOrNah = Random.Range(1, stormChance + 1);
        
-        if (stormOrNah == 1)
+        if (stormOrNah == 1 && snowstorm == false)
         {
             
-            Snowstorm();
+            StartCoroutine(Snowstorm());
+            return;
         }
-
+        
 
         
     }
 
-
-    void Snowstorm()
+    IEnumerator Snowstorm()
     {
-        
-        
-        if (stormTime > 0)
-        {
-            rangeMultiplier = 0.5f;
-            Debug.Log("Time: " + stormTime);
-
-            stormTime -= Time.deltaTime;
-            return;
-        }
-        stormTime = ogStormTime;
+        snowstorm = true;
+        rangeMultiplier = ogRangeMultiplier;
+        Debug.Log("Start Wait");
+        yield return new WaitForSeconds(stormTime);
+        Debug.Log("End Wait");
         rangeMultiplier = 1f;
+        snowstorm = false;
+
     }
 }
