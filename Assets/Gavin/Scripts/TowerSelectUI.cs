@@ -15,12 +15,15 @@ public class TowerSelectUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Tower.gameMaster = gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
+
         //FOR DEBUGGING ADDS MONEY
         if (Input.GetKeyDown(KeyCode.O))
         {
@@ -43,6 +46,10 @@ public class TowerSelectUI : MonoBehaviour
 
                 if (tower.tag == "Tower")
                 {
+
+                    tower.GetComponent<Tower>().SetRangeUI();
+
+
                     //Setting tower UI to be invisible
                     for (int i = 0; i < towerParent.childCount; i++)
                     {
@@ -68,6 +75,12 @@ public class TowerSelectUI : MonoBehaviour
                     towerSelect.GetChild(3).GetComponent<Text>().text = "Shooting Speed: " + towerScript.shootingSpeed.ToString();
                     //Set the range of the tower
                     towerSelect.GetChild(4).GetComponent<Text>().text = "Range: " + towerScript.range.ToString();
+
+                    /*if(towerScript.universalRangeMultiplier != 1)
+                    {
+                        towerSelect.GetChild(4).GetComponent<Text>().text += "; Snow storm active: " + towerScript.universalRangeMultiplier;
+                    }*/
+
                     //Set the Stage of the tower
                     towerSelect.GetChild(5).GetComponent<Text>().text = "Current Stage: " + towerScript.stage.ToString();
                     //Upgrade stuff

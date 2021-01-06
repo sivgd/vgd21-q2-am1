@@ -29,15 +29,14 @@ public class Tower : MonoBehaviour
 
     float shootingCooldown = 0;
 
-    public float universalRangeMultiplier;
+    public static float universalRangeMultiplier;
     private void Start()
     {
         SetRangeUI();
-        
     }
     public void Update()
     {
-        universalRangeMultiplier = gameMaster.gameObject.GetComponent<Hazards>().rangeMultiplier;
+        
         //A line between tower and closest enemy for debugging target selection
         if (ClosestEnemy() != null)
         {
@@ -48,8 +47,10 @@ public class Tower : MonoBehaviour
             Shoot();
             shootingCooldown = shootingSpeed;
         } 
-        shootingCooldown -= Time.deltaTime;
+
         
+
+        shootingCooldown -= Time.deltaTime;
     }
 
     public void Place(Vector2 position)
@@ -87,6 +88,8 @@ public class Tower : MonoBehaviour
 
     Transform ClosestEnemy()
     {
+        float currentRange = universalRangeMultiplier * range;
+
         //gets and returns the closest enemy under the enemyParent
         if(enemyParent.childCount == 0)
         {
@@ -98,7 +101,7 @@ public class Tower : MonoBehaviour
 
         for(int i = 0;i< enemyParent.childCount; i++)
         {
-            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < range * universalRangeMultiplier)
+            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange * universalRangeMultiplier)
             {
                 enemiesInRange.Add(enemyParent.GetChild(i));
             }
@@ -162,6 +165,9 @@ public class Tower : MonoBehaviour
 
     public void SetRangeUI()
     {
-        transform.GetChild(0).localScale = new Vector3(range * 2, range * 2, 1);
+        print("Range: " + range);
+        print("Uni range: " + universalRangeMultiplier);
+        transform.GetChild(0).localScale = new Vector3(range * 2 * universalRangeMultiplier, range * 2 * universalRangeMultiplier, 1);
     }
+
 }
