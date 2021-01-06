@@ -13,6 +13,7 @@ TagManager:
   - AutoballerUI
   - SlushapultUI
   - Farm
+  - Enemy
   layers:
   - Default
   - TransparentFX
