@@ -7,15 +7,15 @@ public class FarmHealthBar : MonoBehaviour
 {
     public Slider slider;
 
-    public void SetMaxHealth(int health)
+    public void SetMaxFarmHealth(int farmHealth)
     {
-        slider.maxValue = health;
-        slider.value = health;
+        slider.maxValue = farmHealth;
+        slider.value = farmHealth;
     }
 
-    public void SetHealth(int health)
+    public void SetHealth(int farmHealth)
     {
-        slider.value = health;
+        slider.value = farmHealth;
     }
 
 }
