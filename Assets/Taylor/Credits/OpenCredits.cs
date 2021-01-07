@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class OpenCredits : MonoBehaviour
 {
+    public Scene creditScene;
+
     // Start is called before the first frame update
     void Start()
     {
