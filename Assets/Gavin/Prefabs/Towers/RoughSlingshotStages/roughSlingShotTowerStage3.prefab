@@ -101,12 +101,13 @@ MonoBehaviour:
   shootingSpeed: 0.35
   shootingDamage: 8
   range: 7
-  cost: 4
+  cost: 80
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   nextStage: {fileID: 0}
+  nothing: {fileID: 0}
   towerName: Sling Shot
   stage: 3
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,

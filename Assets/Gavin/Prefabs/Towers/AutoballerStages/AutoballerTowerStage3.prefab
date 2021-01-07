@@ -182,12 +182,13 @@ MonoBehaviour:
   shootingSpeed: 0.13
   shootingDamage: 2
   range: 7
-  cost: 4
+  cost: 100
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   nextStage: {fileID: 0}
+  nothing: {fileID: 0}
   towerName: Autoballer
   stage: 3
   ammunition: {fileID: 6500604990334557360, guid: 5dec9c2811da086409a0d49a720244e5,

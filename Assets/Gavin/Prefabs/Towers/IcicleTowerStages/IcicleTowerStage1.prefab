@@ -239,13 +239,14 @@ MonoBehaviour:
   shootingSpeed: 0.6
   shootingDamage: 2
   range: 4
-  cost: 0
+  cost: 100
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   nextStage: {fileID: 606179438672042935, guid: 16eb252d3b76c664cb1e6b03301e8484,
     type: 3}
+  nothing: {fileID: 0}
   towerName: Icicle Launcher
   stage: 1
   ammunition: {fileID: 2102751373245527714, guid: b4238dea46e0d114094de73177c07666,

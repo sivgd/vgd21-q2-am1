@@ -82,7 +82,7 @@ public class TowerPlace : MonoBehaviour
     public void PlaceTower()
     {
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 offset = new Vector2(0, 0.5f);
+
         bool canPlace = CheckIfCanPlace(position);
 
         if (canPlace)

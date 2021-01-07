@@ -9,6 +9,7 @@ public class TowerInfo : MonoBehaviour
     public GameObject towerInfo;
     public TowerUpgradeButtonScript upgradeButton;
 
+    public Transform towerParent;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,11 @@ public class TowerInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            CabbageCounter.cabbageAmount += 100;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -30,9 +36,14 @@ public class TowerInfo : MonoBehaviour
 
                 SetTowerInfo(tower);
                 upgradeButton.selectedTower = tower.GetComponent<Tower>();
+                tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
             else
             {
+                for(int i = 0; i < towerParent.childCount; i++)
+                {
+                    towerParent.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
                 towerInfo.SetActive(false);
             }
         }

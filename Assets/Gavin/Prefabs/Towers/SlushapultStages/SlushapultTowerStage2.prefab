@@ -239,13 +239,14 @@ MonoBehaviour:
   shootingSpeed: 0.75
   shootingDamage: 5
   range: 3
-  cost: 100
+  cost: 50
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   nextStage: {fileID: 3097082169236665127, guid: e06998686f8bf7f47a7cdc8d9a04e07d,
     type: 3}
+  nothing: {fileID: 0}
   towerName: Slushapult
   stage: 2
   ammunition: {fileID: 3642762912049621414, guid: 8f804359f90821646921a311fbe1ae71,
