@@ -47,6 +47,8 @@ public class EnemyHealth : MonoBehaviour
             collision.GetComponent<Farm>().farmHealth -= damage;
 
             Destroy(gameObject);
+            Waves.enemiesAlive--;
+            CabbageCounter.cabbageAmount += 100;
         }
     }
 
