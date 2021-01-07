@@ -22,6 +22,8 @@ public class Tower : MonoBehaviour
 
     public static GameObject gameMaster;
 
+    public GameObject nothing;
+
     public string towerName;
     public int stage;
 
@@ -32,6 +34,10 @@ public class Tower : MonoBehaviour
     public static float universalRangeMultiplier;
     private void Start()
     {
+        if(nextStage == null)
+        {
+            print("JO");
+        }
         SetRangeUI();
     }
     public void Update()
@@ -60,9 +66,10 @@ public class Tower : MonoBehaviour
 
     public void Upgrade()
     {
-        print("Upgrade");
+        
         if (nextStage != null)
         {
+            print("Upgrade");
             float costOfTower = nextStage.GetComponent<Tower>().cost;
             if (CabbageCounter.cabbageAmount <= costOfTower)
             {

@@ -3,7 +3,20 @@ guid: f1377038c46b60b4299481ab3e5c6270
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - camera: {instanceID: 0}
+  - towerBeingPlaced: {instanceID: 0}
+  - towerParent: {instanceID: 0}
+  - enemyParent: {instanceID: 0}
+  - ammunitionParent: {instanceID: 0}
+  - roughSlingShotTowerPrefab: {fileID: 5689718888534118928, guid: 1f4d9e881b68cea49b7a69109f387072,
+      type: 3}
+  - icicleTowerPrefab: {fileID: 5416334768566001902, guid: e96f3d70502fc2e4791115b2dd42101b,
+      type: 3}
+  - autoballerTowerPrefab: {fileID: 4621128496862940174, guid: df441efe672d15240955462fac450bf8,
+      type: 3}
+  - slushapultTowerPrefab: {fileID: 8400765888892534785, guid: 97daa5d6070c9774dad4796a087cd198,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
