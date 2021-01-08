@@ -5983,12 +5983,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7d7a7d4acf3388a45b3cecdec8f1186a,
+      objectReference: {fileID: -4510106304517595345, guid: c9bbef68229561845956e61332c8e136,
         type: 3}
     - target: {fileID: 2991817361663435872, guid: 8563170207f022348b6bcadb4216d9e7,
         type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991817361663435872, guid: 8563170207f022348b6bcadb4216d9e7,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2991817361663435935, guid: 8563170207f022348b6bcadb4216d9e7,
         type: 3}

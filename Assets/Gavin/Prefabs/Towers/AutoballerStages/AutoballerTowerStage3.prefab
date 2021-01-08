@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4052016505389951289}
   - component: {fileID: 2075259376425852358}
   - component: {fileID: 953579986555002662}
+  - component: {fileID: 4446670879251504607}
   m_Layer: 0
   m_Name: AutoballerTowerStage3
   m_TagString: Tower
@@ -155,8 +156,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7d7a7d4acf3388a45b3cecdec8f1186a, type: 3}
-  m_Color: {r: 1, g: 0.07017544, b: 0, a: 1}
+  m_Sprite: {fileID: 4615720092872136855, guid: 1d025b2afcdb52b4a8aa0819176baf55,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -209,6 +211,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018327832, y: -0.3440407}
   m_Size: {x: 1.2689424, y: 1.6117245}
   m_Direction: 0
+--- !u!95 &4446670879251504607
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052016505389951295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 694f69b8f9dbbaf48a389524fd847d80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5417016670459532353
 GameObject:
   m_ObjectHideFlags: 0
