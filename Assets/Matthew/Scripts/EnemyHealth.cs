@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if (collision.tag == "Farm")
         {
-            collision.GetComponent<Farm>().farmHealth -= damage;
+            
 
             Destroy(gameObject);
             Waves.enemiesAlive--;
