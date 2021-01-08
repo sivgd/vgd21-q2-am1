@@ -22,7 +22,8 @@ public class Farm : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            farm.GetComponent<EnemyFarmCollision>().currentFarmHealth -= collision.GetComponent<EnemyHealth>().damage;
+            
+            farm.GetComponent<EnemyFarmCollision>().TakeDamage(collision.GetComponent<EnemyHealth>().damage);
         }
     }
 }

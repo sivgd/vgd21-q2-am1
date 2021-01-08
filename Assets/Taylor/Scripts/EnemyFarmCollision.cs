@@ -44,7 +44,7 @@ public class EnemyFarmCollision : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentFarmHealth -= damage;
 
