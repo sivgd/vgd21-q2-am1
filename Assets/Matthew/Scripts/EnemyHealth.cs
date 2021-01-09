@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     SpriteRenderer sr;
     Color originalColor;
     public GameObject healthBar;
+    public int money;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
 
             Destroy(gameObject);
             Waves.enemiesAlive--;
-            CabbageCounter.cabbageAmount += 100;
+            CabbageCounter.cabbageAmount += money;
         }
     }
 
@@ -60,7 +61,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(healthBar);
-            CabbageCounter.cabbageAmount += 100;
+            CabbageCounter.cabbageAmount += money;
             Waves.enemiesAlive--;
         }
         Debug.Log(health);
