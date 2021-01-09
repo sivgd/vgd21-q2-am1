@@ -237,16 +237,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 600
-  shootingSpeed: 0.5
-  shootingDamage: 2
-  range: 4
-  cost: 100
+  shootingSpeed: 1
+  shootingDamage: 1
+  range: 1
+  cost: 1
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
   ammunitionParent: {fileID: 0}
   nextStage: {fileID: 2995190520303157837, guid: 496dbd7f696e7f644aebef1b2d42f5fb,
     type: 3}
+  nothing: {fileID: 0}
   towerName: Sling Shot
   stage: 1
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
