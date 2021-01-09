@@ -49,6 +49,7 @@ public class LoadSheet : MonoBehaviour
 
         for(int i = 0; i < towers.Length; i++)
         {
+            print("Lots");
             SetDataForTower(i);
         }
 
@@ -74,9 +75,9 @@ public class LoadSheet : MonoBehaviour
         print("Tower: " + towerCellStarts[enemy]);
         int colOffset = 1;
 
-        enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset]);
-        enemies[enemy].GetComponent<EnemyHealth>().damage = int.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 1]);
-        enemies[enemy].GetComponent<PathCreation.Examples.PathFollower>().speed = float.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 2]);
-        enemies[enemy].GetComponent<EnemyHealth>().money = int.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 3]);
+        enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset]);
+        enemies[enemy].GetComponent<EnemyHealth>().damage = int.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 1]);
+        enemies[enemy].GetComponent<PathCreation.Examples.PathFollower>().speed = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 2]);
+        enemies[enemy].GetComponent<EnemyHealth>().money = int.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 3]);
     }
 }
