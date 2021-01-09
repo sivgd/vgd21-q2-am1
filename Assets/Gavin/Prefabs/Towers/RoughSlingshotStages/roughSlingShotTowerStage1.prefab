@@ -237,10 +237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 600
-  shootingSpeed: 1
-  shootingDamage: 1
-  range: 1
-  cost: 1
+  shootingSpeed: 0.7
+  shootingDamage: 3
+  range: 4
+  cost: 100
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}

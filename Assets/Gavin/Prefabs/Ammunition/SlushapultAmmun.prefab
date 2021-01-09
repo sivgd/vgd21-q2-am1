@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  speed: 8
+  speed: 15
   isPiercing: 0
   isAoe: 1
   dir: {x: 0, y: 0}
