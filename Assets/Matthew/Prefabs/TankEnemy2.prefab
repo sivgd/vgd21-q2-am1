@@ -65,17 +65,32 @@ PrefabInstance:
     - target: {fileID: 1511470625747951749, guid: 8e743e1f2f82c5847991ee633083cd72,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1511470625747951749, guid: 8e743e1f2f82c5847991ee633083cd72,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1511470625747951864, guid: 8e743e1f2f82c5847991ee633083cd72,
         type: 3}
       propertyPath: m_Name
       value: TankEnemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511470625747951866, guid: 8e743e1f2f82c5847991ee633083cd72,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511470625747951866, guid: 8e743e1f2f82c5847991ee633083cd72,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5209382
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511470625747951866, guid: 8e743e1f2f82c5847991ee633083cd72,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1511470625747951867, guid: 8e743e1f2f82c5847991ee633083cd72,
         type: 3}
