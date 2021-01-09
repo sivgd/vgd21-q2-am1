@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,19 @@ public class TowerPlace : MonoBehaviour
     public Color canPlaceColor;
     public Color canNotPlaceColor;
 
+    int slingAmount;
+    int autoAmount;
+    int iceAmount;
+
+    public float increaseMultiplier;
     public void Start()
     {
         Tower.gameMaster = gameObject;
         Tower.universalRangeMultiplier = gameObject.GetComponent<Hazards>().rangeMultiplier;
         isTowerBeingDragged = false;
+        slingAmount = 0;
+        autoAmount = 0;
+        iceAmount = 0;
     }
 
     public void Update()
@@ -84,7 +93,7 @@ public class TowerPlace : MonoBehaviour
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
         bool canPlace = CheckIfCanPlace(position);
-
+        Debug.Log(towerBeingPlaced.name);
         if (canPlace)
         {
             //Re-enabling everything
@@ -94,9 +103,30 @@ public class TowerPlace : MonoBehaviour
 
             //Disabling the rangeUI
             towerBeingPlaced.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-
+            
             //Taking the cost of the tower from cabbage amount
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().cost;
+            Debug.Log(towerBeingPlaced.GetComponent<Tower>().name);
+            if(towerBeingPlaced.GetComponent<Tower>().name == "Sling Shot")
+            {
+                Debug.Log("Slings: " + slingAmount);
+                slingAmount++;
+                Debug.Log("Slings: " + slingAmount);
+                slushapultTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().cost);
+                
+            }
+            else if (towerBeingPlaced.name == "AutoballerTowerStage1")
+            {
+                autoAmount++;
+                autoballerTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().cost);
+
+            }
+            else if (towerBeingPlaced.name == "IcicleTowerStage1")
+            {
+                iceAmount++;
+                icicleTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().cost);
+
+            }
         }
         else
         {
@@ -113,7 +143,7 @@ public class TowerPlace : MonoBehaviour
 
     public void OnDrag()
     {
-        print("drag");
+
 
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -133,7 +163,7 @@ public class TowerPlace : MonoBehaviour
 
     public void OnEndDrag()
     {
-        print("Drag End");
+       
 
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -142,6 +172,7 @@ public class TowerPlace : MonoBehaviour
         if (canPlace)
         {
             //Re-enabling everything
+            Debug.Log(towerBeingPlaced.GetComponent<Tower>().towerName);
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
             towerBeingPlaced.transform.GetChild(1).gameObject.SetActive(true);
@@ -151,6 +182,26 @@ public class TowerPlace : MonoBehaviour
 
             //Taking the cost of the tower from cabbage amount
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().cost;
+            if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
+            {
+                Debug.Log("Slings: " + slingAmount);
+                slingAmount++;
+                Debug.Log("Slings: " + slingAmount);
+                slushapultTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().cost);
+
+            }
+            else if (towerBeingPlaced.name == "AutoballerTowerStage1")
+            {
+                autoAmount++;
+                autoballerTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().cost);
+
+            }
+            else if (towerBeingPlaced.name == "IcicleTowerStage1")
+            {
+                iceAmount++;
+                icicleTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().cost);
+
+            }
         }
         else
         {
@@ -177,7 +228,7 @@ public class TowerPlace : MonoBehaviour
 
         farmerMenu.gameObject.SetActive(false);
 
-        print("Drag Begin");
+        
 
         isTowerBeingDragged = true;
 

@@ -31,13 +31,12 @@ public class Tower : MonoBehaviour
 
     float shootingCooldown = 0;
 
+
+
     public static float universalRangeMultiplier;
     private void Start()
     {
-        if(nextStage == null)
-        {
-            print("JO");
-        }
+        
         SetRangeUI();
     }
     public void Update()
@@ -69,7 +68,7 @@ public class Tower : MonoBehaviour
         
         if (nextStage != null)
         {
-            print("Upgrade");
+           
             float costOfTower = nextStage.GetComponent<Tower>().cost;
             if (CabbageCounter.cabbageAmount <= costOfTower)
             {
@@ -172,8 +171,8 @@ public class Tower : MonoBehaviour
 
     public void SetRangeUI()
     {
-        print("Range: " + range);
-        print("Uni range: " + universalRangeMultiplier);
+        
+
         transform.GetChild(0).localScale = new Vector3(range * 2 * universalRangeMultiplier, range * 2 * universalRangeMultiplier, 1);
     }
 
