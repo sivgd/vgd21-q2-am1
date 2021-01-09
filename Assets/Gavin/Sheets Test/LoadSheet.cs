@@ -14,6 +14,9 @@ public class LoadSheet : MonoBehaviour
     public bool updateOnLoad;
     public GameObject[] towers;
     public int[] towerCellStarts;
+
+    public GameObject[] enemies;
+    public int[] enemyCellStarts;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +45,6 @@ public class LoadSheet : MonoBehaviour
 
         List<List<string>> data = rawData.values;
 
-        print(data[11].Count);
         //Towers
 
         for(int i = 0; i < towers.Length; i++)
@@ -50,27 +52,31 @@ public class LoadSheet : MonoBehaviour
             SetDataForTower(i);
         }
 
-        /*for(int r = 0; r < data.Count; r++)
+        for (int i = 0; i < enemies.Length; i++)
         {
-            if (rawData.values[r].Count > 0)
-            {
-                List<string> column = data[r];
-                for (int c = 0; c < column.Count; c++)
-                {
-                    print("Row: " + r + "; Col: " + c + "; Data: " + data[r][c]);
-                }
-            }
-        }*/
+            SetDataForEnemy(i);
+        }
     }
 
     void SetDataForTower(int tower)
     {
-        print("Tower: " + towerCellStarts[tower]);
+        //print("Tower: " + towerCellStarts[tower]);
         int colOffset = 1;
         
         towers[tower].GetComponent<Tower>().range = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset]);
         towers[tower].GetComponent<Tower>().shootingDamage = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 1]);
         towers[tower].GetComponent<Tower>().shootingSpeed = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 2]);
         towers[tower].GetComponent<Tower>().cost = int.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 3]);
+    }
+
+    void SetDataForEnemy(int enemy)
+    {
+        print("Tower: " + towerCellStarts[enemy]);
+        int colOffset = 1;
+
+        enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset]);
+        enemies[enemy].GetComponent<EnemyHealth>().damage = int.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 1]);
+        enemies[enemy].GetComponent<PathCreation.Examples.PathFollower>().speed = float.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 2]);
+        enemies[enemy].GetComponent<EnemyHealth>().money = int.Parse(rawData.values[towerCellStarts[enemy] - 1][colOffset + 3]);
     }
 }
