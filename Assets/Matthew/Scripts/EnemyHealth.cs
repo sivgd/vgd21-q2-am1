@@ -14,19 +14,37 @@ public class EnemyHealth : MonoBehaviour
     Color originalColor;
     public GameObject healthBar;
     public int money;
+
+    public GameObject farm;
+    new Transform transform;
+
+    private Vector3 currentPos;
+    private Vector3 lastPos;
+
+    public RuntimeAnimatorController attackAnimator;
+    
+    public float timeToDestroy;
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
+        transform = GetComponent<Transform>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        currentPos = transform.position;
+
+        if (currentPos == lastPos)
+        {
+            StartCoroutine(Attack());
+        }
+
+        lastPos = currentPos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -76,5 +94,18 @@ public class EnemyHealth : MonoBehaviour
     void EndFlash()
     {
         sr.color = originalColor;
+    }
+
+    IEnumerator Attack()
+    {
+        
+        sr.flipX = true;
+        GetComponent<Animator>().runtimeAnimatorController = attackAnimator;
+        yield return new WaitForSeconds(timeToDestroy);
+        farm.GetComponent<EnemyFarmCollision>().TakeDamage(damage);
+        Destroy(gameObject);
+        Destroy(healthBar);
+        Waves.enemiesAlive--;
+        
     }
 }

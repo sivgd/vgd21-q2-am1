@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour
         float enemyY = attachedEnemy.GetComponent<Transform>().position.y;
         float enemyZ = attachedEnemy.GetComponent<Transform>().position.z;
         float enemyYSize = attachedEnemy.GetComponent<Transform>().localScale.y;
-        gameObject.transform.position = new Vector3(enemyX, enemyY + (6/4 * enemyYSize), enemyZ);
+        gameObject.transform.position = new Vector3(enemyX, enemyY + 0.5f, enemyZ);
         gameObject.transform.localScale = new Vector3(healthPercentage * 2, 0.5f, 1);
         
     }
