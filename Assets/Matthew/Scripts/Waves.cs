@@ -40,6 +40,14 @@ public class Waves : MonoBehaviour
         WaveCounter.waveNumber += 1;
 
         WaveHandler wave = wavesVar[waveIndex];
+        for(int i = 0; i < wave.groups.Length; i++)
+        {
+            print(i);
+            StartCoroutine(SpawnGroup(wave.groups[i]));
+            yield return new WaitForSeconds(wave.groups[i].delay);
+        }
+        
+        /*
         if (wave.firstEnemy != null)
         {
             for (int i = 0; i < wave.firstCount; i++)
@@ -71,13 +79,24 @@ public class Waves : MonoBehaviour
                 SpawnEnemy(wave.fourthEnemy);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
-        }
+        }*/
         waveIndex++;
         
     }
 
+    IEnumerator SpawnGroup(Group waveGroup)
+    {
+        for (int e = 0; e < waveGroup.enemyCount; e++)
+        {
+            print("Enemy mabye spawned");
+            SpawnEnemy(waveGroup.enemyPrefab);
+            yield return new WaitForSeconds(1f / waveGroup.rate);
+        }
+    }
+
     void SpawnEnemy(GameObject enemy)
     {
+        print("Enemy spawned");
         GameObject enemyAccess = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemyParent);
         enemyAccess.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
         GameObject healthBar = Instantiate(healthBarPrefab, enemyAccess.transform);

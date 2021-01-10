@@ -123,7 +123,7 @@ namespace GoogleSheetsToUnity
 
                 if (callback != null)
                 {
-                    callback(new GstuSpreadSheet(responce, search.titleColumn,search.titleRow));
+                    //callback(new GstuSpreadSheet(responce, search.titleColumn,search.titleRow));
                 }
             }
         }

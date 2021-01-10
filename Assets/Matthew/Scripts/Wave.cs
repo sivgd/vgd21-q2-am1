@@ -5,13 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public class WaveHandler
 {
-    public GameObject firstEnemy;
-    public int firstCount;
-    public GameObject secondEnemy;
-    public int secondCount;
-    public GameObject thirdEnemy;
-    public int thirdCount;
-    public GameObject fourthEnemy;
-    public int fourthCount;
-    public float rate;
+    public Group[] groups;
+    //public float rate;//Time between each group
+}
+
+[System.Serializable]
+public class Group
+{
+    public GameObject enemyPrefab;
+    public int enemyCount;
+    public float rate;//Time between each enemy
+    public float delay;//Until the next group
 }
