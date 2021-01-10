@@ -49,7 +49,7 @@ public class LoadSheet : MonoBehaviour
 
         for(int i = 0; i < towers.Length; i++)
         {
-            print("Lots");
+           
             SetDataForTower(i);
         }
 
@@ -72,7 +72,7 @@ public class LoadSheet : MonoBehaviour
 
     void SetDataForEnemy(int enemy)
     {
-        print("Tower: " + towerCellStarts[enemy]);
+        
         int colOffset = 1;
 
         enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset]);

@@ -64,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
             CabbageCounter.cabbageAmount += money;
             Waves.enemiesAlive--;
         }
-        Debug.Log(health);
+        
     }
 
     void Flash()
