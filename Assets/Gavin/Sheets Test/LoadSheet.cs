@@ -99,7 +99,7 @@ public class LoadSheet : MonoBehaviour
     {
         
         int colOffset = 1;
-
+        print(enemies[enemy]);
         enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset]);
         enemies[enemy].GetComponent<EnemyHealth>().damage = int.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 1]);
         enemies[enemy].GetComponent<PathCreation.Examples.PathFollower>().speed = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 2]);
