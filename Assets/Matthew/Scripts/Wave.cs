@@ -5,13 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class WaveHandler
 {
-    public GameObject firstEnemy;
+    public GameObject firstGroup;
     public int firstCount;
-    public GameObject secondEnemy;
+    public GameObject secondGroup;
     public int secondCount;
-    public GameObject thirdEnemy;
+    public GameObject thirdGroup;
     public int thirdCount;
-    public GameObject fourthEnemy;
+    public GameObject fourthGroup;
     public int fourthCount;
     public float rate;
+
 }

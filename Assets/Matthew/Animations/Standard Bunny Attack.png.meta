@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: 72d85153bd1f03747a103df1310719e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7458960017239930511
+    second: Standard Bunny Attack_0
+  - first:
+      213: 5860694401285298179
+    second: Standard Bunny Attack_1
+  - first:
+      213: -3519151399790205884
+    second: Standard Bunny Attack_2
+  - first:
+      213: 6265261691973307981
+    second: Standard Bunny Attack_3
+  - first:
+      213: 7466161622530506591
+    second: Standard Bunny Attack_4
+  - first:
+      213: -5275379093304408681
+    second: Standard Bunny Attack_5
+  - first:
+      213: 507259012988841144
+    second: Standard Bunny Attack_6
+  - first:
+      213: 7660830047583773065
+    second: Standard Bunny Attack_7
+  - first:
+      213: 4353068327402039521
+    second: Standard Bunny Attack_8
+  - first:
+      213: -5225140474931249995
+    second: Standard Bunny Attack_9
+  - first:
+      213: 4556225987695620854
+    second: Standard Bunny Attack_10
+  - first:
+      213: 6907411382247799211
+    second: Standard Bunny Attack_11
+  - first:
+      213: -2321173964037487766
+    second: Standard Bunny Attack_12
+  - first:
+      213: 2347813118435168540
+    second: Standard Bunny Attack_13
+  - first:
+      213: 6002486394128206105
+    second: Standard Bunny Attack_14
+  - first:
+      213: 6399654315874501686
+    second: Standard Bunny Attack_15
+  - first:
+      213: 3981754856539146897
+    second: Standard Bunny Attack_16
+  - first:
+      213: 9188046681529129112
+    second: Standard Bunny Attack_17
+  - first:
+      213: -8316702030039843329
+    second: Standard Bunny Attack_18
+  - first:
+      213: -4919528670803928342
+    second: Standard Bunny Attack_19
+  - first:
+      213: -5106319032495368777
+    second: Standard Bunny Attack_20
+  - first:
+      213: -41717897639706102
+    second: Standard Bunny Attack_21
+  - first:
+      213: 6926951085076305980
+    second: Standard Bunny Attack_22
+  - first:
+      213: -930177458722984198
+    second: Standard Bunny Attack_23
+  - first:
+      213: 3076297280069475609
+    second: Standard Bunny Attack_24
+  - first:
+      213: -4480208005872849329
+    second: Standard Bunny Attack_25
+  - first:
+      213: -9028088809791743082
+    second: Standard Bunny Attack_26
+  - first:
+      213: 6306976611776419490
+    second: Standard Bunny Attack_27
+  - first:
+      213: 5265330318431740137
+    second: Standard Bunny Attack_28
+  - first:
+      213: -6270509839568766234
+    second: Standard Bunny Attack_29
+  - first:
+      213: -8625742007930953038
+    second: Standard Bunny Attack_30
+  - first:
+      213: 5006748001575551418
+    second: Standard Bunny Attack_31
+  - first:
+      213: 3239617588212792167
+    second: Standard Bunny Attack_32
+  - first:
+      213: 7018453224813141564
+    second: Standard Bunny Attack_33
+  - first:
+      213: 4880985888321888096
+    second: Standard Bunny Attack_34
+  - first:
+      213: -1781674462932452764
+    second: Standard Bunny Attack_35
+  - first:
+      213: 7185987191332778747
+    second: Standard Bunny Attack_36
+  - first:
+      213: 8890687082074741673
+    second: Standard Bunny Attack_37
+  - first:
+      213: 2038673510948519844
+    second: Standard Bunny Attack_38
+  - first:
+      213: -1725128255007897332
+    second: Standard Bunny Attack_39
+  - first:
+      213: 2497087035141817058
+    second: Standard Bunny Attack_40
+  - first:
+      213: -5344757845833328213
+    second: Standard Bunny Attack_41
+  - first:
+      213: -373096343153591297
+    second: Standard Bunny Attack_42
+  - first:
+      213: -6384537381927549949
+    second: Standard Bunny Attack_43
+  - first:
+      213: 4384811756589372848
+    second: Standard Bunny Attack_44
+  - first:
+      213: 5269166965084369983
+    second: Standard Bunny Attack_45
+  - first:
+      213: -7122449096588961154
+    second: Standard Bunny Attack_46
+  - first:
+      213: 5629455929021255062
+    second: Standard Bunny Attack_47
+  - first:
+      213: 7517457321254246173
+    second: Standard Bunny Attack_48
+  - first:
+      213: -1681259090610831182
+    second: Standard Bunny Attack_49
+  - first:
+      213: 8048307454988394510
+    second: Standard Bunny Attack_50
+  - first:
+      213: 7125616490623586285
+    second: Standard Bunny Attack_51
+  - first:
+      213: -8036785534874815816
+    second: Standard Bunny Attack_52
+  - first:
+      213: -3347952517436469596
+    second: Standard Bunny Attack_53
+  - first:
+      213: -1465234479468090413
+    second: Standard Bunny Attack_54
+  - first:
+      213: 8734367580723645126
+    second: Standard Bunny Attack_55
+  - first:
+      213: 8887991641948905257
+    second: Standard Bunny Attack_56
+  - first:
+      213: 432601029607776070
+    second: Standard Bunny Attack_57
+  - first:
+      213: 7651224789943818426
+    second: Standard Bunny Attack_58
+  - first:
+      213: 5133360699643750958
+    second: Standard Bunny Attack_59
+  - first:
+      213: -8836173022183598143
+    second: Standard Bunny Attack_60
+  - first:
+      213: 3665484435412623177
+    second: Standard Bunny Attack_61
+  - first:
+      213: 5754916610996572103
+    second: Standard Bunny Attack_62
+  - first:
+      213: 5874547623778051063
+    second: Standard Bunny Attack_63
+  - first:
+      213: 4089895269223251119
+    second: Standard Bunny Attack_64
+  - first:
+      213: -6581649501941124098
+    second: Standard Bunny Attack_65
+  - first:
+      213: -9041966298260034670
+    second: Standard Bunny Attack_66
+  - first:
+      213: -8170662555369659999
+    second: Standard Bunny Attack_67
+  - first:
+      213: 6795489775853836164
+    second: Standard Bunny Attack_68
+  - first:
+      213: 5758295402460229737
+    second: Standard Bunny Attack_69
+  - first:
+      213: -3785974540618985426
+    second: Standard Bunny Attack_70
+  - first:
+      213: 6323230323038888110
+    second: Standard Bunny Attack_71
+  - first:
+      213: 6922392573365904533
+    second: Standard Bunny Attack_72
+  - first:
+      213: -9015904488473132804
+    second: Standard Bunny Attack_73
+  - first:
+      213: -8310372952742963334
+    second: Standard Bunny Attack_74
+  - first:
+      213: -4929396769004919522
+    second: Standard Bunny Attack_75
+  - first:
+      213: 6188181614982009696
+    second: Standard Bunny Attack_76
+  - first:
+      213: 7346333157916590310
+    second: Standard Bunny Attack_77
+  - first:
+      213: -2198497980461471709
+    second: Standard Bunny Attack_78
+  - first:
+      213: -1771640414595816093
+    second: Standard Bunny Attack_79
+  - first:
+      213: 5303823486787621786
+    second: Standard Bunny Attack_80
+  - first:
+      213: 532557790284411578
+    second: Standard Bunny Attack_81
+  - first:
+      213: 2891687797371302673
+    second: Standard Bunny Attack_82
+  - first:
+      213: 6279317715027889145
+    second: Standard Bunny Attack_83
+  - first:
+      213: -7528887919210650741
+    second: Standard Bunny Attack_84
+  - first:
+      213: -2339950669823171180
+    second: Standard Bunny Attack_85
+  - first:
+      213: -1760699469817360395
+    second: Standard Bunny Attack_86
+  - first:
+      213: 7867961025794298314
+    second: Standard Bunny Attack_87
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Standard Bunny Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.5091978, y: 0.36400974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f867d6dcd9c838760800000000000000
+      internalID: 7458960017239930511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_1
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.5424786, y: 0.3755656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3081bb5b18e555150800000000000000
+      internalID: 5860694401285298179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_2
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.58907187, y: 0.36400974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444afa87276792fc0800000000000000
+      internalID: -3519151399790205884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_3
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.6057125, y: 0.35823178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e8ee6605ea2f650800000000000000
+      internalID: 6265261691973307981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_4
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.6090406, y: 0.35245386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fb59230722d9760800000000000000
+      internalID: 7466161622530506591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_5
+      rect:
+        serializedVersion: 2
+        x: 6250
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.629009, y: 0.36400974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79581103aa61ac6b0800000000000000
+      internalID: -5275379093304408681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standard Bunny Attack_6
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 0
+        width: 1250
+        height: 720
+      alignment: 9
+      pivot: {x: 0.65230626, y: 0.3755656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bca05e72652a0700800000000000000
+      internalID: 507259012988841144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

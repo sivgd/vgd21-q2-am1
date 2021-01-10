@@ -14,6 +14,9 @@ public class Waves : MonoBehaviour
     public GameObject healthBarPrefab;
     public GameObject cabbageCounter;
     public float enemyFlashTime;
+    public RuntimeAnimatorController standardAttackAnimator;
+    public RuntimeAnimatorController speedAttackAnimator;
+    public GameObject farm;
     private void Start()
     {
        
@@ -40,35 +43,35 @@ public class Waves : MonoBehaviour
         WaveCounter.waveNumber += 1;
 
         WaveHandler wave = wavesVar[waveIndex];
-        if (wave.firstEnemy != null)
+        if (wave.firstGroup != null)
         {
             for (int i = 0; i < wave.firstCount; i++)
             {
-                SpawnEnemy(wave.firstEnemy);
+                SpawnEnemy(wave.firstGroup);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }
-        if (wave.secondEnemy != null)
+        if (wave.secondGroup != null)
         {
             for (int i = 0; i < wave.secondCount; i++)
             {
-                SpawnEnemy(wave.secondEnemy);
+                SpawnEnemy(wave.secondGroup);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }
-        if (wave.thirdEnemy != null)
+        if (wave.thirdGroup != null)
         {
             for (int i = 0; i < wave.thirdCount; i++)
             {
-                SpawnEnemy(wave.thirdEnemy);
+                SpawnEnemy(wave.thirdGroup);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }
-        if (wave.fourthEnemy != null)
+        if (wave.fourthGroup != null)
         {
             for (int i = 0; i < wave.fourthCount; i++)
             {
-                SpawnEnemy(wave.fourthEnemy);
+                SpawnEnemy(wave.fourthGroup);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }
@@ -85,6 +88,16 @@ public class Waves : MonoBehaviour
         enemyAccess.GetComponent<EnemyHealth>().cabbageCounter = cabbageCounter;
         enemyAccess.GetComponent<EnemyHealth>().flashTime = enemyFlashTime;
         enemyAccess.GetComponent<EnemyHealth>().healthBar = healthBar;
+        enemyAccess.GetComponent<EnemyHealth>().farm = farm;
+        if (enemyAccess.name == "StandardEnemy(Clone)" || enemyAccess.name == "StandardEnemy2(Clone)" || enemyAccess.name == "StandardEnemy3(Clone)")
+        {
+            enemyAccess.GetComponent<EnemyHealth>().attackAnimator = standardAttackAnimator;
+        }
+        else if(enemyAccess.name == "SpeedEnemy(Clone)" || enemyAccess.name == "SpeedEnemy2(Clone)" || enemyAccess.name == "SpeedEnemy3(Clone)")
+        {
+            enemyAccess.GetComponent<EnemyHealth>().attackAnimator = speedAttackAnimator;
+        }
+        
         enemiesAlive++;
     }
 }
