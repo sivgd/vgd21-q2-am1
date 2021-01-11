@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using GoogleSheetsToUnity;
 using System.Text.RegularExpressions;
 
@@ -31,7 +32,7 @@ public class LoadSheet : MonoBehaviour
     {
         if (updateOnLoad)
         {
-            isLoaded = false;
+            //isLoaded = false;
             UpdateStats();
 
         }
@@ -42,11 +43,12 @@ public class LoadSheet : MonoBehaviour
     {
         if(rawData != null && !isLoaded)
         {
-            UpdateEverything(null);
-            isLoaded = true;
+            //UpdateEverything(null);
+            //isLoaded = true;
         }
     }
-
+    
+    [MenuItem("Window/Update")]
     void UpdateStats()
     {
         SpreadsheetManager spreadsheetManager = new SpreadsheetManager();
