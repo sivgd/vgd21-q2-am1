@@ -7843,6 +7843,21 @@ PrefabInstance:
       propertyPath: cabbageCounter
       value: 
       objectReference: {fileID: 1181954068}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: farm
+      value: 
+      objectReference: {fileID: 542238236}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: standardAttackAnimator
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d67062f2367c174587b41b4b0991097, type: 2}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: speedAttackAnimator
+      value: 
+      objectReference: {fileID: 9100000, guid: ab8baa48d90d72f47930df25482048d8, type: 2}
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
       propertyPath: m_LocalPosition.x
