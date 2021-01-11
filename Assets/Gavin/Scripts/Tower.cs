@@ -35,20 +35,10 @@ public class Tower : MonoBehaviour
 
     private void Awake()
     {
+        print("Acutal cost: " + actualCost);
         ogCost = actualCost;
-        if (towerName == "Sling Shot")
-        {
-            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);
-        }
-        else if (towerName == "Icicle Launcher")
-        {
-            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.iceAmount) * ogCost);
-        }
-        else if (towerName == "Autoballer")
-        {
-            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.autoAmount) * ogCost);
-        }
-
+        print("OGcost: " + ogCost);
+        SetActualCost();
 
     }
     public static float universalRangeMultiplier;
@@ -194,4 +184,22 @@ public class Tower : MonoBehaviour
         transform.GetChild(0).localScale = new Vector3(range * 2 * universalRangeMultiplier, range * 2 * universalRangeMultiplier, 1);
     }
 
+    public void SetActualCost()
+    {
+        
+        if (towerName == "Sling Shot")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);
+        }
+        else if (towerName == "Icicle Launcher")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.iceAmount) * ogCost);
+        }
+        else if (towerName == "Autoballer")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.autoAmount) * ogCost);
+        }
+
+        print("Slingam: " + TowerPlace.slingAmount + "; Increase: " + TowerPlace.increaseMultiplier + "; OGCost: " + ogCost + "; actualCost: " + actualCost);
+    }
 }

@@ -30,7 +30,7 @@ public class Waves : MonoBehaviour
         }
         if (countdown <= 0f)
         {
-            print("spawn wave");
+
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             return;
@@ -44,9 +44,8 @@ public class Waves : MonoBehaviour
         WaveCounter.waveNumber += 1;
         
         WaveHandler wave = wavesVar[waveIndex];
-        print("Wave: " + waveIndex + "; " + wave.groups.Length);
+
         waveIndex++;
-        print("After waveIndex++: " + waveIndex);
         for (int i = 0; i < wave.groups.Length; i++)
         {
             
@@ -88,7 +87,6 @@ public class Waves : MonoBehaviour
             }
         }*/
         
-        Debug.Log("Wave number: " + waveIndex);
     }
 
     IEnumerator SpawnGroup(Group waveGroup)

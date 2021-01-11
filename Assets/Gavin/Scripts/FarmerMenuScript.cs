@@ -36,6 +36,7 @@ public class FarmerMenuScript : MonoBehaviour
         else
         {
             farmerMenu.SetActive(true);
+            selectedTower = null;
         }
         
     } 
@@ -55,6 +56,8 @@ public class FarmerMenuScript : MonoBehaviour
         TowerInfoUI.transform.GetChild(2).GetComponent<Text>().text = "Shooting Damage: " + towerScript.shootingDamage.ToString();
         //Set the shooting speed of the tower
         TowerInfoUI.transform.GetChild(3).GetComponent<Text>().text = "Shooting Speed: " + towerScript.shootingSpeed.ToString();
+
+        towerScript.SetActualCost();
         //Set the cost of the tower
         TowerInfoUI.transform.GetChild(4).GetComponent<Text>().text = "Cost: " + towerScript.actualCost.ToString();
     }

@@ -113,12 +113,12 @@ public class TowerPlace : MonoBehaviour
                 
                 
             }
-            else if (towerBeingPlaced.name == "AutoballerTowerStage1")
+            else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Autoballer")
             {
                 autoAmount++;
                 
             }
-            else if (towerBeingPlaced.name == "IcicleTowerStage1")
+            else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Icicle Launcher")
             {
                 iceAmount++;
                 
@@ -185,13 +185,13 @@ public class TowerPlace : MonoBehaviour
                 slushapultTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().actualCost);
 
             }
-            else if (towerBeingPlaced.name == "AutoballerTowerStage1")
+            else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Autoballer")
             {
                 autoAmount++;
                 autoballerTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().actualCost);
 
             }
-            else if (towerBeingPlaced.name == "IcicleTowerStage1")
+            else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Icicle Launcher")
             {
                 iceAmount++;
                 icicleTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().actualCost);
