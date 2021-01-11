@@ -20,7 +20,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 5231b619a1ee749b39a7712f48627248
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: d41a7cf61dcaf4bd29264520afccec63
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
-    guid: 42ea76f4ecc394b89aec73706ff0b260
+    guid: 0eff5534ff828074ba794aade98f301b
   m_configObjects: {}

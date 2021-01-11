@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
         CabbageCounter.cabbageAmount = 0;
         WaveCounter.waveNumber = 0;
 
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameIsPaused = false;
     }
     public void LoadMenu()
@@ -59,9 +59,14 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
-    public void LevelSelect()
+    public void LevelOne()
     {
         SceneManager.LoadScene("Demo");
+    }
+
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene("");
     }
 
     public void Credits()
