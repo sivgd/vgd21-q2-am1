@@ -92,14 +92,14 @@ public class LoadSheet : MonoBehaviour
         towers[tower].GetComponent<Tower>().range = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset]);
         towers[tower].GetComponent<Tower>().shootingDamage = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 1]);
         towers[tower].GetComponent<Tower>().shootingSpeed = float.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 2]);
-        towers[tower].GetComponent<Tower>().cost = int.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 3]);
+        towers[tower].GetComponent<Tower>().actualCost = int.Parse(rawData.values[towerCellStarts[tower] - 1][colOffset + 3]);
     }
 
     void SetDataForEnemy(int enemy)
     {
         
         int colOffset = 1;
-        print(enemies[enemy]);
+
         enemies[enemy].GetComponent<EnemyHealth>().health = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset]);
         enemies[enemy].GetComponent<EnemyHealth>().damage = int.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 1]);
         enemies[enemy].GetComponent<PathCreation.Examples.PathFollower>().speed = float.Parse(rawData.values[enemyCellStarts[enemy] - 1][colOffset + 2]);

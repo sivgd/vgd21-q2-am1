@@ -26,11 +26,11 @@ public class TowerPlace : MonoBehaviour
     public Color canPlaceColor;
     public Color canNotPlaceColor;
 
-    int slingAmount;
-    int autoAmount;
-    int iceAmount;
+    public static int slingAmount;
+    public static int autoAmount;
+    public static int iceAmount;
 
-    public float increaseMultiplier;
+    public static float increaseMultiplier;
     public void Start()
     {
         Tower.gameMaster = gameObject;
@@ -39,6 +39,7 @@ public class TowerPlace : MonoBehaviour
         slingAmount = 0;
         autoAmount = 0;
         iceAmount = 0;
+        increaseMultiplier = 1.5f;
     }
 
     public void Update()
@@ -66,11 +67,11 @@ public class TowerPlace : MonoBehaviour
     }
     public bool CheckIfCanPlace(Vector2 position)
     {
-
+        
 
         //RaycastHit2D ray = Physics2D.Raycast(position, Vector2.zero);
         RaycastHit2D ray = Physics2D.BoxCast(position, new Vector2(1, 1.2f), 0, Vector2.zero);
-        if (CabbageCounter.cabbageAmount < towerBeingPlaced.GetComponent<Tower>().cost)
+        if (CabbageCounter.cabbageAmount < towerBeingPlaced.GetComponent<Tower>().actualCost)
         {
             return false;
         }
@@ -90,6 +91,7 @@ public class TowerPlace : MonoBehaviour
 
     public void PlaceTower()
     {
+
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
         bool canPlace = CheckIfCanPlace(position);
@@ -105,26 +107,25 @@ public class TowerPlace : MonoBehaviour
             towerBeingPlaced.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
             
             //Taking the cost of the tower from cabbage amount
-            CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().cost;
+            CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             Debug.Log(towerBeingPlaced.GetComponent<Tower>().name);
             if(towerBeingPlaced.GetComponent<Tower>().name == "Sling Shot")
             {
                 Debug.Log("Slings: " + slingAmount);
                 slingAmount++;
                 Debug.Log("Slings: " + slingAmount);
-                slushapultTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().cost);
+                
                 
             }
             else if (towerBeingPlaced.name == "AutoballerTowerStage1")
             {
                 autoAmount++;
-                autoballerTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().cost);
-
+                
             }
             else if (towerBeingPlaced.name == "IcicleTowerStage1")
             {
                 iceAmount++;
-                icicleTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().cost);
+                
 
             }
         }
@@ -181,25 +182,25 @@ public class TowerPlace : MonoBehaviour
             towerBeingPlaced.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
 
             //Taking the cost of the tower from cabbage amount
-            CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().cost;
+            CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
             {
                 Debug.Log("Slings: " + slingAmount);
                 slingAmount++;
                 Debug.Log("Slings: " + slingAmount);
-                slushapultTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().cost);
+                slushapultTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().actualCost);
 
             }
             else if (towerBeingPlaced.name == "AutoballerTowerStage1")
             {
                 autoAmount++;
-                autoballerTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().cost);
+                autoballerTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().actualCost);
 
             }
             else if (towerBeingPlaced.name == "IcicleTowerStage1")
             {
                 iceAmount++;
-                icicleTowerPrefab.GetComponent<Tower>().cost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().cost);
+                icicleTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().actualCost);
 
             }
         }

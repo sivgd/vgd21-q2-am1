@@ -9,7 +9,8 @@ public class Tower : MonoBehaviour
     public float shootingSpeed;
     public float shootingDamage;
     public float range;
-    public int cost;
+    public int actualCost;
+    public int ogCost;
 
     public float switchTargetOffset;
 
@@ -32,11 +33,16 @@ public class Tower : MonoBehaviour
     float shootingCooldown = 0;
 
 
-
+    private void Awake()
+    {
+        ogCost = actualCost;
+        actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);
+        Debug.Log("Cost: " + actualCost);
+    }
     public static float universalRangeMultiplier;
     private void Start()
     {
-        
+
         SetRangeUI();
     }
     public void Update()
@@ -51,10 +57,10 @@ public class Tower : MonoBehaviour
         {
             Shoot();
             shootingCooldown = shootingSpeed;
-        } 
-
+        }
         
 
+        
         shootingCooldown -= Time.deltaTime;
     }
 
@@ -69,7 +75,7 @@ public class Tower : MonoBehaviour
         if (nextStage != null)
         {
            
-            float costOfTower = nextStage.GetComponent<Tower>().cost;
+            float costOfTower = nextStage.GetComponent<Tower>().actualCost;
             if (CabbageCounter.cabbageAmount <= costOfTower)
             {
                 print("Not enough money");
@@ -79,7 +85,7 @@ public class Tower : MonoBehaviour
             GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);
             newTower.GetComponent<Tower>().enemyParent = enemyParent;
             newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
-            CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().cost;
+            CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().actualCost;
             Destroy(gameObject);
 
         }

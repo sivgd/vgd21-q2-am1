@@ -91,7 +91,7 @@ public class Waves : MonoBehaviour
     {
         for (int e = 0; e < waveGroup.enemyCount; e++)
         {
-            print("Enemy mabye spawned");
+
             SpawnEnemy(waveGroup.enemyPrefab);
             yield return new WaitForSeconds(1f / waveGroup.rate);
         }
@@ -99,7 +99,7 @@ public class Waves : MonoBehaviour
 
     void SpawnEnemy(GameObject enemy)
     {
-        print("Enemy spawned");
+        
         GameObject enemyAccess = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemyParent);
         enemyAccess.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
         GameObject healthBar = Instantiate(healthBarPrefab, enemyAccess.transform);

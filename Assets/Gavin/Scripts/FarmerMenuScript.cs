@@ -56,7 +56,7 @@ public class FarmerMenuScript : MonoBehaviour
         //Set the shooting speed of the tower
         TowerInfoUI.transform.GetChild(3).GetComponent<Text>().text = "Shooting Speed: " + towerScript.shootingSpeed.ToString();
         //Set the cost of the tower
-        TowerInfoUI.transform.GetChild(4).GetComponent<Text>().text = "Cost: " + towerScript.cost.ToString();
+        TowerInfoUI.transform.GetChild(4).GetComponent<Text>().text = "Cost: " + towerScript.actualCost.ToString();
     }
 
     public void ClickedBuyTower()

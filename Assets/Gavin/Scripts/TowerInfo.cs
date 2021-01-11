@@ -73,7 +73,7 @@ public class TowerInfo : MonoBehaviour
         if (towerScript.nextStage != null)
         {
             print("set");
-            towerInfo.transform.GetChild(4).GetChild(1).GetComponent<TextMeshPro>().text = "Upgrade: " + towerScript.nextStage.GetComponent<Tower>().cost;
+            towerInfo.transform.GetChild(4).GetChild(1).GetComponent<TextMeshPro>().text = "Upgrade: " + towerScript.nextStage.GetComponent<Tower>().actualCost;
         }
         else
         {
@@ -94,7 +94,7 @@ public class TowerInfo : MonoBehaviour
         if (towerScript.nextStage != null)
         {
             print("set");
-            towerInfo.transform.GetChild(4).GetChild(1).GetComponent<TextMeshPro>().text = "Upgrade: " + towerScript.nextStage.GetComponent<Tower>().cost;
+            towerInfo.transform.GetChild(4).GetChild(1).GetComponent<TextMeshPro>().text = "Upgrade: " + towerScript.nextStage.GetComponent<Tower>().actualCost;
         }
         else
         {
