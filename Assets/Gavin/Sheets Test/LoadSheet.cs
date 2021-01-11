@@ -108,7 +108,7 @@ public class LoadSheet : MonoBehaviour
 
     void SetDataForWave(int wave)
     {
-        print("Set for: " + wave);
+        print("Set for wave: " + wave);
 
         WaveHandler waveH = waveHandler.GetComponent<Waves>().wavesVar[wave - 1];
         string[] groupsString;
@@ -141,47 +141,48 @@ public class LoadSheet : MonoBehaviour
             float delay;
 
             //Getting the type of enemy
-            if(Regex.IsMatch(groupSplit[0], @"[S]"))
+            if(Regex.IsMatch(groupSplit[0], @"\dS$"))
             {
                 print("S");
                 typeOfEnemy = enemies[0];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[SS]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dSS$"))
             {
                 print("SS");
                 typeOfEnemy = enemies[1];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[SSS]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dSSS$"))
             {
                 typeOfEnemy = enemies[2];
             }
 
-            else if (Regex.IsMatch(groupSplit[0], @"[s]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\ds$"))
             {
                 typeOfEnemy = enemies[3];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[ss]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dss$"))
             {
                 typeOfEnemy = enemies[4];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[sss]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dsss$"))
             {
                 typeOfEnemy = enemies[5];
             }
 
-            else if (Regex.IsMatch(groupSplit[0], @"[T]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dT$"))
             {
                 typeOfEnemy = enemies[6];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[TT]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dTT$"))
             {
                 typeOfEnemy = enemies[7];
             }
-            else if (Regex.IsMatch(groupSplit[0], @"[TTT]"))
+            else if (Regex.IsMatch(groupSplit[0], @"\dTTT$"))
             {
                 typeOfEnemy = enemies[8];
             }
-
+            print("Group: " + i);
+            print(Regex.Replace(groupSplit[0], "[a-zA-Z]", ""));
             numberOfEnemies = int.Parse(Regex.Replace(groupSplit[0], "[a-zA-Z]", ""));
             rate = float.Parse(groupSplit[1]);
             delay = float.Parse(groupSplit[2]);
