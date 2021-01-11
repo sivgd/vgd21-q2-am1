@@ -42,13 +42,13 @@ public class Waves : MonoBehaviour
     {
         Debug.Log("Wave Incoming");
         WaveCounter.waveNumber += 1;
-
         
         WaveHandler wave = wavesVar[waveIndex];
-        print("waveIndex: " + waveIndex);
+        waveIndex++;
+        Debug.Log("WTF is happening");
         for (int i = 0; i < wave.groups.Length; i++)
         {
-            print(i);
+            
             StartCoroutine(SpawnGroup(wave.groups[i]));
             yield return new WaitForSeconds(wave.groups[i].delay);
         }
@@ -86,8 +86,8 @@ public class Waves : MonoBehaviour
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }*/
-        waveIndex++;
         
+        Debug.Log("Wave number: " + waveIndex);
     }
 
     IEnumerator SpawnGroup(Group waveGroup)
