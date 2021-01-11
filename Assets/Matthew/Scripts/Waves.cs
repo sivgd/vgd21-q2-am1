@@ -44,8 +44,9 @@ public class Waves : MonoBehaviour
         WaveCounter.waveNumber += 1;
         
         WaveHandler wave = wavesVar[waveIndex];
+        print("Wave: " + waveIndex + "; " + wave.groups.Length);
         waveIndex++;
-        Debug.Log("WTF is happening");
+        print("After waveIndex++: " + waveIndex);
         for (int i = 0; i < wave.groups.Length; i++)
         {
             

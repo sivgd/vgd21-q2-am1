@@ -95,7 +95,6 @@ public class TowerPlace : MonoBehaviour
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
         bool canPlace = CheckIfCanPlace(position);
-        Debug.Log(towerBeingPlaced.name);
         if (canPlace)
         {
             //Re-enabling everything
@@ -108,12 +107,9 @@ public class TowerPlace : MonoBehaviour
             
             //Taking the cost of the tower from cabbage amount
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
-            Debug.Log(towerBeingPlaced.GetComponent<Tower>().name);
             if(towerBeingPlaced.GetComponent<Tower>().name == "Sling Shot")
             {
-                Debug.Log("Slings: " + slingAmount);
                 slingAmount++;
-                Debug.Log("Slings: " + slingAmount);
                 
                 
             }
@@ -173,7 +169,6 @@ public class TowerPlace : MonoBehaviour
         if (canPlace)
         {
             //Re-enabling everything
-            Debug.Log(towerBeingPlaced.GetComponent<Tower>().towerName);
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
             towerBeingPlaced.transform.GetChild(1).gameObject.SetActive(true);
@@ -185,9 +180,8 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
             {
-                Debug.Log("Slings: " + slingAmount);
+
                 slingAmount++;
-                Debug.Log("Slings: " + slingAmount);
                 slushapultTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().actualCost);
 
             }

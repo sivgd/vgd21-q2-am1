@@ -49,7 +49,7 @@ public class Tower : MonoBehaviour
             actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.autoAmount) * ogCost);
         }
 
-        Debug.Log("Cost: " + actualCost);
+
     }
     public static float universalRangeMultiplier;
     private void Start()

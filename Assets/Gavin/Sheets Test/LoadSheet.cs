@@ -108,7 +108,6 @@ public class LoadSheet : MonoBehaviour
 
     void SetDataForWave(int wave)
     {
-        print("Set for wave: " + wave);
 
         WaveHandler waveH = waveHandler.GetComponent<Waves>().wavesVar[wave - 1];
         string[] groupsString;
@@ -181,8 +180,6 @@ public class LoadSheet : MonoBehaviour
             {
                 typeOfEnemy = enemies[8];
             }
-            print("Group: " + i);
-            print(Regex.Replace(groupSplit[0], "[a-zA-Z]", ""));
             numberOfEnemies = int.Parse(Regex.Replace(groupSplit[0], "[a-zA-Z]", ""));
             rate = float.Parse(groupSplit[1]);
             delay = float.Parse(groupSplit[2]);
