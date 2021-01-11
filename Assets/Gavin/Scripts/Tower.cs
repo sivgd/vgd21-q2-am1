@@ -36,7 +36,19 @@ public class Tower : MonoBehaviour
     private void Awake()
     {
         ogCost = actualCost;
-        actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);
+        if (towerName == "Sling Shot")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);
+        }
+        else if (towerName == "Icicle Launcher")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.iceAmount) * ogCost);
+        }
+        else if (towerName == "Autoballer")
+        {
+            actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.autoAmount) * ogCost);
+        }
+
         Debug.Log("Cost: " + actualCost);
     }
     public static float universalRangeMultiplier;

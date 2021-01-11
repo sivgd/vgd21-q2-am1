@@ -143,10 +143,12 @@ public class LoadSheet : MonoBehaviour
             //Getting the type of enemy
             if(Regex.IsMatch(groupSplit[0], @"[S]"))
             {
+                print("S");
                 typeOfEnemy = enemies[0];
             }
             else if (Regex.IsMatch(groupSplit[0], @"[SS]"))
             {
+                print("SS");
                 typeOfEnemy = enemies[1];
             }
             else if (Regex.IsMatch(groupSplit[0], @"[SSS]"))
