@@ -7822,6 +7822,11 @@ PrefabInstance:
       propertyPath: speedAttackAnimator
       value: 
       objectReference: {fileID: 9100000, guid: ab8baa48d90d72f47930df25482048d8, type: 2}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: waveCounter
+      value: 
+      objectReference: {fileID: 1011144132}
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
       propertyPath: m_LocalPosition.x
