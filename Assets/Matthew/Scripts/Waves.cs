@@ -45,7 +45,7 @@ public class Waves : MonoBehaviour
         WaveHandler wave = wavesVar[waveIndex];
         for(int i = 0; i < wave.groups.Length; i++)
         {
-            print(i);
+            
             StartCoroutine(SpawnGroup(wave.groups[i]));
             yield return new WaitForSeconds(wave.groups[i].delay);
         }
