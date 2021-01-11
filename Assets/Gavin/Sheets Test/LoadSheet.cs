@@ -63,7 +63,6 @@ public class LoadSheet : MonoBehaviour
 
         List<List<string>> data = rawData.values;
         //Towers
-
         numberOfWaves = int.Parse(rawData.values[waveSpot - 1][0]);
 
         for (int i = 0; i < towers.Length; i++)
@@ -213,10 +212,11 @@ public class LoadSheet : MonoBehaviour
         {
             money[i] = int.Parse(rawData.values[wave1Start + i - 1][colOffset]);
         }
-        
+
+        WaveCounter.money = new int[numberOfWaves];
         for(int i = 0; i < numberOfWaves; i++)
         {
-            print("Money for " + i + ": " + money[i]);
+            WaveCounter.money[i] = money[i];
         }
     }
 }

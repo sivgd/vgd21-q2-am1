@@ -8,6 +8,7 @@ public class WaveCounter : MonoBehaviour
     public static int waveNumber = 0;
     private int addCabbage = 0;
     Text score;
+    public static int[] money;//The money you get per round 
 
     // Use this for initialization
     void Start()
@@ -19,80 +20,84 @@ public class WaveCounter : MonoBehaviour
     void Update()
     {
         score.text = "Wave: " + waveNumber;
+        if(money == null)
+        {
+            return;
+        }
 
         if (WaveCounter.waveNumber == 0 && addCabbage == 0)
         {
-            CabbageCounter.cabbageAmount += 100;
+            CabbageCounter.cabbageAmount += money[0];
             addCabbage += 2;
         }
         else
         {
             if (WaveCounter.waveNumber == 2 && addCabbage == 2)
             {
-                CabbageCounter.cabbageAmount += 100;
+                CabbageCounter.cabbageAmount += money[1];
                 addCabbage += 1;
             }
             else
             {
                 if (WaveCounter.waveNumber == 3 && addCabbage == 3)
                 {
-                    CabbageCounter.cabbageAmount += 100;
+                    CabbageCounter.cabbageAmount += money[2];
                     addCabbage += 1;
                 }
                 else
                 {
                     if (WaveCounter.waveNumber == 4 && addCabbage == 4)
                     {
-                        CabbageCounter.cabbageAmount += 100;
+                        CabbageCounter.cabbageAmount += money[3];
                         addCabbage += 1;
                     }
                     else
                     {
                         if (WaveCounter.waveNumber == 5 && addCabbage == 5)
                         {
-                            CabbageCounter.cabbageAmount += 100;
+                            CabbageCounter.cabbageAmount += money[4];
                             addCabbage += 1;
                         }
                         else
                         {
                             if (WaveCounter.waveNumber == 6 && addCabbage == 6)
                             {
-                                CabbageCounter.cabbageAmount += 100;
+                                CabbageCounter.cabbageAmount += money[5];
                                 addCabbage += 1;
                             }
                             else
                             {
                                 if (WaveCounter.waveNumber == 7 && addCabbage == 7)
                                 {
-                                    CabbageCounter.cabbageAmount += 100;
+                                    CabbageCounter.cabbageAmount += money[6];
                                     addCabbage += 1;
                                 }
                                 else
                                 {
                                     if (WaveCounter.waveNumber == 8 && addCabbage == 8)
                                     {
-                                        CabbageCounter.cabbageAmount += 100;
+                                        CabbageCounter.cabbageAmount += money[7];
                                         addCabbage += 1;
                                     }
                                     else
                                     {
                                         if (WaveCounter.waveNumber == 9 && addCabbage == 9)
                                         {
-                                            CabbageCounter.cabbageAmount += 100;
+                                            CabbageCounter.cabbageAmount += money[8];
                                             addCabbage += 1;
                                         }
                                         else
                                         {
                                             if (WaveCounter.waveNumber == 10 && addCabbage == 10)
                                             {
-                                                CabbageCounter.cabbageAmount += 100;
+                                                CabbageCounter.cabbageAmount += money[9];
                                                 addCabbage += 1;
                                             }
                                             else
                                             {
                                                 if (WaveCounter.waveNumber == 11 && addCabbage == 11)
                                                 {
-                                                    CabbageCounter.cabbageAmount += 0;
+                                                    CabbageCounter.cabbageAmount += money[10];
                                                     addCabbage += 1;
                                                 }
                                                 else
