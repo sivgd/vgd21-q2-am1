@@ -25,6 +25,7 @@ public class LoadSheet : MonoBehaviour
     public int wave1Start;
     public int waveSpot;
 
+    public int numberOfWaves;
     // Start is called before the first frame update
     void Awake()
     {
@@ -61,7 +62,9 @@ public class LoadSheet : MonoBehaviour
         List<List<string>> data = rawData.values;
         //Towers
 
-        for(int i = 0; i < towers.Length; i++)
+        numberOfWaves = int.Parse(rawData.values[waveSpot - 1][0]);
+
+        for (int i = 0; i < towers.Length; i++)
         {
            
             SetDataForTower(i);
@@ -72,15 +75,17 @@ public class LoadSheet : MonoBehaviour
             SetDataForEnemy(i);
         }
         
-        waveHandler.GetComponent<Waves>().wavesVar = new WaveHandler[10];
-        for(int i = 0; i < 10; i++)
+        waveHandler.GetComponent<Waves>().wavesVar = new WaveHandler[numberOfWaves];
+        for(int i = 0; i < numberOfWaves; i++)
         {
             waveHandler.GetComponent<Waves>().wavesVar[i] = new WaveHandler();
         }
-        for(int i = 1; i <= int.Parse(rawData.values[waveSpot-1][0]); i++)
+        for(int i = 1; i <= numberOfWaves; i++)
         {
             SetDataForWave(i);
         }
+
+        SetMoneyForWaves();
         
     }
 
@@ -108,29 +113,31 @@ public class LoadSheet : MonoBehaviour
 
     void SetDataForWave(int wave)
     {
+        int colOffset = 2;
 
         WaveHandler waveH = waveHandler.GetComponent<Waves>().wavesVar[wave - 1];
         string[] groupsString;
 
         //Getting the amount of groups
-        int howManyGroups = rawData.values[wave1Start + wave - 2].Count;
+        int howManyGroups = rawData.values[wave1Start + wave - 2].Count - colOffset;
 
         //Putting all the groups in one place
         groupsString = new string[howManyGroups];
-        for(int i = 0; i < howManyGroups - 1; i++)
+        for(int i = 0; i < howManyGroups; i++)
         {
-            groupsString[i] = rawData.values[wave1Start + wave - 2][i + 1];
+            print(rawData.values[wave1Start + wave - 2].Count);
+            groupsString[i] = rawData.values[wave1Start + wave - 2][i + colOffset];
         }
 
         waveH.groups = new Group[howManyGroups];
-        for (int i = 0; i < howManyGroups - 1; i++)
+        for (int i = 0; i < howManyGroups; i++)
         {
             waveH.groups[i] = new Group();
         }
 
 
         //Getting the information from those groups
-        for (int i = 0; i < howManyGroups - 1; i++)
+        for (int i = 0; i < howManyGroups; i++)
         {
 
             string[] groupSplit = groupsString[i].Split(',');
@@ -192,5 +199,22 @@ public class LoadSheet : MonoBehaviour
 
         }
         
+    }
+
+    void SetMoneyForWaves()
+    {
+        int colOffset = 1;
+
+        int[] money = new int[numberOfWaves];
+
+        for(int i = 0; i < numberOfWaves; i++)
+        {
+            money[i] = int.Parse(rawData.values[wave1Start + i - 1][colOffset]);
+        }
+        
+        for(int i = 0; i < numberOfWaves; i++)
+        {
+            print("Money for " + i + ": " + money[i]);
+        }
     }
 }

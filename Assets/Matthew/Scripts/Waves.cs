@@ -40,6 +40,12 @@ public class Waves : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+        if(waveIndex >= wavesVar.Length)
+        {
+            print("YOU WON");
+            yield break;
+        }
+
         Debug.Log("Wave Incoming");
         WaveCounter.waveNumber += 1;
         

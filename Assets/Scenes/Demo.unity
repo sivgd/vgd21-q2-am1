@@ -2356,7 +2356,6 @@ GameObject:
   - component: {fileID: 1014821521}
   - component: {fileID: 1014821519}
   - component: {fileID: 1014821523}
-  - component: {fileID: 1014821516}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -2364,41 +2363,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1014821516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014821515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd3c5134464341408a14a9c9f9029f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wavesVar:
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  - groups: []
-  timeBetweenWaves: 5
-  spawnPath: {fileID: 1089613127}
-  spawnPoint: {fileID: 83839061}
-  enemyParent: {fileID: 1342466404}
-  healthBarPrefab: {fileID: 6600681530488028926, guid: 9105ce8b4b64485489fe1c94e045d313,
-    type: 3}
-  cabbageCounter: {fileID: 1181954068}
-  enemyFlashTime: 1
-  standardAttackAnimator: {fileID: 9100000, guid: 4d67062f2367c174587b41b4b0991097,
-    type: 2}
-  speedAttackAnimator: {fileID: 9100000, guid: ab8baa48d90d72f47930df25482048d8, type: 2}
-  farm: {fileID: 542238236}
 --- !u!4 &1014821517
 Transform:
   m_ObjectHideFlags: 0
@@ -2442,7 +2406,6 @@ MonoBehaviour:
     type: 3}
   canPlaceColor: {r: 0, g: 0, b: 0, a: 0.1764706}
   canNotPlaceColor: {r: 0.745283, g: 0, b: 0, a: 0.1764706}
-  increaseMultiplier: 0
 --- !u!114 &1014821519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,6 +2519,7 @@ MonoBehaviour:
   currentWaveHandler: {fileID: 75053916}
   wave1Start: 64
   waveSpot: 62
+  numberOfWaves: 0
 --- !u!1 &1024175286
 GameObject:
   m_ObjectHideFlags: 0
