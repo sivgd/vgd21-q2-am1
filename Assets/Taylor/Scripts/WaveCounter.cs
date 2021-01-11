@@ -19,15 +19,11 @@ public class WaveCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Wave: " + waveNumber;
-        if(money == null)
-        {
-            return;
-        }
+        
 
-        if (WaveCounter.waveNumber == 0 && addCabbage == 0)
+        /*if (WaveCounter.waveNumber == 0 && addCabbage == 0)
         {
-            CabbageCounter.cabbageAmount += money[0];
+            
             addCabbage += 2;
         }
         else
@@ -184,6 +180,33 @@ public class WaveCounter : MonoBehaviour
                     }
                 }
             }
+        }
+    }*/
+    }
+
+    public void CheckWave()
+    {
+        score.text = "Wave: " + (waveNumber + 1);
+        if (money == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < money.Length; i++)
+        {
+            if (WaveCounter.waveNumber == i && addCabbage == i)
+            {
+                CabbageCounter.cabbageAmount += money[i];
+                addCabbage++;
+            }
+
+        }
+        if (false)
+        {
+
+        }else if (true)
+        {
+
         }
     }
 }

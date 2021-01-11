@@ -17,6 +17,8 @@ public class Waves : MonoBehaviour
     public RuntimeAnimatorController standardAttackAnimator;
     public RuntimeAnimatorController speedAttackAnimator;
     public GameObject farm;
+    public WaveCounter waveCounter;
+
     private void Start()
     {
        
@@ -26,7 +28,12 @@ public class Waves : MonoBehaviour
 
         if(enemiesAlive > 0)
         {
+            
             return;
+        }else if(enemiesAlive <= 0)
+        {
+            waveCounter.CheckWave();
+
         }
         if (countdown <= 0f)
         {
