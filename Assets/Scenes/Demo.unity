@@ -7789,6 +7789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
       propertyPath: spawnPath
       value: 
       objectReference: {fileID: 1089613127}
@@ -7827,6 +7832,43 @@ PrefabInstance:
       propertyPath: waveCounter
       value: 
       objectReference: {fileID: 1011144132}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[0].enemyCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[0].rate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[0].enemyPrefab
+      value: 
+      objectReference: {fileID: 1526188337090488558, guid: bd5826d3b2bf1c3419ed73eea13b9cbe,
+        type: 3}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[1].enemyPrefab
+      value: 
+      objectReference: {fileID: 902588852598214194, guid: 693c34b6755542a41a2f0464e82de1d0,
+        type: 3}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[1].enemyCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[1].rate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.data[1].delay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
       propertyPath: m_LocalPosition.x
