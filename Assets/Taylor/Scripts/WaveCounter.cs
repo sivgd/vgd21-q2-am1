@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveCounter : MonoBehaviour
 {
@@ -206,7 +207,11 @@ public class WaveCounter : MonoBehaviour
 
         }else if (true)
         {
-            
+
+            if (WaveCounter.waveNumber == 11)
+            {
+                SceneManager.LoadScene("VictoryScreen");
+            }
         }
     }
 }
