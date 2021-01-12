@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+
 public class Waves : MonoBehaviour
 {
     public static int enemiesAlive;
@@ -18,7 +19,7 @@ public class Waves : MonoBehaviour
     public RuntimeAnimatorController speedAttackAnimator;
     public GameObject farm;
     public WaveCounter waveCounter;
-
+    public static int waveNumber;
     private void Start()
     {
        
@@ -35,6 +36,12 @@ public class Waves : MonoBehaviour
             waveCounter.CheckWave();
 
         }
+        if(waveNumber -1 == waveIndex)
+        {
+            StartCoroutine(SpawnWave());
+            return;
+        }
+        /*
         if (countdown <= 0f)
         {
 
@@ -42,7 +49,9 @@ public class Waves : MonoBehaviour
             countdown = timeBetweenWaves;
             return;
         }
+
         countdown -= Time.deltaTime;
+        */
     }
 
     IEnumerator SpawnWave()

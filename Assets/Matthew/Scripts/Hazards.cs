@@ -6,14 +6,14 @@ using UnityEngine;
 public class Hazards : MonoBehaviour
 {
     //Snowstorm variables
-    bool snowstorm;
+    public static bool snowstorm;
     public int stormChance;
-    public float stormTime;
+    public static float stormTime;
     public float rangeMultiplier;
     
 
     //Avalanche variables
-    bool avalanche;
+    public static bool avalanche;
     public int avalancheChance;
     public int minimumSnowballs;
     public int maximumSnowballs;
@@ -34,7 +34,7 @@ public class Hazards : MonoBehaviour
     {
         int stormOrNah = Random.Range(1, stormChance + 1);
        
-        if (stormOrNah == 1 && snowstorm == false)
+        if (stormOrNah == 1 && snowstorm == false && avalanche == false)
         {
             
             StartCoroutine(Snowstorm());
@@ -43,7 +43,7 @@ public class Hazards : MonoBehaviour
 
         int avalancheOrNah = Random.Range(1, avalancheChance + 1);
 
-        if (avalancheOrNah == 1 && avalanche == false)
+        if (avalancheOrNah == 1 && avalanche == false && snowstorm == false)
         {
 
             StartCoroutine(Avalanche());
