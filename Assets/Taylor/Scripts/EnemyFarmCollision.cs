@@ -15,6 +15,9 @@ public class EnemyFarmCollision : MonoBehaviour
     {
         currentFarmHealth = maxFarmHealth;
         farmHealthBar.SetHealth(maxFarmHealth);
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
     }
 
     // Update is called once per frame
@@ -48,9 +51,16 @@ public class EnemyFarmCollision : MonoBehaviour
 
         farmHealthBar.SetHealth(currentFarmHealth);
 
-        if (currentFarmHealth == 0)
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (currentFarmHealth == 0 && sceneName == "Demo")
         {
             SceneManager.LoadScene("GameOver");
+        }
+        else if (currentFarmHealth == 0 && sceneName == "Level2")
+        {
+            SceneManager.LoadScene("GameOver2");
         }
     }
 }
