@@ -32,7 +32,7 @@ public class Tower : MonoBehaviour
 
     float shootingCooldown = 0;
 
-
+    public bool isOgCostSet;
     private void Awake()
     {
         ogCost = 0;
@@ -44,7 +44,6 @@ public class Tower : MonoBehaviour
     public static float universalRangeMultiplier;
     private void Start()
     {
-
         SetRangeUI();
     }
     public void Update()
@@ -186,10 +185,15 @@ public class Tower : MonoBehaviour
 
     public void SetActualCost()
     {
-        if(ogCost == 0)
+        print("AC: " + actualCost + "; OG: " + ogCost + "; isOG" + isOgCostSet);
+        if(ogCost == 0 && !isOgCostSet && actualCost != 0)
         {
+            print("SetActualCOst if statement");
+            isOgCostSet = true;
             ogCost = actualCost;
+
         }
+
 
         if (towerName == "Sling Shot")
         {

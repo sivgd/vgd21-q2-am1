@@ -109,6 +109,7 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if(towerBeingPlaced.GetComponent<Tower>().name == "Sling Shot")
             {
+                print("PlaceTower");
                 slingAmount++;
                 
                 
@@ -181,6 +182,7 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
             {
+                print("OnEndDrag");
                 slingAmount++;
             }
             else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Autoballer")
