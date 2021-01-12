@@ -59,7 +59,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 return;
             }
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Projectile>().DestroyProjectile();
         }
         if (collision.tag == "Farm")
         {

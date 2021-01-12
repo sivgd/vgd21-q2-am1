@@ -32,6 +32,11 @@ public class TowerInfo : MonoBehaviour
 
             if (tower != null)
             {
+                for (int i = 0; i < towerParent.childCount; i++)
+                {
+                    towerParent.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                }
+
                 towerInfo.SetActive(true);
 
                 SetTowerInfo(tower);
@@ -53,9 +58,13 @@ public class TowerInfo : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(pos, Vector2.zero);
         if (ray.collider != null)
         {
-            if (ray.collider.gameObject.tag == "TowerSelect")
+            if (ray.collider.gameObject.tag == "Tower")
             {
-                return ray.collider.transform.parent.gameObject;
+                if (ray.collider.gameObject.GetComponent<Tower>().enabled)
+                {
+                    print("GetTower");
+                    return ray.collider.transform.gameObject;
+                }
             }
         }
         return null;
@@ -68,7 +77,7 @@ public class TowerInfo : MonoBehaviour
         Tower towerScript = tower.GetComponent<Tower>();
         towerInfo.transform.GetChild(0).GetComponent<TextMeshPro>().text = towerScript.towerName;
         towerInfo.transform.GetChild(1).GetComponent<TextMeshPro>().text = "Damage: " + towerScript.shootingDamage;
-        towerInfo.transform.GetChild(2).GetComponent<TextMeshPro>().text = "Range: " + towerScript.range;
+        towerInfo.transform.GetChild(2).GetComponent<TextMeshPro>().text = "Range: " + (towerScript.range * Tower.universalRangeMultiplier);
         towerInfo.transform.GetChild(3).GetComponent<TextMeshPro>().text = "Speed: "+towerScript.shootingSpeed;
         if (towerScript.nextStage != null)
         {

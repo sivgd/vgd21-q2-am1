@@ -21,4 +21,13 @@ public class Projectile : MonoBehaviour
     {
     }
 
+    public void DestroyProjectile()
+    {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        gameObject.GetComponent<Projectile>().enabled = false;
+        transform.GetComponent<ParticleSystem>().Stop();
+        Destroy(gameObject, 3);
+    }
+
 }

@@ -9,6 +9,9 @@ public class TowerUpgradeButtonScript : MonoBehaviour
     public Tower selectedTower;
     public TowerInfo towerInfo;
 
+    public Color defaultColor;
+    public Color nextStageColor;
+    public Color cantBuyColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,11 +67,23 @@ public class TowerUpgradeButtonScript : MonoBehaviour
     private void SetNextStage()
     {
         
-
-        for (int i = 0; i < textMeshPros.Length; i++)
+        if(selectedTower.nextStage.GetComponent<Tower>().actualCost <= CabbageCounter.cabbageAmount)
         {
-            textMeshPros[i].color = Color.red;
+            //Have enough money
+            for (int i = 0; i < textMeshPros.Length; i++)
+            {
+                textMeshPros[i].color = nextStageColor;
+            }
         }
+        else
+        {
+            //Don't have enough money
+            for (int i = 0; i < textMeshPros.Length; i++)
+            {
+                textMeshPros[i].color = cantBuyColor;
+            }
+        }
+        
         towerInfo.SetTowerInfo(selectedTower.nextStage, selectedTower.transform.position);
     }
 }
