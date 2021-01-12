@@ -10,7 +10,7 @@ public class Hazards : MonoBehaviour
     public int stormChance;
     public float stormTime;
     public float rangeMultiplier;
-    public float ogRangeMultiplier;
+    
 
     //Avalanche variables
     bool avalanche;
@@ -45,7 +45,7 @@ public class Hazards : MonoBehaviour
         if (avalancheOrNah == 1 && avalanche == false)
         {
 
-            Avalanche();
+            StartCoroutine(Avalanche());
             return;
         }
         
@@ -54,28 +54,29 @@ public class Hazards : MonoBehaviour
     IEnumerator Snowstorm()
     {
         snowstorm = true;
-        rangeMultiplier = ogRangeMultiplier;
+        Tower.universalRangeMultiplier = rangeMultiplier;
         
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         yield return new WaitForSeconds(stormTime);
         
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        rangeMultiplier = 1f;
+        Tower.universalRangeMultiplier = 1f;
         snowstorm = false;
 
     }
 
-    void Avalanche()
+    IEnumerator Avalanche()
     {
         avalanche = true;
         var rotation = Quaternion.Euler(0, 0, 0);
-        var position = new Vector3(Random.Range(-15f, 12f), Random.Range(-10f, 6f), 0f);
+        
         int snowballAmount = Random.Range(minimumSnowballs, maximumSnowballs);
 
         for (int i = 0; i < snowballAmount; i++)
         {
+            var position = new Vector3(Random.Range(-15f, 12f), Random.Range(-10f, 6f), 0f);
             GameObject snowballAccess = Instantiate(snowball, position, rotation);
-            
+            yield return new WaitForSeconds(0.2f);
         }
 
         avalanche = false;

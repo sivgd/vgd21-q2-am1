@@ -112,7 +112,7 @@ public class Tower : MonoBehaviour
 
         for(int i = 0;i< enemyParent.childCount; i++)
         {
-            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange * universalRangeMultiplier)
+            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
             {
                 enemiesInRange.Add(enemyParent.GetChild(i));
             }
