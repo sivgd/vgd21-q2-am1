@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 600
-  shootingSpeed: 0.4
-  shootingDamage: 5
-  range: 6
-  actualCost: 0
+  shootingSpeed: 0.8
+  shootingDamage: 3
+  range: 4
+  actualCost: 100
   ogCost: 0
   switchTargetOffset: 0.2
   testBool: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     type: 3}
   nothing: {fileID: 0}
   towerName: Sling Shot
-  stage: 2
+  stage: 1
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
     type: 3}
   isOgCostSet: 0

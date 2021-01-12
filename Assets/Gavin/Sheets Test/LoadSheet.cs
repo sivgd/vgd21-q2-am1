@@ -114,6 +114,8 @@ public class LoadSheet : MonoBehaviour
 
     void SetDataForWave(int wave)
     {
+        
+
         int colOffset = 2;
 
         WaveHandler waveH = waveHandler.GetComponent<Waves>().wavesVar[wave - 1];
