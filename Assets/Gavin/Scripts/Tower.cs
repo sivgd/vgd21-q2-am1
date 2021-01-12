@@ -35,8 +35,8 @@ public class Tower : MonoBehaviour
 
     private void Awake()
     {
+        ogCost = 0;
         print("Acutal cost: " + actualCost);
-        ogCost = actualCost;
         print("OGcost: " + ogCost);
         SetActualCost();
 
@@ -186,7 +186,11 @@ public class Tower : MonoBehaviour
 
     public void SetActualCost()
     {
-        
+        if(ogCost == 0)
+        {
+            ogCost = actualCost;
+        }
+
         if (towerName == "Sling Shot")
         {
             actualCost = Convert.ToInt32(Mathf.Pow(TowerPlace.increaseMultiplier, TowerPlace.slingAmount) * ogCost);

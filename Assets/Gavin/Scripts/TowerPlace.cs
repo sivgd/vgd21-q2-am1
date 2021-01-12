@@ -124,6 +124,7 @@ public class TowerPlace : MonoBehaviour
                 
 
             }
+            towerBeingPlaced.GetComponent<Tower>().SetActualCost();
         }
         else
         {
@@ -180,23 +181,17 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
             {
-
                 slingAmount++;
-                slushapultTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, slingAmount) * slushapultTowerPrefab.GetComponent<Tower>().actualCost);
-
             }
             else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Autoballer")
             {
                 autoAmount++;
-                autoballerTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, autoAmount) * autoballerTowerPrefab.GetComponent<Tower>().actualCost);
-
             }
             else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Icicle Launcher")
             {
                 iceAmount++;
-                icicleTowerPrefab.GetComponent<Tower>().actualCost = Convert.ToInt32(Mathf.Pow(increaseMultiplier, iceAmount) * icicleTowerPrefab.GetComponent<Tower>().actualCost);
-
             }
+            towerBeingPlaced.GetComponent<Tower>().SetActualCost();
         }
         else
         {
