@@ -100,7 +100,7 @@ public class Tower : MonoBehaviour
     Transform ClosestEnemy()
     {
         float currentRange = universalRangeMultiplier * range;
-
+        
         //gets and returns the closest enemy under the enemyParent
         if(enemyParent.childCount == 0)
         {

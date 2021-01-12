@@ -28,6 +28,19 @@ public class Snowball : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+
+            if(collision.name == "roughSlingShotTowerStage1(Clone)" || collision.name == "roughSlingShotTowerStage2(Clone)" || collision.name == "roughSlingShotTowerStage3(Clone)")
+            {
+                TowerPlace.slingAmount--;
+            }
+            else if (collision.name == "AutoballerTowerStage1(Clone)" || collision.name == "AutoballerTowerStage2(Clone)" || collision.name == "AutoballerTowerStage3(Clone)")
+            {
+                TowerPlace.autoAmount--;
+            }
+            else if (collision.name == "IcicleTowerStage1(Clone)" || collision.name == "IcicleTowerStage2(Clone)" || collision.name == "IcicleTowerStage3(Clone)")
+            {
+                TowerPlace.iceAmount--;
+            }
         }
     }
 }
