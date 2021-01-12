@@ -23,6 +23,7 @@ public class Hazards : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Tower.universalRangeMultiplier = 1f;
         avalanche = false;
         snowstorm = false;
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -57,8 +58,9 @@ public class Hazards : MonoBehaviour
         Tower.universalRangeMultiplier = rangeMultiplier;
         
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        print("123456");
         yield return new WaitForSeconds(stormTime);
-        
+        print("SDKLFJHLKSDJFHKLSJDFHL");
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         Tower.universalRangeMultiplier = 1f;
         snowstorm = false;
