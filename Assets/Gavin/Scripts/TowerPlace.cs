@@ -100,7 +100,6 @@ public class TowerPlace : MonoBehaviour
             //Re-enabling everything
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
-            towerBeingPlaced.transform.GetChild(1).gameObject.SetActive(true);
 
             //Disabling the rangeUI
             towerBeingPlaced.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
@@ -173,7 +172,6 @@ public class TowerPlace : MonoBehaviour
             //Re-enabling everything
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
-            towerBeingPlaced.transform.GetChild(1).gameObject.SetActive(true);
 
             //Disabling the rangeUI
             towerBeingPlaced.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
@@ -254,7 +252,6 @@ public class TowerPlace : MonoBehaviour
         //Disabling everything not needed
         tower.GetComponent<Tower>().enabled = false;
         tower.GetComponent<CapsuleCollider2D>().enabled = false;
-        tower.transform.GetChild(1).gameObject.SetActive(false);
 
         //Enabling the RangeUI
         tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;

@@ -20,7 +20,7 @@ public class WaveCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         /*if (WaveCounter.waveNumber == 0 && addCabbage == 0)
         {
@@ -205,13 +205,22 @@ public class WaveCounter : MonoBehaviour
         if (false)
         {
 
-        }else if (true)
+        }
+        else if (true)
         {
 
-            if (WaveCounter.waveNumber == 11)
-            {
-                SceneManager.LoadScene("VictoryScreen");
-            }
+        }
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (WaveCounter.waveNumber == 11 && sceneName == "Demo")
+        {
+            SceneManager.LoadScene("VictoryScreen");
+        }
+        else if (WaveCounter.waveNumber == 11 && sceneName == "Level2")
+        {
+            SceneManager.LoadScene("FinalVictory");
         }
     }
 }

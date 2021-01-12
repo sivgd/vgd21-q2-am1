@@ -227,7 +227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75053916 stripped
 GameObject:
@@ -2224,6 +2224,9 @@ MonoBehaviour:
   - {fileID: 2041674446}
   selectedTower: {fileID: 0}
   towerInfo: {fileID: 1014821519}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  nextStageColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.8666667}
+  cantBuyColor: {r: 1, g: 0.3820755, b: 0.3820755, a: 1}
 --- !u!61 &952580756
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7651,6 +7654,12 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2991817362605308672, guid: 8563170207f022348b6bcadb4216d9e7,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3926438663717373701, guid: 6270c207c8ece814eb430437e32728af,
+        type: 3}
     - target: {fileID: 2991817362605308733, guid: 8563170207f022348b6bcadb4216d9e7,
         type: 3}
       propertyPath: m_Name
@@ -7894,7 +7903,7 @@ PrefabInstance:
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
