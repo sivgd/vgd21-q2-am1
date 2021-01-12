@@ -63,6 +63,7 @@ public class Waves : MonoBehaviour
         {
             
             StartCoroutine(SpawnGroup(wave.groups[i]));
+            print("Delay: " + wave.groups[i].delay);
             yield return new WaitForSeconds(wave.groups[i].delay);
         }
         
@@ -114,7 +115,11 @@ public class Waves : MonoBehaviour
 
     void SpawnEnemy(GameObject enemy)
     {
-        
+        if(enemy == null)
+        {
+            print("Why is it null?");
+            return;
+        }
         GameObject enemyAccess = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemyParent);
         enemyAccess.GetComponent<PathCreation.Examples.PathFollower>().pathCreator = spawnPath;
         GameObject healthBar = Instantiate(healthBarPrefab, enemyAccess.transform);
