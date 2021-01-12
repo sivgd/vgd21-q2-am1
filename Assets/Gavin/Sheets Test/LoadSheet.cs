@@ -126,7 +126,6 @@ public class LoadSheet : MonoBehaviour
         groupsString = new string[howManyGroups];
         for(int i = 0; i < howManyGroups; i++)
         {
-            print(rawData.values[wave1Start + wave - 2].Count);
             groupsString[i] = rawData.values[wave1Start + wave - 2][i + colOffset];
         }
 

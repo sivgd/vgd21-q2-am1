@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyFarmCollision : MonoBehaviour
 {
@@ -49,5 +50,10 @@ public class EnemyFarmCollision : MonoBehaviour
         currentFarmHealth -= damage;
 
         farmHealthBar.SetHealth(currentFarmHealth);
+
+        if (currentFarmHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

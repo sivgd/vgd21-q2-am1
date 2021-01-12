@@ -236,10 +236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 600
-  shootingSpeed: 0.6
-  shootingDamage: 2
-  range: 4
-  cost: 100
+  shootingSpeed: 1.5
+  shootingDamage: 7
+  range: 5
+  actualCost: 250
+  ogCost: 250
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
@@ -251,6 +252,7 @@ MonoBehaviour:
   stage: 1
   ammunition: {fileID: 2102751373245527714, guid: b4238dea46e0d114094de73177c07666,
     type: 3}
+  isOgCostSet: 0
 --- !u!70 &9091294024663865079
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

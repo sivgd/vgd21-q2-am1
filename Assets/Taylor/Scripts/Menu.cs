@@ -66,7 +66,7 @@ public class Menu : MonoBehaviour
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Level2");
     }
 
     public void Credits()
