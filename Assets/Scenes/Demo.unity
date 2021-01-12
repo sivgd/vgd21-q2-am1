@@ -2396,7 +2396,7 @@ MonoBehaviour:
   towerParent: {fileID: 1448746010}
   enemyParent: {fileID: 1342466404}
   ammunitionParent: {fileID: 1024175287}
-  roughSlingShotTowerPrefab: {fileID: 5689718888534118928, guid: 1f4d9e881b68cea49b7a69109f387072,
+  roughSlingShotTowerPrefab: {fileID: 3926438663717373701, guid: 6270c207c8ece814eb430437e32728af,
     type: 3}
   icicleTowerPrefab: {fileID: 5416334768566001902, guid: e96f3d70502fc2e4791115b2dd42101b,
     type: 3}
@@ -2493,7 +2493,7 @@ MonoBehaviour:
   associatedWorksheet: Sheet1
   updateOnLoad: 1
   towers:
-  - {fileID: 5689718888534118928, guid: 1f4d9e881b68cea49b7a69109f387072, type: 3}
+  - {fileID: 3926438663717373701, guid: 6270c207c8ece814eb430437e32728af, type: 3}
   - {fileID: 2995190520303157837, guid: 496dbd7f696e7f644aebef1b2d42f5fb, type: 3}
   - {fileID: 272719835073358114, guid: d53633eab4b7a8b428a6856964b98ed7, type: 3}
   - {fileID: 5416334768566001902, guid: e96f3d70502fc2e4791115b2dd42101b, type: 3}
@@ -5976,17 +5976,6 @@ MonoBehaviour:
   Fx: {fileID: 1487188726}
   buttonHover: {fileID: 8300000, guid: ff5e0ad7026f54c9890ff17ee22c4a9e, type: 3}
   buttonClick: {fileID: 8300000, guid: d1d329812ac4546d78ff779f710485a0, type: 3}
-  themeDay: {fileID: 8300000, guid: aa93dc947c14b43dfaae25fc3dd83e1c, type: 3}
-  themeNight: {fileID: 8300000, guid: d3635a27724024027a8f4f6c1c4edecb, type: 3}
-  themeOriginal: {fileID: 8300000, guid: 2350180624f574f9398953a709193a05, type: 3}
-  autoballer: {fileID: 8300000, guid: db5204cffe0f94fd1b70203a4e726437, type: 3}
-  catapult: {fileID: 8300000, guid: 7fde60015eb194e5397877c2850a513e, type: 3}
-  launcher: {fileID: 8300000, guid: 843271bdf46564772a859b94ca41a2bf, type: 3}
-  pop1: {fileID: 8300000, guid: e21d22e4a696c4bd8b3e3e8a6d7ff8bc, type: 3}
-  pop2: {fileID: 8300000, guid: 903186755470f43c6a55b6374a43083d, type: 3}
-  pop3: {fileID: 8300000, guid: 83ab939f4fe8a46698ffd0ddef9c27a7, type: 3}
-  tick: {fileID: 8300000, guid: 709a1e134c6894615acfe95fe34036f7, type: 3}
-  pageTurn: {fileID: 8300000, guid: babd6f29b040d470ab40db87bb5dee67, type: 3}
 --- !u!82 &1487188726
 AudioSource:
   m_ObjectHideFlags: 0
