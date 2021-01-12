@@ -36,8 +36,6 @@ public class Tower : MonoBehaviour
     private void Awake()
     {
         ogCost = 0;
-        print("Acutal cost: " + actualCost);
-        print("OGcost: " + ogCost);
         SetActualCost();
 
     }
@@ -77,9 +75,9 @@ public class Tower : MonoBehaviour
         {
            
             float costOfTower = nextStage.GetComponent<Tower>().actualCost;
-            if (CabbageCounter.cabbageAmount <= costOfTower)
+            if (CabbageCounter.cabbageAmount < costOfTower)
             {
-                print("Not enough money");
+                
                 return;
             }
 
@@ -185,10 +183,13 @@ public class Tower : MonoBehaviour
 
     public void SetActualCost()
     {
-        print("AC: " + actualCost + "; OG: " + ogCost + "; isOG" + isOgCostSet);
+        if(stage != 1)
+        {
+            return;
+        }
+
         if(ogCost == 0 && !isOgCostSet && actualCost != 0)
         {
-            print("SetActualCOst if statement");
             isOgCostSet = true;
             ogCost = actualCost;
 

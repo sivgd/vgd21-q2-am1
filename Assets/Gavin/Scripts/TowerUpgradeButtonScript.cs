@@ -69,10 +69,6 @@ public class TowerUpgradeButtonScript : MonoBehaviour
         {
             textMeshPros[i].color = Color.red;
         }
-        if(selectedTower.nextStage == null)
-        {
-            print("WHYYYY");
-        }
         towerInfo.SetTowerInfo(selectedTower.nextStage, selectedTower.transform.position);
     }
 }
