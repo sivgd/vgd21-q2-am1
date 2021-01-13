@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 606179438672042929}
   - component: {fileID: 3215286596162137934}
   - component: {fileID: 4425341362748042670}
+  - component: {fileID: 8074973791635957729}
   m_Layer: 0
   m_Name: IcicleTowerStage2
   m_TagString: Tower
@@ -130,6 +131,32 @@ CapsuleCollider2D:
   m_Offset: {x: -0.037217617, y: -0.04297179}
   m_Size: {x: 1.2311628, y: 1.4544054}
   m_Direction: 0
+--- !u!61 &8074973791635957729
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606179438672042935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08074939, y: 0.20187342}
+  m_SpriteTilingProperty:
+    border: {x: 0.65, y: 0.375, z: 0.545, w: 0.81}
+    pivot: {x: 0.53229976, y: 0.41925064}
+    oldSize: {x: 2.5, y: 2.5}
+    newSize: {x: 1.2, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2.5}
+  m_EdgeRadius: 0
 --- !u!1 &8790540759117870843
 GameObject:
   m_ObjectHideFlags: 0

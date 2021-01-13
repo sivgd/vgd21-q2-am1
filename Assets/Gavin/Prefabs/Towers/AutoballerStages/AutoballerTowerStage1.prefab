@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7266242443280103671}
   - component: {fileID: 8440281830995966487}
   - component: {fileID: 3528008279780761226}
+  - component: {fileID: 2825486182380078800}
   m_Layer: 0
   m_Name: AutoballerTowerStage1
   m_TagString: Tower
@@ -151,6 +152,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2825486182380078800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621128496862940174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.6430517}
+    newSize: {x: 1.2, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6430517}
+  m_EdgeRadius: 0
 --- !u!1 &6782997234341230536
 GameObject:
   m_ObjectHideFlags: 0
