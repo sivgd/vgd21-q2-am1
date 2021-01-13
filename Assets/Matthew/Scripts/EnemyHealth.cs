@@ -24,9 +24,12 @@ public class EnemyHealth : MonoBehaviour
     public RuntimeAnimatorController attackAnimator;
     
     public float timeToDestroy;
+
+    public float creationTimeStamp;
     // Start is called before the first frame update
     void Start()
     {
+        creationTimeStamp = Time.time;
         maxHealth = health;
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;

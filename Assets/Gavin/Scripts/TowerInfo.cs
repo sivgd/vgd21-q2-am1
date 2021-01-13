@@ -10,6 +10,8 @@ public class TowerInfo : MonoBehaviour
     public TowerUpgradeButtonScript upgradeButton;
 
     public Transform towerParent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,16 +34,22 @@ public class TowerInfo : MonoBehaviour
 
             if (tower != null)
             {
-                for (int i = 0; i < towerParent.childCount; i++)
+                if (tower.tag == "Tower")
                 {
-                    towerParent.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                    for (int i = 0; i < towerParent.childCount; i++)
+                    {
+                        towerParent.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                    }
+
+                    towerInfo.SetActive(true);
+
+                    SetTowerInfo(tower);
+                    upgradeButton.selectedTower = tower.GetComponent<Tower>();
+                    tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                }else if(tower.tag == "UI")
+                {
+
                 }
-
-                towerInfo.SetActive(true);
-
-                SetTowerInfo(tower);
-                upgradeButton.selectedTower = tower.GetComponent<Tower>();
-                tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
             else
             {
@@ -65,6 +73,10 @@ public class TowerInfo : MonoBehaviour
                     print("GetTower");
                     return ray.collider.transform.gameObject;
                 }
+            }
+            if(ray.collider.gameObject.tag == "UI")
+            {
+                return ray.collider.transform.gameObject;
             }
         }
         return null;
@@ -107,5 +119,37 @@ public class TowerInfo : MonoBehaviour
         {
             towerInfo.transform.GetChild(4).GetChild(1).GetComponent<TextMeshPro>().text = "No More";
         }
+    }
+
+    public void NextTowerSelection(bool isLeft)
+    {
+        int length = upgradeButton.selectedTower.targetModes.Length;
+        int mode = upgradeButton.selectedTower.targetMode;
+        int dir = isLeft ? -1 : 1;
+
+
+        if(mode + dir >= length || mode + dir < 0)
+        {
+            if (isLeft)
+            {
+                mode = length - 1;
+            }
+            else
+            {
+                mode = 0;
+            }
+        }
+        else
+        {
+            mode += dir;
+            print("Mode: " + mode);
+        }
+        upgradeButton.selectedTower.targetMode = mode;
+        UpdateTowerSelection(upgradeButton.selectedTower.gameObject);
+    }
+    public void UpdateTowerSelection(GameObject tower)
+    {
+        Tower towerS = tower.GetComponent<Tower>();
+        towerInfo.transform.GetChild(5).GetComponent<TextMeshPro>().text = towerS.targetModesNames[towerS.targetMode];
     }
 }

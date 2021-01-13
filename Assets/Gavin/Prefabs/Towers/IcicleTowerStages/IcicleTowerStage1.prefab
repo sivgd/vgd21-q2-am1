@@ -195,6 +195,14 @@ MonoBehaviour:
   ammunition: {fileID: 2102751373245527714, guid: b4238dea46e0d114094de73177c07666,
     type: 3}
   isOgCostSet: 0
+  targetMode: 0
+  targetModes: 53005700460043005200
+  targetModesNames:
+  - Strong
+  - Weak
+  - Furthest
+  - Closest
+  - Random
 --- !u!70 &9091294024663865079
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

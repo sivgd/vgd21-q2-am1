@@ -33,6 +33,11 @@ public class Tower : MonoBehaviour
     float shootingCooldown = 0;
 
     public bool isOgCostSet;
+
+    public int targetMode;
+
+    public char[] targetModes = { 'S', 'W', 'F', 'C', 'R' };
+    public string[] targetModesNames;
     private void Awake()
     {
         ogCost = 0;
@@ -97,12 +102,49 @@ public class Tower : MonoBehaviour
 
     }
 
-    Transform ClosestEnemy()
+    Transform TargetSelect(char targetMode)
+    {
+        //S = strongest/most health
+        //W = weakest/lowest health
+        //F = furthest
+        //C = Closest
+        //R = random
+        if (targetMode == 'S')
+        {
+            return StrongestEnemy();
+        }
+
+        if (targetMode == 'W')
+        {
+            return WeakestEnemy();
+        }
+
+        if(targetMode == 'F')
+        {
+            return FurthestEnemy();
+        }
+
+        if (targetMode == 'C')
+        {
+            return ClosestEnemy();
+        }
+
+        if(targetMode == 'R')
+        {
+            return RandomEnemy();
+        }
+
+        return null;
+    }
+
+
+
+    Transform StrongestEnemy()
     {
         float currentRange = universalRangeMultiplier * range;
-        
+
         //gets and returns the closest enemy under the enemyParent
-        if(enemyParent.childCount == 0)
+        if (enemyParent.childCount == 0)
         {
             return null;
         }
@@ -110,15 +152,99 @@ public class Tower : MonoBehaviour
         List<Transform> enemiesInRange = new List<Transform>();
 
 
-        for(int i = 0;i< enemyParent.childCount; i++)
+        for (int i = 0; i < enemyParent.childCount; i++)
         {
-            if(Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
+            if (Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
             {
                 enemiesInRange.Add(enemyParent.GetChild(i));
             }
         }
 
-        if(enemiesInRange.Count == 0)
+        if (enemiesInRange.Count == 0)
+        {
+            return null;
+        }
+
+        //Where the actually target Selection happens above is just getting all in range
+        Transform strongestEnemy = enemiesInRange[0];
+        for (int i = 1; i < enemiesInRange.Count; i++)
+        {
+            Transform enemy = enemiesInRange[i];
+
+            if (enemy.GetComponent<EnemyHealth>().health > strongestEnemy.GetComponent<EnemyHealth>().health)
+            {
+                strongestEnemy = enemy;
+            }
+
+        }
+
+        return strongestEnemy;
+    }
+
+    Transform WeakestEnemy()
+    {
+        float currentRange = universalRangeMultiplier * range;
+
+        //gets and returns the closest enemy under the enemyParent
+        if (enemyParent.childCount == 0)
+        {
+            return null;
+        }
+
+        List<Transform> enemiesInRange = new List<Transform>();
+
+
+        for (int i = 0; i < enemyParent.childCount; i++)
+        {
+            if (Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
+            {
+                enemiesInRange.Add(enemyParent.GetChild(i));
+            }
+        }
+
+        if (enemiesInRange.Count == 0)
+        {
+            return null;
+        }
+
+        //Where the actually target Selection happens above is just getting all in range
+        Transform weakestEnemy = enemiesInRange[0];
+        for (int i = 1; i < enemiesInRange.Count; i++)
+        {
+            Transform enemy = enemiesInRange[i];
+
+            if (enemy.GetComponent<EnemyHealth>().health < weakestEnemy.GetComponent<EnemyHealth>().health)
+            {
+                weakestEnemy = enemy;
+            }
+
+        }
+
+        return weakestEnemy;
+    }
+
+    Transform ClosestEnemy()
+    {
+        float currentRange = universalRangeMultiplier * range;
+
+        //gets and returns the closest enemy under the enemyParent
+        if (enemyParent.childCount == 0)
+        {
+            return null;
+        }
+
+        List<Transform> enemiesInRange = new List<Transform>();
+
+
+        for (int i = 0; i < enemyParent.childCount; i++)
+        {
+            if (Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
+            {
+                enemiesInRange.Add(enemyParent.GetChild(i));
+            }
+        }
+
+        if (enemiesInRange.Count == 0)
         {
             return null;
         }
@@ -137,22 +263,109 @@ public class Tower : MonoBehaviour
         return closestEnemy;
     }
 
+    Transform FurthestEnemy()
+    {
+        float currentRange = universalRangeMultiplier * range;
+
+        //gets and returns the closest enemy under the enemyParent
+        if (enemyParent.childCount == 0)
+        {
+            return null;
+        }
+
+        List<Transform> enemiesInRange = new List<Transform>();
+
+
+        for (int i = 0; i < enemyParent.childCount; i++)
+        {
+            if (Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
+            {
+                enemiesInRange.Add(enemyParent.GetChild(i));
+            }
+        }
+
+        if (enemiesInRange.Count == 0)
+        {
+            return null;
+        }
+        Transform furthestEnemy = enemiesInRange[0];
+        for (int i = 1; i < enemiesInRange.Count; i++)
+        {
+            Transform enemy = enemiesInRange[i];
+
+            if (Vector2.Distance(enemy.position, transform.position) > Vector2.Distance(furthestEnemy.position, transform.position))
+            {
+                furthestEnemy = enemy;
+            }
+
+        }
+
+        return furthestEnemy;
+    }
+
+    Transform RandomEnemy()
+    {
+        float currentRange = universalRangeMultiplier * range;
+
+        //gets and returns the closest enemy under the enemyParent
+        if (enemyParent.childCount == 0)
+        {
+            return null;
+        }
+
+        List<Transform> enemiesInRange = new List<Transform>();
+
+
+        for (int i = 0; i < enemyParent.childCount; i++)
+        {
+            if (Vector2.Distance(enemyParent.GetChild(i).position, transform.position) < currentRange)
+            {
+                enemiesInRange.Add(enemyParent.GetChild(i));
+            }
+        }
+
+        if (enemiesInRange.Count == 0)
+        {
+            return null;
+        }
+
+        System.Random random = new System.Random((int) (Time.time * 1000));
+
+        Transform randomEnemy = enemiesInRange[random.Next(0, enemiesInRange.Count)];
+
+        return randomEnemy;
+    }
+
+    Transform FirstEnemy()
+    {
+        return null;
+    }
+
+    Transform LastEnemy()
+    {
+        return null;
+    }
     void Shoot()
     {
 
         //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
-        Transform closestEnemyTransform = ClosestEnemy();
-        if(closestEnemyTransform == null)
+        if(targetMode >= targetModes.Length)
+        {
+            print("targetMode too big");
+            return;
+        }
+        Transform targetedEnemyTransform = TargetSelect(targetModes[targetMode]);
+        if(targetedEnemyTransform == null)
         {
             return;
         }
-        Vector2 closestEnemy = closestEnemyTransform.position;
+        Vector2 targetedEnemy = targetedEnemyTransform.position;
 
 
 
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
         projectile.GetComponent<Projectile>().damage = shootingDamage;
-        projectile.GetComponent<Projectile>().dir = (new Vector3(closestEnemy.x, closestEnemy.y, 0) - transform.position).normalized;
+        projectile.GetComponent<Projectile>().dir = (new Vector3(targetedEnemy.x, targetedEnemy.y, 0) - transform.position).normalized;
 
         //Transform movement mostly in projectile script though
 
