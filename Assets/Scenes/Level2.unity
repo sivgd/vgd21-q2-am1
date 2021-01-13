@@ -4616,6 +4616,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: 9b8fc5a863c374e9b952548f0bd900da, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1599395126
 GameObject:
   m_ObjectHideFlags: 0
