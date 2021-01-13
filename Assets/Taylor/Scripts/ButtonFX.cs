@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundManagerScript : MonoBehaviour
+public class ButtonFX : MonoBehaviour
 {
     public AudioSource Fx;
     public AudioClip buttonHover;

@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 516301296}
   - component: {fileID: 516301298}
   - component: {fileID: 516301297}
+  - component: {fileID: 516301299}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -506,6 +507,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &516301299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516301295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b1b53babc8a4361a13d9f071ee16ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 001c46475ff4346d0a56f1788c472cb7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: ff5e0ad7026f54c9890ff17ee22c4a9e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: d1d329812ac4546d78ff779f710485a0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &902722700
 GameObject:
   m_ObjectHideFlags: 0

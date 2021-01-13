@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 523786912}
   - component: {fileID: 523786911}
   - component: {fileID: 523786910}
+  - component: {fileID: 523786913}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -411,6 +412,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523786913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523786909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b1b53babc8a4361a13d9f071ee16ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 001c46475ff4346d0a56f1788c472cb7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: ff5e0ad7026f54c9890ff17ee22c4a9e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: d1d329812ac4546d78ff779f710485a0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &547396920
 GameObject:
   m_ObjectHideFlags: 0
