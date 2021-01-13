@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3926438663717373699}
   - component: {fileID: 1336137293267416060}
   - component: {fileID: 251620282546663708}
-  - component: {fileID: 8470536739222236894}
   m_Layer: 0
   m_Name: roughSlingShotTowerStage1
   m_TagString: Tower
@@ -131,32 +130,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.010894448, y: 0.052379966}
   m_Size: {x: 0.8450889, y: 1.6499662}
   m_Direction: 0
---- !u!61 &8470536739222236894
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3926438663717373701}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04506409, y: 0.10139418}
-  m_SpriteTilingProperty:
-    border: {x: 0.26500002, y: 0.16100001, z: 0.351, w: 0.22900002}
-    pivot: {x: 0.4624466, y: 0.43662864}
-    oldSize: {x: 1.2, y: 1.6}
-    newSize: {x: 1.2, y: 1.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.6}
-  m_EdgeRadius: 0
 --- !u!1 &8097847960711640416
 GameObject:
   m_ObjectHideFlags: 0
