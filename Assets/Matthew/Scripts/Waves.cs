@@ -72,7 +72,7 @@ public class Waves : MonoBehaviour
         {
             
             StartCoroutine(SpawnGroup(wave.groups[i]));
-            print("Delay: " + wave.groups[i].delay);
+
             yield return new WaitForSeconds(wave.groups[i].delay);
         }
         
