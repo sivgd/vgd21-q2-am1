@@ -175,6 +175,9 @@ MonoBehaviour:
   - {fileID: 1887411408}
   selectedTower: {fileID: 0}
   towerInfo: {fileID: 1014882726}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  nextStageColor: {r: 0, g: 0, b: 0, a: 0}
+  cantBuyColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &23658684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3451,9 +3454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stormChance: 10000
-  stormTime: 10
   rangeMultiplier: 1
-  ogRangeMultiplier: 0
   avalancheChance: 10000
   minimumSnowballs: 5
   maximumSnowballs: 15
@@ -4521,7 +4522,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d3635a27724024027a8f4f6c1c4edecb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
