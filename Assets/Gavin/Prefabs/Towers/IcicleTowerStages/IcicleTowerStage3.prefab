@@ -97,10 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 600
-  shootingSpeed: 0.4
-  shootingDamage: 3
-  range: 7
-  actualCost: 0
+  shootingSpeed: 1.1
+  shootingDamage: 8
+  range: 6
+  actualCost: 500
   ogCost: 0
   switchTargetOffset: 0.2
   testBool: 0

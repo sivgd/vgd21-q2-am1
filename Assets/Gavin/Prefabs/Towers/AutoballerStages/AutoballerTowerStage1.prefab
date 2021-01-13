@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4621128496862940169}
   - component: {fileID: 4621128496862940168}
   - component: {fileID: 7266242443280103671}
-  - component: {fileID: 8440281830995966487}
   - component: {fileID: 3528008279780761226}
   m_Layer: 0
   m_Name: AutoballerTowerStage1
@@ -102,7 +101,7 @@ MonoBehaviour:
   shootingSpeed: 0.2
   shootingDamage: 1
   range: 4
-  actualCost: 0
+  actualCost: 200
   ogCost: 0
   switchTargetOffset: 0.2
   testBool: 0
@@ -116,22 +115,6 @@ MonoBehaviour:
   ammunition: {fileID: 6500604990334557360, guid: 5dec9c2811da086409a0d49a720244e5,
     type: 3}
   isOgCostSet: 0
---- !u!70 &8440281830995966487
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621128496862940174}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018327832, y: -0.12750989}
-  m_Size: {x: 1.2689424, y: 1.6620804}
-  m_Direction: 0
 --- !u!95 &3528008279780761226
 Animator:
   serializedVersion: 3
