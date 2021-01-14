@@ -112,7 +112,7 @@ MonoBehaviour:
   stage: 3
   ammunition: {fileID: 5081291677917440286, guid: 1c98e7fd5e9765348affa4c8ce9c3884,
     type: 3}
-  isOgCostSet: 0
+  isOgCostSet: 1
   targetMode: 0
   targetModes: 53005700460043005200
   targetModesNames:
