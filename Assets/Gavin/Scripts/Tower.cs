@@ -362,14 +362,24 @@ public class Tower : MonoBehaviour
         Vector2 targetedEnemy = targetedEnemyTransform.position;
 
 
-
         GameObject projectile = Instantiate(ammunition, transform.position, new Quaternion(), ammunitionParent);
         projectile.GetComponent<Projectile>().damage = shootingDamage;
         projectile.GetComponent<Projectile>().dir = (new Vector3(targetedEnemy.x, targetedEnemy.y, 0) - transform.position).normalized;
 
         //Transform movement mostly in projectile script though
 
-
+        if (towerName == "Sling Shot")
+        {
+            FindObjectOfType<SoundManager>().Play("Slingshot");
+        }
+        else if (towerName == "Icicle Launcher")
+        {
+            FindObjectOfType<SoundManager>().Play("Launcher");
+        }
+        else if (towerName == "Autoballer")
+        {
+            FindObjectOfType<SoundManager>().Play("Autoballer");
+        }
 
         //Physics based movement
         /*projectile.GetComponent<Projectile>().damage = shootingDamage;

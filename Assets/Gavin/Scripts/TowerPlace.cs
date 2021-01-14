@@ -97,6 +97,8 @@ public class TowerPlace : MonoBehaviour
         bool canPlace = CheckIfCanPlace(position);
         if (canPlace)
         {
+            FindObjectOfType<SoundManager>().Play("TowerPlace");
+
             //Re-enabling everything
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
@@ -169,6 +171,9 @@ public class TowerPlace : MonoBehaviour
 
         if (canPlace)
         {
+            FindObjectOfType<SoundManager>().Play("TowerPlace");
+
+
             //Re-enabling everything
             towerBeingPlaced.GetComponent<Tower>().enabled = true;
             towerBeingPlaced.GetComponent<CapsuleCollider2D>().enabled = true;
@@ -180,7 +185,6 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if (towerBeingPlaced.GetComponent<Tower>().towerName == "Sling Shot")
             {
-                print("OnEndDrag");
                 slingAmount++;
             }
             else if (towerBeingPlaced.GetComponent<Tower>().towerName == "Autoballer")
