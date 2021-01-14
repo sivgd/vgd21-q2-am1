@@ -103,7 +103,7 @@ MonoBehaviour:
   shootingDamage: 1
   range: 4
   actualCost: 200
-  ogCost: 0
+  ogCost: 200
   switchTargetOffset: 0.2
   testBool: 0
   enemyParent: {fileID: 0}
