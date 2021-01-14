@@ -77,7 +77,7 @@ public class EnemyHealth : MonoBehaviour
     void CheckHealth()
     {
         health -= bulletDamage;
-
+        FindObjectOfType<SoundManager>().Play("EnemyHit");
         if (health <= 0)
         {
             Destroy(gameObject);

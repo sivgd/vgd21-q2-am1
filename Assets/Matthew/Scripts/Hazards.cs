@@ -8,6 +8,7 @@ public class Hazards : MonoBehaviour
     //Snowstorm variables
     public static bool snowstorm;
     public int stormChance;
+    public float ogStormTime;
     public static float stormTime;
     public float rangeMultiplier;
     
@@ -27,6 +28,7 @@ public class Hazards : MonoBehaviour
         avalanche = false;
         snowstorm = false;
         indicator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        stormTime = ogStormTime;
     }
 
     // Update is called once per frame

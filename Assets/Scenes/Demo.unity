@@ -2938,6 +2938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stormChance: 10000
+  ogStormTime: 10
   rangeMultiplier: 0.5
   avalancheChance: 10000
   minimumSnowballs: 5
