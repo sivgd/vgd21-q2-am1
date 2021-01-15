@@ -2937,10 +2937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ee94e254dfb9345be8ec31c431ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stormChance: 10000
+  stormChance: 100000
   ogStormTime: 10
   rangeMultiplier: 0.5
-  avalancheChance: 10000
+  avalancheChance: 100000
   minimumSnowballs: 5
   maximumSnowballs: 15
   snowball: {fileID: 7016130823424576521, guid: a6b6958f63a5f7c4a94ab7bf5e50750f,
@@ -2986,7 +2986,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014821515}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a50d2339d5b7b154ca1f5e81298941ae, type: 3}
   m_Name: 
@@ -3998,6 +3998,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: {fileID: 1024282575}
+  buttonTime: 0
+  ogButtonTime: 10
 --- !u!114 &1164550308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7353,7 +7355,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.46274513, g: 0.627451, b: 0.96470594, a: 1}
-    m_HighlightedColor: {r: 0.3039783, g: 0.51397306, b: 0.9339623, a: 1}
+    m_HighlightedColor: {r: 0.2216981, g: 0.4795104, b: 1, a: 1}
     m_PressedColor: {r: 0.13679248, g: 0.42452845, b: 1, a: 1}
     m_SelectedColor: {r: 0.46274513, g: 0.627451, b: 0.96470594, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
@@ -8860,6 +8862,11 @@ PrefabInstance:
       propertyPath: wavesVar.Array.data[0].groups.Array.data[1].delay
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
+      propertyPath: tankAttackAnimator
+      value: 
+      objectReference: {fileID: 9100000, guid: d6fe46e81b5b48f4c93924e65467f7c3, type: 2}
     - target: {fileID: 1890402630665797274, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
       propertyPath: m_LocalPosition.x

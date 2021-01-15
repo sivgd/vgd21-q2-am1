@@ -48,7 +48,7 @@ public class LoadSheet : MonoBehaviour
         }
     }
     
-    [MenuItem("Window/Update")]
+    
     void UpdateStats()
     {
         SpreadsheetManager spreadsheetManager = new SpreadsheetManager();

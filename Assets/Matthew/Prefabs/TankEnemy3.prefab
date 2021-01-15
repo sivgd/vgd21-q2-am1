@@ -75,10 +75,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6355808823417698445, guid: 31d4955804eb32b4192d1c839f3e21ea,
+  m_Sprite: {fileID: 6482606936090279980, guid: c28835eaf11c05345b01302b6fc782ee,
     type: 3}
   m_Color: {r: 1, g: 0.14109325, b: 0, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.32, y: 2.17}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2
-  speed: 1
+  speed: 2
   transformPos: {fileID: 8118923961564927368}
 --- !u!114 &5831924737753013837
 MonoBehaviour:
@@ -116,15 +116,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTime: 0.1
-  health: 5
+  health: 40
   maxHealth: 0
-  damage: 10
+  damage: 40
   cabbageCounter: {fileID: 0}
   healthBar: {fileID: 0}
-  money: 300
+  money: 400
   farm: {fileID: 0}
   attackAnimator: {fileID: 0}
   timeToDestroy: 2
+  creationTimeStamp: 0
 --- !u!50 &4211003467470610509
 Rigidbody2D:
   serializedVersion: 4
@@ -162,8 +163,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4657633, y: 0.39348575}
-    oldSize: {x: 21.000002, y: 10.817872}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.34, y: 4.68}
     newSize: {x: 2.32, y: 2.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -182,7 +183,7 @@ Animator:
   m_GameObject: {fileID: 5394101806240718465}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 055e2e1fcb72ee0429a24f14bab7b16e, type: 2}
+  m_Controller: {fileID: 9100000, guid: bfac0f2762bcff542b94d19f57300f7c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
