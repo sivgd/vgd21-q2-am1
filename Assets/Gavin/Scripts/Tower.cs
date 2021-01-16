@@ -87,7 +87,10 @@ public class Tower : MonoBehaviour
             }
 
             GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);
-            newTower.GetComponent<AnimControl>().SetAnimator();
+            if (newTower.GetComponent<AnimControl>() != null)
+            {
+                newTower.GetComponent<AnimControl>().SetAnimator();
+            }
             newTower.GetComponent<Tower>().enemyParent = enemyParent;
             newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
             CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().actualCost;
