@@ -210,17 +210,5 @@ public class WaveCounter : MonoBehaviour
         {
 
         }
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-        if (WaveCounter.waveNumber == 11 && sceneName == "Demo")
-        {
-            SceneManager.LoadScene("VictoryScreen");
-        }
-        else if (WaveCounter.waveNumber == 11 && sceneName == "Level2")
-        {
-            SceneManager.LoadScene("FinalVictory");
-        }
     }
 }
