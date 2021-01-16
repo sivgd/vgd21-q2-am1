@@ -48,7 +48,6 @@ public class LoadSheet : MonoBehaviour
         }
     }
     
-    
     void UpdateStats()
     {
         SpreadsheetManager spreadsheetManager = new SpreadsheetManager();
