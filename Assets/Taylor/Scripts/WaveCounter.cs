@@ -10,12 +10,12 @@ public class WaveCounter : MonoBehaviour
     private int addCabbage = 0;
     Text score;
     public static int[] money;//The money you get per round 
-
+    public int[] moneyPerTurn;
     // Use this for initialization
     void Start()
     {
         score = GetComponent<Text>();
-
+        money = moneyPerTurn;
     }
     // Update is called once per frame
     void Update()

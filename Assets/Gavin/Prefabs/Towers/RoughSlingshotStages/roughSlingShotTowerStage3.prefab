@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 272719835073358116}
   - component: {fileID: 2828137274315693531}
   - component: {fileID: 3947556014588550971}
+  - component: {fileID: 6715281680714577896}
+  - component: {fileID: 8761188731843030393}
   m_Layer: 0
   m_Name: roughSlingShotTowerStage3
   m_TagString: Tower
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 272719835073358114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children:
   - {fileID: 1508596341164764675}
   m_Father: {fileID: 0}
@@ -73,8 +75,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f660cfd795171c94795a2e008a024466, type: 3}
-  m_Color: {r: 0.8018868, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3194340448900652837, guid: eabb1cbc6bc15d54eb7a6f30b7a46037,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -137,6 +140,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.037217677, y: -0.0019848347}
   m_Size: {x: 0.7024323, y: 1.5468013}
   m_Direction: 0
+--- !u!114 &6715281680714577896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272719835073358114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f24603d9aba6a47b451ea9387b0bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8761188731843030393
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272719835073358114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cbd45fa8e4aaec4fb3416cff9057035, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5031703613683882823
 GameObject:
   m_ObjectHideFlags: 0

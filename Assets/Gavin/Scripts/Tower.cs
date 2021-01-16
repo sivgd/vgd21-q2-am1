@@ -87,6 +87,7 @@ public class Tower : MonoBehaviour
             }
 
             GameObject newTower = Instantiate(nextStage, transform.position, new Quaternion(), transform.parent);
+            newTower.GetComponent<AnimControl>().SetAnimator();
             newTower.GetComponent<Tower>().enemyParent = enemyParent;
             newTower.GetComponent<Tower>().ammunitionParent = ammunitionParent;
             CabbageCounter.cabbageAmount -= newTower.GetComponent<Tower>().actualCost;
@@ -357,7 +358,15 @@ public class Tower : MonoBehaviour
         Transform targetedEnemyTransform = TargetSelect(targetModes[targetMode]);
         if(targetedEnemyTransform == null)
         {
+            if (gameObject.GetComponent<AnimControl>() != null)
+            {
+                gameObject.GetComponent<AnimControl>().ShootAnim(false);
+            }
             return;
+        }
+        if (gameObject.GetComponent<AnimControl>() != null)
+        {
+            gameObject.GetComponent<AnimControl>().ShootAnim(true);
         }
         Vector2 targetedEnemy = targetedEnemyTransform.position;
 
