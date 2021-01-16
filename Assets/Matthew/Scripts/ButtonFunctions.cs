@@ -8,13 +8,27 @@ using TMPro;
 public class ButtonFunctions : MonoBehaviour
 {
     public TextMeshProUGUI currentSpeed;
+    public float buttonTime;
+    public float ogButtonTime;
+
+    private void Start()
+    {
+        buttonTime = ogButtonTime;
+    }
+
+    private void FixedUpdate()
+    {
+        buttonTime -= Time.deltaTime;
+    }
     public void NextWave()
     {
-        if (Waves.enemiesAlive == 0)
+        if (Waves.enemiesAlive == 0 && buttonTime <= 0)
         {
             Waves.waveNumber++;
+            buttonTime = ogButtonTime;
+            Debug.Log("Button are push");
         }
-        else if(Waves.enemiesAlive > 0)
+        else if(Waves.enemiesAlive > 0 )
         {
             Warning.checkButton++;
         }

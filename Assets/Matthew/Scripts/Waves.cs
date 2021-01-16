@@ -17,6 +17,7 @@ public class Waves : MonoBehaviour
     public float enemyFlashTime;
     public RuntimeAnimatorController standardAttackAnimator;
     public RuntimeAnimatorController speedAttackAnimator;
+    public RuntimeAnimatorController tankAttackAnimator;
     public GameObject farm;
     public WaveCounter waveCounter;
     public static int waveNumber;
@@ -145,7 +146,11 @@ public class Waves : MonoBehaviour
         {
             enemyAccess.GetComponent<EnemyHealth>().attackAnimator = speedAttackAnimator;
         }
-        
+        else if (enemyAccess.name == "TankEnemy(Clone)" || enemyAccess.name == "TankEnemy2(Clone)" || enemyAccess.name == "TankEnemy3(Clone)")
+        {
+            enemyAccess.GetComponent<EnemyHealth>().attackAnimator = tankAttackAnimator;
+        }
+
         enemiesAlive++;
     }
 }
