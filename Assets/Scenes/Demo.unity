@@ -2615,14 +2615,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014821515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a50d2339d5b7b154ca1f5e81298941ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   associatedSheet: 18DPMB5cRVUB1-mDtefVJrwZbdINrP7lUDN3XpPA4HuM
   associatedWorksheet: Sheet1
-  updateOnLoad: 0
+  updateOnLoad: 1
   towers:
   - {fileID: 3926438663717373701, guid: 6270c207c8ece814eb430437e32728af, type: 3}
   - {fileID: 2995190520303157837, guid: 496dbd7f696e7f644aebef1b2d42f5fb, type: 3}
@@ -3564,21 +3564,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1181954070
-Transform:
+--- !u!224 &1181954070
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181954068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -774.09, y: 487.3, z: -4860}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 248.03595, y: 211.808, z: 54}
   m_Children:
   - {fileID: 845535287}
   m_Father: {fileID: 1561117926}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 187, y: -54}
+  m_SizeDelta: {x: 1.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1261544336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,10 +5877,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5962,10 +5967,10 @@ RectTransform:
   m_Father: {fileID: 1561117926}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.8, y: 486}
-  m_SizeDelta: {x: 1147.6599, y: 76.26789}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -4.8, y: -54}
+  m_SizeDelta: {x: 1147.6599, y: 76.26788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638577764
 MonoBehaviour:
