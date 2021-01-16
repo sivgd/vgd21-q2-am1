@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyFarmCollision : MonoBehaviour
 {
-    public int maxFarmHealth = 1000;
+    public int maxFarmHealth = 250;
     public int currentFarmHealth;
 
     public FarmHealthBar farmHealthBar;
@@ -15,20 +15,19 @@ public class EnemyFarmCollision : MonoBehaviour
     {
         currentFarmHealth = maxFarmHealth;
         farmHealthBar.SetHealth(maxFarmHealth);
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(50);
+        }
     }
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-
         if (collisionInfo.collider.tag == "Standard")
         {
             TakeDamage(20);
@@ -50,5 +49,10 @@ public class EnemyFarmCollision : MonoBehaviour
         currentFarmHealth -= damage;
 
         farmHealthBar.SetHealth(currentFarmHealth);
+
+        if (currentFarmHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
