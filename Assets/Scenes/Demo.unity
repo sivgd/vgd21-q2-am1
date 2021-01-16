@@ -2494,7 +2494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warningText: {fileID: 1638577764}
   upTime: 0
-  ogUpTime: 3
+  ogUpTime: 10
 --- !u!4 &1014821517
 Transform:
   m_ObjectHideFlags: 0

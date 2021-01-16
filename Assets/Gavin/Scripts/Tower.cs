@@ -40,7 +40,6 @@ public class Tower : MonoBehaviour
     public string[] targetModesNames;
     private void Awake()
     {
-        ogCost = 0;
         SetActualCost();
 
     }
@@ -423,11 +422,13 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        if(ogCost == 0 && !isOgCostSet && actualCost != 0)
+        print("Before: Slingam: " + TowerPlace.slingAmount + "; Increase: " + TowerPlace.increaseMultiplier + "; OGCost: " + ogCost + "; actualCost: " + actualCost);
+
+        if (ogCost == 0 && !isOgCostSet && actualCost != 0)
         {
             isOgCostSet = true;
             ogCost = actualCost;
-
+            print("Changed og cost");
         }
 
 

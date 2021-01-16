@@ -78,11 +78,12 @@ public class FarmerMenuScript : MonoBehaviour
         //Disabling everything not needed
         tower.GetComponent<Tower>().enabled = false;
         tower.GetComponent<CapsuleCollider2D>().enabled = false;
-        tower.transform.GetChild(1).gameObject.SetActive(false);
+        //tower.transform.GetChild(0).gameObject.SetActive(false);
 
         //Enabling the RangeUI
         tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
 
         gameObject.GetComponent<TowerPlace>().towerBeingPlaced = tower;
+        gameObject.GetComponent<TowerPlace>().isTowerBeingDragged = false;
     }
 }

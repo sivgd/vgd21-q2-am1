@@ -48,6 +48,7 @@ public class TowerPlace : MonoBehaviour
         {
             Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
             towerBeingPlaced.transform.position = mousePosition;
+            OnDrag();
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -110,7 +111,6 @@ public class TowerPlace : MonoBehaviour
             CabbageCounter.cabbageAmount -= towerBeingPlaced.GetComponent<Tower>().actualCost;
             if(towerBeingPlaced.GetComponent<Tower>().name == "Sling Shot")
             {
-                print("PlaceTower");
                 slingAmount++;
                 
                 
@@ -143,7 +143,6 @@ public class TowerPlace : MonoBehaviour
 
     public void OnDrag()
     {
-
 
         Vector2 position = camera.ScreenToWorldPoint(Input.mousePosition);
 
