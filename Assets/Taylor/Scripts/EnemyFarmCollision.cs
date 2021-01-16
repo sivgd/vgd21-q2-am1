@@ -50,17 +50,5 @@ public class EnemyFarmCollision : MonoBehaviour
         currentFarmHealth -= damage;
 
         farmHealthBar.SetHealth(currentFarmHealth);
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-
-        if (currentFarmHealth == 0 && sceneName == "Demo")
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-        else if (currentFarmHealth == 0 && sceneName == "Level2")
-        {
-            SceneManager.LoadScene("GameOver2");
-        }
     }
 }
