@@ -126,6 +126,7 @@ MonoBehaviour:
   attackAnimator: {fileID: 0}
   timeToDestroy: 2
   creationTimeStamp: 0
+  isTank: 0
 --- !u!50 &4211003467470610509
 Rigidbody2D:
   serializedVersion: 4

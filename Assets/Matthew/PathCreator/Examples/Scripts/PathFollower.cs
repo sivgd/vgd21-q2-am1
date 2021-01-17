@@ -52,6 +52,10 @@ namespace PathCreation.Examples
                     
                     sr.flipX = false;
                 }
+                if (gameObject.GetComponent<EnemyHealth>().isTank)
+                {
+                    sr.flipX = !sr.flipX;
+                }
             }
             //Log position of "last frame"
             lastPosition = currentPosition;

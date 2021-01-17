@@ -3454,6 +3454,7 @@ MonoBehaviour:
   currentSpeed: {fileID: 1024282575}
   buttonTime: 0
   ogButtonTime: 10
+  enemyParent: {fileID: 1342466403}
 --- !u!114 &1164550308
 MonoBehaviour:
   m_ObjectHideFlags: 0

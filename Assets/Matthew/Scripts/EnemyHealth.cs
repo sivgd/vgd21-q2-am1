@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
     public float timeToDestroy;
 
     public float creationTimeStamp;
+    public bool isTank;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,10 @@ public class EnemyHealth : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
         transform = GetComponent<Transform>();
-        
+        if (gameObject.name == "TankEnemy(Clone)" || gameObject.name == "TankEnemy2(Clone)" || gameObject.name == "TankEnemy3(Clone)")
+        {
+            isTank = true;
+        }
     }
 
     // Update is called once per frame
