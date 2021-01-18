@@ -52,6 +52,13 @@ public class Hazards : MonoBehaviour
             return;
         }
         
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Vector2 pos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            var rot = Quaternion.Euler(0, 0, 0);
+            Instantiate(snowball, pos, rot);
+        }
     }
 
     IEnumerator Snowstorm()
