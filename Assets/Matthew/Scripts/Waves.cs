@@ -28,11 +28,11 @@ public class Waves : MonoBehaviour
     private void Update()
     {
 
-        if(enemiesAlive > 0)
+        if(enemyParent.childCount > 0)
         {
             
             return;
-        }else if(enemiesAlive <= 0)
+        }else if(enemyParent.childCount <= 0)
         {
             waveCounter.CheckWave();
 
