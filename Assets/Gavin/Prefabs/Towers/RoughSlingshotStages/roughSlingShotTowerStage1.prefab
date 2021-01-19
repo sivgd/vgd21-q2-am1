@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 251620282546663708}
   - component: {fileID: 8854594991708668904}
   - component: {fileID: 1451894513784822382}
-  - component: {fileID: 4853544798254087222}
+  - component: {fileID: -4342510725535205050}
   m_Layer: 0
   m_Name: roughSlingShotTowerStage1
   m_TagString: Tower
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f24603d9aba6a47b451ea9387b0bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &4853544798254087222
+--- !u!50 &-4342510725535205050
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
