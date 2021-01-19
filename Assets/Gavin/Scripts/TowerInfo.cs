@@ -42,7 +42,7 @@ public class TowerInfo : MonoBehaviour
                     }
 
                     towerInfo.SetActive(true);
-
+                    UpdateTowerSelection(tower);
                     SetTowerInfo(tower);
                     upgradeButton.selectedTower = tower.GetComponent<Tower>();
                     tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
