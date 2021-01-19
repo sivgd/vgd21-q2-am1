@@ -8,6 +8,7 @@ using TMPro;
 public class ButtonFunctions : MonoBehaviour
 {
     public TextMeshProUGUI currentSpeed;
+    public TextMeshProUGUI waveText;
     public float buttonTime;
     public float ogButtonTime;
     public GameObject enemyParent;
@@ -20,6 +21,11 @@ public class ButtonFunctions : MonoBehaviour
     private void Update()
     {
         buttonTime -= Time.deltaTime;
+        if (buttonTime < 0f)
+        {
+            buttonTime = 0f;
+        }
+        waveText.text = "Next Wave " + Mathf.Round(buttonTime);
     }
     public void NextWave()
     {
@@ -40,15 +46,22 @@ public class ButtonFunctions : MonoBehaviour
     
     public void SpeedControl()
     {
-        if (Time.timeScale == 1f)
+        if (Time.timeScale == 0.5f)
+        {
+            Time.timeScale = 1f;
+            currentSpeed.text = "Current Speed: Single";
+        }
+        else if (Time.timeScale == 1f)
         {
             Time.timeScale = 2f;
             currentSpeed.text = "Current Speed: Double";
         }
         else if (Time.timeScale == 2f)
         {
-            Time.timeScale = 1f;
-            currentSpeed.text = "Current Speed: Single";
+            Time.timeScale = 0.5f;
+            currentSpeed.text = "Current Speed: Half";
         }
+
+        
     }
 }

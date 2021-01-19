@@ -123,7 +123,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   money: 400
   farm: {fileID: 0}
-  attackAnimator: {fileID: 0}
+  attackAnimator: {fileID: 9100000, guid: d6fe46e81b5b48f4c93924e65467f7c3, type: 2}
   timeToDestroy: 2
   creationTimeStamp: 0
   isTank: 0

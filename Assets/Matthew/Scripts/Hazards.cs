@@ -21,6 +21,8 @@ public class Hazards : MonoBehaviour
     public GameObject snowball;
 
     public GameObject indicator;
+
+    public GameObject enemyParent;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class Hazards : MonoBehaviour
     {
         int stormOrNah = Random.Range(1, stormChance + 1);
        
-        if (stormOrNah == 1 && snowstorm == false && avalanche == false)
+        if (stormOrNah == 1 && snowstorm == false && avalanche == false && enemyParent.transform.childCount > 0)
         {
             
             StartCoroutine(Snowstorm());
@@ -45,7 +47,7 @@ public class Hazards : MonoBehaviour
 
         int avalancheOrNah = Random.Range(1, avalancheChance + 1);
 
-        if (avalancheOrNah == 1 && avalanche == false && snowstorm == false)
+        if (avalancheOrNah == 1 && avalanche == false && snowstorm == false && enemyParent.transform.childCount > 0)
         {
 
             StartCoroutine(Avalanche());
