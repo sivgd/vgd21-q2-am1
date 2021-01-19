@@ -16,22 +16,22 @@ public class Snowball : MonoBehaviour
     void Update()
     {
         survivalTime -= Time.deltaTime;
-        /*
+        
         if (survivalTime <= 0)
         {
             Destroy(gameObject);
         }
-        */
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        
         if(collision.tag == "Tower" || collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            Debug.Log(collision.name);
+            
 
             if(collision.name == "roughSlingShotTowerStage1(Clone)" || collision.name == "roughSlingShotTowerStage2(Clone)" || collision.name == "roughSlingShotTowerStage3(Clone)")
             {
