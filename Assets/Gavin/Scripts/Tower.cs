@@ -343,7 +343,6 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
-        print("shoot");
         //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
         if(targetMode >= targetModes.Length)
         {
@@ -415,13 +414,11 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        print("Before: Slingam: " + TowerPlace.slingAmount + "; Increase: " + TowerPlace.increaseMultiplier + "; OGCost: " + ogCost + "; actualCost: " + actualCost);
 
         if (ogCost == 0 && !isOgCostSet && actualCost != 0)
         {
             isOgCostSet = true;
             ogCost = actualCost;
-            print("Changed og cost");
         }
 
 

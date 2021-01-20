@@ -63,7 +63,6 @@ public class Waves : MonoBehaviour
             yield break;
         }
 
-        Debug.Log("Wave Incoming");
         WaveCounter.waveNumber += 1;
         
         WaveHandler wave = wavesVar[waveIndex];
