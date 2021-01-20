@@ -11,6 +11,8 @@ public class WaveCounter : MonoBehaviour
     Text score;
     public static int[] money;//The money you get per round 
     public int[] moneyPerTurn;
+    public GameObject enemyParent;
+    public float timer;
     // Use this for initialization
     void Start()
     {
@@ -20,7 +22,11 @@ public class WaveCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (WaveCounter.waveNumber == 10)
+        {
+            timer -= Time.deltaTime;
+        }
+      
     }
 
     public void CheckWave()
@@ -39,7 +45,7 @@ public class WaveCounter : MonoBehaviour
                 addCabbage++;
             }
 
-            if (WaveCounter.waveNumber == 11)
+            if (WaveCounter.waveNumber == 10 && enemyParent.transform.childCount <= 0 && timer <= 0)
             {
                 SceneManager.LoadScene("VictoryScreen");
             }

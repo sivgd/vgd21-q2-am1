@@ -104,6 +104,6 @@ public class ResolutionManager : MonoBehaviour
 
     public void ApplyChanges()
     {
-        SetAndApplyResolution(currentResolutionIndex);
+       SetAndApplyResolution(currentResolutionIndex);
     }
 }
