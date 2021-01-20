@@ -214,7 +214,6 @@ public class LoadSheet : MonoBehaviour
         for(int i = 0; i < numberOfWaves; i++)
         {
             money[i] = int.Parse(rawData.values[wave1Start + i - 1][colOffset]);
-            print("Money: " + money[i] + " : " + i);
         }
 
         WaveCounter.money = new int[numberOfWaves];
