@@ -20,10 +20,7 @@ public class EnemyFarmCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamage(50);
-        }
+
     }
 
     void OnCollisionEnter(Collision collisionInfo)

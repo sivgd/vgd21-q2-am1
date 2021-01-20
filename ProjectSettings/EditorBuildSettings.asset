@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: df857da41e67242488e0bd57c67d07f9
   - enabled: 0
-    path: Assets/Scenes/FinalVictory.unity
+    path: 
     guid: 7e8729075b68349f684cb12ec6689a1d
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 9629710f1a5ac904b94e6fa9d3b2a267
   m_configObjects: {}

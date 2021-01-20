@@ -40,38 +40,65 @@ public class Menu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void Restart()
+    public void RestartLevelOne()
     {
-        Debug.Log("Restarting Game...");
+        SceneManager.LoadScene("Demo");
         CabbageCounter.cabbageAmount = 0;
         WaveCounter.waveNumber = 0;
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        GameIsPaused = false;
+        Resume();
+        Debug.Log("Restarting Level One...");
+    }
+    public void RestartLeveTwo()
+    {
+        SceneManager.LoadScene("Level2");
+        CabbageCounter.cabbageAmount = 0;
+        WaveCounter.waveNumber = 0;
+        Resume();
+        Debug.Log("Restarting Level Two...");
+    }
+    public void RestartLevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+        Resume();
+        Debug.Log("Hard Reset...");
     }
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Resume();
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene("LevelSelect");
+        Resume();
     }
 
     public void LevelOne()
     {
         SceneManager.LoadScene("Demo");
+        CabbageCounter.cabbageAmount = 0;
+        WaveCounter.waveNumber = 0;
+        Resume();
     }
 
     public void LevelTwo()
     {
         SceneManager.LoadScene("Level2");
+        CabbageCounter.cabbageAmount = 0;
+        WaveCounter.waveNumber = 0;
+        Resume();
     }
 
     public void Credits()
     {
         SceneManager.LoadScene("CreditScene");
+    }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+
     }
 
     public void QuitGame()
