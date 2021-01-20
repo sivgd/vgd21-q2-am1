@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 8060815671834547223}
   - component: {fileID: 9091294024663865079}
   - component: {fileID: -5592467025162034170}
+  - component: {fileID: 7261239093462744090}
+  - component: {fileID: 5153225590240562973}
   m_Layer: 0
   m_Name: IcicleTowerStage1
   m_TagString: Tower
@@ -155,7 +157,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: eba004bd176786347b121d56337dd119, type: 3}
+  m_Sprite: {fileID: -2756406823823670351, guid: c9cb589f53c3c33439b516c6409bf419,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,3 +244,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7261239093462744090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416334768566001902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f24603d9aba6a47b451ea9387b0bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &5153225590240562973
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416334768566001902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43a7a0b134817f440bf430f626f377e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -16,7 +16,7 @@ public class AnimControl : MonoBehaviour
         idleName = "Idle";
         shootingName = "Shoot";
         animator.Play(idleName);
-        animator.speed =  1.833f / towerScript.shootingSpeed;
+        animator.speed = animator.runtimeAnimatorController.animationClips[0].length / towerScript.shootingSpeed;
         
     }
 

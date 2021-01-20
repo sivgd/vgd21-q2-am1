@@ -343,7 +343,7 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
-
+        print("shoot");
         //Gets the closest enemy then turns the projectile then adds a force to push it in that direction
         if(targetMode >= targetModes.Length)
         {
