@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ee94e254dfb9345be8ec31c431ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stormChance: 1
+  stormChance: 100000
   ogStormTime: 10
   rangeMultiplier: 0.5
   avalancheChance: 100000
