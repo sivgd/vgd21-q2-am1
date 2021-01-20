@@ -2460,6 +2460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyPerTurn: 6400000064000000640000006400000064000000640000009600000096000000960000009600000096000000
   enemyParent: {fileID: 1342466403}
+  timer: 0
 --- !u!114 &1011144133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3691,7 +3692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1388097184
 RectTransform:
   m_ObjectHideFlags: 0
