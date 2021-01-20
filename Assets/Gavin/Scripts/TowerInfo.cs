@@ -46,7 +46,9 @@ public class TowerInfo : MonoBehaviour
                     SetTowerInfo(tower);
                     upgradeButton.selectedTower = tower.GetComponent<Tower>();
                     tower.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
-                }else if(tower.tag == "UI")
+                    tower.GetComponent<Tower>().SetRangeUI();
+                }
+                else if(tower.tag == "UI")
                 {
 
                 }
@@ -149,6 +151,7 @@ public class TowerInfo : MonoBehaviour
     }
     public void UpdateTowerSelection(GameObject tower)
     {
+        print("Update");
         Tower towerS = tower.GetComponent<Tower>();
         towerInfo.transform.GetChild(5).GetComponent<TextMeshPro>().text = towerS.targetModesNames[towerS.targetMode];
     }
