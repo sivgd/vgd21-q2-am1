@@ -5889,6 +5889,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: EnemySplat
+    clip: {fileID: 8300000, guid: 1ca42233bd9a044b8acaccadb70078fb, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TowerBlowUp
+    clip: {fileID: 8300000, guid: 7836495cef13f4cf0ae26807e7e583c1, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1599395126
 GameObject:
   m_ObjectHideFlags: 0
