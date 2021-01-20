@@ -116,15 +116,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTime: 0.1
-  health: 3
+  health: 10
   maxHealth: 0
-  damage: 10
+  damage: 20
   cabbageCounter: {fileID: 0}
   healthBar: {fileID: 0}
-  money: 50
+  money: 40
   farm: {fileID: 0}
   attackAnimator: {fileID: 0}
   timeToDestroy: 2
+  creationTimeStamp: 0
+  isTank: 0
 --- !u!50 &47136944699800493
 Rigidbody2D:
   serializedVersion: 4

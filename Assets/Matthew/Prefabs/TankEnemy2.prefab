@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2
-  speed: 1
+  speed: 1.5
   transformPos: {fileID: 2278684455835051824}
 --- !u!114 &4601726115309448437
 MonoBehaviour:
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTime: 0.1
-  health: 30
+  health: 60
   maxHealth: 0
   damage: 30
   cabbageCounter: {fileID: 0}

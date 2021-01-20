@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   endOfPathInstruction: 2
-  speed: 2
+  speed: 2.5
   transformPos: {fileID: 2893150628981830923}
 --- !u!114 &7890739137287148644
 MonoBehaviour:
@@ -116,15 +116,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTime: 0.1
-  health: 5
+  health: 10
   maxHealth: 0
-  damage: 10
+  damage: 20
   cabbageCounter: {fileID: 0}
   healthBar: {fileID: 0}
-  money: 50
+  money: 20
   farm: {fileID: 0}
   attackAnimator: {fileID: 0}
   timeToDestroy: 2
+  creationTimeStamp: 0
+  isTank: 0
 --- !u!50 &3813986594939649767
 Rigidbody2D:
   serializedVersion: 4
