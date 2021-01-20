@@ -56,12 +56,6 @@ public class Menu : MonoBehaviour
         Resume();
         Debug.Log("Restarting Level Two...");
     }
-    public void RestartLevelSelect()
-    {
-        SceneManager.LoadScene("LevelSelect");
-        Resume();
-        Debug.Log("Hard Reset...");
-    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");

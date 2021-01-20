@@ -27,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
 
     public float creationTimeStamp;
     public bool isTank;
+    bool immuneToDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
         {
             isTank = true;
         }
+        immuneToDamage = false;
     }
 
     // Update is called once per frame
@@ -80,8 +82,12 @@ public class EnemyHealth : MonoBehaviour
 
     void CheckHealth()
     {
-        health -= bulletDamage;
-        FindObjectOfType<SoundManager>().Play("EnemyHit");
+        if(!immuneToDamage)
+        {
+            health -= bulletDamage;
+            FindObjectOfType<SoundManager>().Play("EnemyHit");
+        }
+        
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -105,7 +111,8 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator Attack()
     {
-        
+
+        immuneToDamage = true;
         sr.flipX = true;
         GetComponent<Animator>().runtimeAnimatorController = attackAnimator;
         yield return new WaitForSeconds(timeToDestroy);
