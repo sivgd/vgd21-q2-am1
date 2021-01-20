@@ -21,7 +21,6 @@ public class TowerPlace : MonoBehaviour
     public GameObject roughSlingShotTowerPrefab;
     public GameObject icicleTowerPrefab;
     public GameObject autoballerTowerPrefab;
-    public GameObject slushapultTowerPrefab;
 
     public Color canPlaceColor;
     public Color canNotPlaceColor;
@@ -236,9 +235,6 @@ public class TowerPlace : MonoBehaviour
                 break;
             case "AutoballerUI":
                 prefab = autoballerTowerPrefab;
-                break;
-            case "SlushapultUI":
-                prefab = slushapultTowerPrefab;
                 break;
         }
 
