@@ -20,7 +20,12 @@ public class WaveCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (waveNumber >= money.Length)
+        {
+            print("money: " + money.Length);
+            print("wave: " + waveNumber);
+            SceneManager.LoadScene("VictoryScreen");
+        }
     }
 
     public void CheckWave()
@@ -39,18 +44,7 @@ public class WaveCounter : MonoBehaviour
                 addCabbage++;
             }
 
-            if (WaveCounter.waveNumber == 11)
-            {
-                SceneManager.LoadScene("VictoryScreen");
-            }
-
-        }
-        if (false)
-        {
-
-        }
-        else if (true)
-        {
+            
 
         }
 

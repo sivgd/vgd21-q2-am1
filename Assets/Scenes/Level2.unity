@@ -4756,7 +4756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91749f5582fde40108bbea2aa08a9f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyPerTurn: 
+  moneyPerTurn: fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000
 --- !u!114 &1356433675
 MonoBehaviour:
   m_ObjectHideFlags: 0
