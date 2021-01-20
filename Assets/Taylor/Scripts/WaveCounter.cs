@@ -11,6 +11,8 @@ public class WaveCounter : MonoBehaviour
     Text score;
     public static int[] money;//The money you get per round 
     public int[] moneyPerTurn;
+    public GameObject enemyParent;
+    public float timer;
     // Use this for initialization
     void Start()
     {

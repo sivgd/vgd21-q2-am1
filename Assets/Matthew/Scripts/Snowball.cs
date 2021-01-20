@@ -47,5 +47,13 @@ public class Snowball : MonoBehaviour
                 TowerPlace.iceAmount--;
             }
         }
+        if(collision.tag == "Tower")
+        {
+            FindObjectOfType<SoundManager>().Play("TowerBlowUp");
+        }
+        else if(collision.tag == "Enemy")
+        {
+            FindObjectOfType<SoundManager>().Play("EnemySplat");
+        }
     }
 }
