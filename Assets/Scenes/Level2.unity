@@ -2905,6 +2905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
         type: 3}
+      propertyPath: wavesVar.Array.data[0].groups.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890402630665797273, guid: a742df8ef440f4f4bb77e1867bfb1fa4,
+        type: 3}
       propertyPath: spawnPath
       value: 
       objectReference: {fileID: 680709393}
@@ -3373,6 +3378,12 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2991817362605308672, guid: 8563170207f022348b6bcadb4216d9e7,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3926438663717373701, guid: 6270c207c8ece814eb430437e32728af,
+        type: 3}
     - target: {fileID: 2991817362605308733, guid: 8563170207f022348b6bcadb4216d9e7,
         type: 3}
       propertyPath: m_Name
@@ -4721,7 +4732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91749f5582fde40108bbea2aa08a9f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyPerTurn: 6400000064000000640000006400000064000000640000006400000064000000640000006400000064000000
+  moneyPerTurn: 
 --- !u!114 &1356433675
 MonoBehaviour:
   m_ObjectHideFlags: 0

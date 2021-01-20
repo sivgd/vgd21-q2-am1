@@ -70,16 +70,19 @@ public class LoadSheet : MonoBehaviour
             SetDataForTower(i);
         }
 
+
         for (int i = 0; i < enemies.Length; i++)
         {
             SetDataForEnemy(i);
         }
         
         waveHandler.GetComponent<Waves>().wavesVar = new WaveHandler[numberOfWaves];
-        for(int i = 0; i < numberOfWaves; i++)
+        currentWaveHandler.GetComponent<Waves>().wavesVar = new WaveHandler[numberOfWaves];
+        for (int i = 0; i < numberOfWaves; i++)
         {
             waveHandler.GetComponent<Waves>().wavesVar[i] = new WaveHandler();
         }
+        currentWaveHandler.GetComponent<Waves>().wavesVar = waveHandler.GetComponent<Waves>().wavesVar;
         for(int i = 1; i <= numberOfWaves; i++)
         {
             SetDataForWave(i);
@@ -211,6 +214,7 @@ public class LoadSheet : MonoBehaviour
         for(int i = 0; i < numberOfWaves; i++)
         {
             money[i] = int.Parse(rawData.values[wave1Start + i - 1][colOffset]);
+            print("Money: " + money[i] + " : " + i);
         }
 
         WaveCounter.money = new int[numberOfWaves];

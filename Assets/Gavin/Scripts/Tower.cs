@@ -140,7 +140,7 @@ public class Tower : MonoBehaviour
         return null;
     }
 
-
+    #region Tower Selections
 
     Transform StrongestEnemy()
     {
@@ -339,15 +339,8 @@ public class Tower : MonoBehaviour
         return randomEnemy;
     }
 
-    Transform FirstEnemy()
-    {
-        return null;
-    }
+    #endregion
 
-    Transform LastEnemy()
-    {
-        return null;
-    }
     void Shoot()
     {
 
